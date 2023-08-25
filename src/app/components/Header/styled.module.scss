@@ -1,0 +1,54 @@
+@import '@/styles/global.scss';
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-left: $spacesM;
+
+  height: $headerHeight;
+  background-color: $mainColor;
+}
+
+.header {
+  font-size: $fonstSizeL;
+  font-weight: $fontWeightL;
+  color: $textColor;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: $navigationWidth;
+}
+
+.link {
+  font-size: $fonstSizeS;
+  font-weight: $fontWeightS;
+  color: $textColor;
+  &:hover {
+    color: $accentColor;
+  }
+}
+
+.button {
+  margin: 0 $spacesM;
+  padding: $spacesXS $spacesM;
+
+  background-color: $textColor;
+  color: $mainColor;
+
+  font-size: $fonstSizeM;
+  font-weight: $fontWeightL;
+
+  cursor: pointer;
+}
