@@ -1,0 +1,16 @@
+#!/bin/sh
+."$(dirname "$0")/_/husky.sh"
+
+yarn lint || (
+  echo 'lint error'
+)
+
+yarn format || (
+  echo 'prettier error'
+)
+
+yarn build || (
+  echo 'build error'
+)
+
+echo 'everything is okay'
