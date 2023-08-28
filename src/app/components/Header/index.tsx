@@ -50,9 +50,7 @@ export const Header = () => {
             if (index !== ROUTE.length - 1) {
               return (
                 <Link
-                  className={`${styles.link} ${
-                    pathName === path && styles.currentLink
-                  }`}
+                  className={`${styles.link} ${pathName === path && styles.currentLink}`}
                   href={path}
                   key={name}
                 >
@@ -63,35 +61,21 @@ export const Header = () => {
             return null;
           })}
         </nav>
-        <button
-          type="button"
-          className={`${styles.button} ${sen.className}`}
-          onClick={toggleModal}
-        >
+        <button type="button" className={`${styles.button} ${sen.className}`} onClick={toggleModal}>
           {VIDEO_BUTTON}
         </button>
       </div>
-      <button
-        type="button"
-        className={styles.imgButton}
-        onClick={toggleLeftSideBar}
-      >
+      <button type="button" className={styles.imgButton} onClick={toggleLeftSideBar}>
         {MENU}
       </button>
       {showLeftSideBar && (
         <div className={styles.rigthSideMenu}>
-          <button
-            type="button"
-            className={styles.imgButton}
-            onClick={toggleLeftSideBar}
-          >
+          <button type="button" className={styles.imgButton} onClick={toggleLeftSideBar}>
             {CLOSE}
           </button>
           {ROUTE.map(({ name, path }) => (
             <Link
-              className={`${styles.link} ${
-                pathName === path && styles.currentLink
-              }`}
+              className={`${styles.link} ${pathName === path && styles.currentLink}`}
               href={path}
               key={name}
             >
