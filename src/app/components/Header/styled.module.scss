@@ -1,11 +1,13 @@
 @import '@/styles/global.scss';
 
 .container {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding-left: $spacesM;
+  padding: 0 $spacesXS;
 
   height: $headerHeight;
   background-color: $mainColor;
@@ -15,12 +17,20 @@
   font-size: $fonstSizeL;
   font-weight: $fontWeightL;
   color: $textColor;
+
+  @media (max-width: $breakpointL) {
+    font-size: $fonstSizeM;
+  }
 }
 
 .content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: $breakpointL) {
+    display: none;
+  }
 }
 
 .navigation {
@@ -38,10 +48,19 @@
   &:hover {
     color: $accentColor;
   }
+  @media (max-width: $breakpointL) {
+    margin: 0 auto;
+    padding-top: $spacesS;
+  }
+}
+
+.currentLink {
+  color: $accentColor;
 }
 
 .button {
-  margin: 0 $spacesM;
+  position: relative;
+  margin-left: $spacesM;
   padding: $spacesXS $spacesM;
 
   background-color: $textColor;
@@ -50,5 +69,68 @@
   font-size: $fonstSizeM;
   font-weight: $fontWeightL;
 
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: 1;
+
   cursor: pointer;
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: $accentColor;
+    transition: all 0.5s;
+    z-index: -1;
+  }
+  &:hover:before {
+    width: 100%;
+  }
+
+  @media (max-width: $breakpointL) {
+    margin: 0;
+    margin-top: $spacesS;
+    padding: $spacesXS;
+  }
+}
+
+.video {
+  width: $videoWidth;
+  height: $videoHeight;
+
+  @media (max-width: $breakpointM) {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.imgButton {
+  display: flex;
+  align-items: center;
+  background-color: $mainColor;
+  display: none;
+
+  svg {
+    fill: $accentColor;
+  }
+
+  @media (max-width: $breakpointL) {
+    display: block;
+  }
+}
+
+.rigthSideMenu {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+
+  height: 100vh;
+  padding: $spacesXS;
+
+  top: 0;
+  right: 0;
+  background-color: $mainColor;
 }

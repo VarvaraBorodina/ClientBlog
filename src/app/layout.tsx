@@ -10,18 +10,13 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Client Blog',
-  description:
-    'We are a community of content writers who share their learnings',
+  description: 'We are a community of content writers who share their learnings',
   icons: {
-    icon: '/favicon.svg',
+    icon: '/img/favicon.svg',
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className={inter.className}>
