@@ -5,14 +5,16 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 
-import Close from '@/assets/close.svg';
-import Menu from '@/assets/menu.svg';
 import { Modal } from '@/components/Modal';
-import { ASSETS, ROUTE, TEXT } from '@/constants';
+import { ASSETS, ICONS, ROUTE, TEXT } from '@/constants';
 
 import styles from './styled.module.scss';
 
 const sen = Sen({ subsets: ['latin'] });
+
+const { HEADER, VIDEO_BUTTON } = TEXT;
+const { ABOUT_VEDEO } = ASSETS;
+const { MENU, CLOSE } = ICONS;
 
 export const Header = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
@@ -37,38 +39,59 @@ export const Header = () => {
         <Modal closeModal={toggleModal}>
           <video className={styles.video} controls autoPlay>
             <track kind="captions" />
-            <source src={ASSETS.ABOUT_VEDEO} type="video/mp4" />
+            <source src={ABOUT_VEDEO} type="video/mp4" />
           </video>
         </Modal>
       )}
-      <h1 className={styles.header}>{TEXT.HEADER}</h1>
+      <h1 className={styles.header}>{HEADER}</h1>
       <div className={styles.content}>
         <nav className={styles.navigation}>
-          {ROUTE.map(({ name, path }) => (
-            <Link
-              className={`${styles.link} ${pathName === path && styles.currentLink}`}
-              href={path}
-              key={name}
-            >
-              {name}
-            </Link>
-          ))}
+          {ROUTE.map(({ name, path }, index) => {
+            if (index !== ROUTE.length - 1) {
+              return (
+                <Link
+                  className={`${styles.link} ${
+                    pathName === path && styles.currentLink
+                  }`}
+                  href={path}
+                  key={name}
+                >
+                  {name}
+                </Link>
+              );
+            }
+            return null;
+          })}
         </nav>
-        <button type="button" className={`${styles.button} ${sen.className}`} onClick={toggleModal}>
-          {TEXT.VIDEO_BUTTON}
+        <button
+          type="button"
+          className={`${styles.button} ${sen.className}`}
+          onClick={toggleModal}
+        >
+          {VIDEO_BUTTON}
         </button>
       </div>
-      <button type="button" className={styles.imgButton} onClick={toggleLeftSideBar}>
-        <Menu />
+      <button
+        type="button"
+        className={styles.imgButton}
+        onClick={toggleLeftSideBar}
+      >
+        {MENU}
       </button>
       {showLeftSideBar && (
         <div className={styles.rigthSideMenu}>
-          <button type="button" className={styles.imgButton} onClick={toggleLeftSideBar}>
-            <Close />
+          <button
+            type="button"
+            className={styles.imgButton}
+            onClick={toggleLeftSideBar}
+          >
+            {CLOSE}
           </button>
           {ROUTE.map(({ name, path }) => (
             <Link
-              className={`${styles.link} ${pathName === path && styles.currentLink}`}
+              className={`${styles.link} ${
+                pathName === path && styles.currentLink
+              }`}
               href={path}
               key={name}
             >
@@ -80,7 +103,7 @@ export const Header = () => {
             className={`${styles.button} ${sen.className}`}
             onClick={toggleModal}
           >
-            {TEXT.VIDEO_BUTTON}
+            {VIDEO_BUTTON}
           </button>
         </div>
       )}

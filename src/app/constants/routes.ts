@@ -15,4 +15,8 @@ export const ROUTE = [
     name: 'Contact Us',
     path: '/contact',
   },
+  {
+    name: 'Privacy Policy',
+    path: '/policy',
+  },
 ];

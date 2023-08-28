@@ -6,7 +6,7 @@
   background-color: $mainColor;
   color: $textColor;
 
-  @media (max-width: $breakpointXL) {
+  @media (max-width: $breakpointL) {
     padding: $spacesXS;
   }
 }
@@ -23,6 +23,11 @@
 .title {
   font-size: $fonstSizeL;
   font-weight: $fontWeightL;
+
+  margin-bottom: $spacesM;
+  @media (max-width: $breakpointM) {
+    margin-bottom: 0;
+  }
 }
 
 .link {
@@ -33,9 +38,13 @@
     color: $accentColor;
   }
 
-  @media (max-width: $breakpointM) {
+  @media (max-width: $breakpointL) {
     font-size: $fonstSizeXS;
-    margin-right: $spacesXS;
+  }
+
+  @media (max-width: $breakpointM) {
+    font-size: $fonstSizeS;
+    margin-top: $spacesXS;
   }
 }
 
@@ -44,11 +53,16 @@
   justify-content: space-between;
   align-items: center;
 
-  width: $navigationWidth;
+  min-width: $fullNavigationWidth;
+
+  @media (max-width: $breakpointL) {
+    min-width: $navigationWidth;
+  }
+
   @media (max-width: $breakpointM) {
-    width: 100%;
-    justify-content: flex-start;
-    margin-top: $spacesXS;
+    min-width: auto;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
@@ -58,7 +72,7 @@
   justify-content: space-between;
 
   margin-bottom: $spacesM;
-  margin-top: $spacesM;
+  margin-top: $spacesXS;
   padding: $spacesM;
 
   background-color: $formColor;
@@ -69,6 +83,12 @@
 
     padding: $spacesXS;
   }
+}
+
+.error {
+  color: $accentColor;
+  font-size: $fonstSizeXS;
+  font-weight: $fontWeightS;
 }
 
 .formTitle {
