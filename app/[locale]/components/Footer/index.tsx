@@ -2,6 +2,9 @@
 
 import emailjs from '@emailjs/browser';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useTranslations } from 'next-intl';
+import IntlLink from 'next-intl/link';
 import React, { useState } from 'react';
 import * as yup from 'yup';
 
@@ -30,6 +33,9 @@ const { INSTAGRAM, LINKED_IN, FACEBOOK, TWITTER } = ICONS;
 export const Footer = () => {
   const [email, setEmail] = useState<string>('');
   const [message, setMessage] = useState<string>('');
+
+  const pathName = usePathname();
+  const absolutePath = pathName.replace('/ru', '/');
 
   const handleEmailChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = target;
@@ -67,8 +73,11 @@ export const Footer = () => {
     }
   };
 
+  const t = useTranslations('Index');
+
   return (
     <footer className={styles.container}>
+      <p>{t('title')}</p>
       <div className={styles.header}>
         <h6 className={styles.title}>{TEXT.HEADER}</h6>
         <nav className={styles.navigation}>
@@ -96,6 +105,12 @@ export const Footer = () => {
       </div>
       <div className={styles.contacts}>
         <div>
+          <IntlLink locale="ru" href={absolutePath} className={styles.lang}>
+            De
+          </IntlLink>
+          <IntlLink locale="en" href={absolutePath} className={styles.lang}>
+            En
+          </IntlLink>
           <p className={styles.contact}>{ADDRES}</p>
           <p className={styles.contact}>{EMAIL}</p>
         </div>
