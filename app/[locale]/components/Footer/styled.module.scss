@@ -153,21 +153,24 @@
 
 .contacts {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
 
-  color: $contactsColor;
   @media (max-width: $breakpointM) {
     flex-direction: column;
+    font-size: $fonstSizeXS;
   }
 }
 
 .contact {
-  margin-bottom: $spacesXXS;
+  margin-top: $spacesXXS;
+  color: $contactsColor;
+}
 
-  @media (max-width: $breakpointM) {
-    font-size: $fonstSizeXS;
-  }
+.lang {
+  margin-bottom: $spacesXXS;
+  margin-right: $spacesXXS;
+  color: $accentColor;
 }
 
 .social {

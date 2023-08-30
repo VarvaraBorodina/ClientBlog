@@ -1,0 +1,26 @@
+{
+  "Index": {
+    "title": "Hello world!"
+  },
+
+  "Routes": {
+    "Home": "Home",
+    "Blog": "Blog",
+    "About Us": "About Us",
+    "Contact Us": "Contact Us",
+    "Privacy Policy": "Privacy Policy"
+  },
+
+  "Header": {
+    "Video": "Video about us"
+  },
+
+  "Footer": {
+    "Title": "Subscribe to our news letter to get latest updates and news",
+    "Subscribe": "Subscribe",
+    "Subscribe Ok": "You have subscribed",
+    "Subscribe error": "Subscribe error",
+    "Invalid email": "Invalid email",
+    "Email placeholder": "Enter Your Email"
+  }
+}

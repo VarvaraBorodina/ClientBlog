@@ -1,4 +1,5 @@
 export const ASSETS = {
-  ABOUT_VEDEO: '/about.mp4',
+  ABOUT_VEDEO: '/video/about.mp4',
+
   FAV_ICON: '/img/favicon.svg',
 };
