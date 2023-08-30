@@ -21,5 +21,11 @@
     "Subscribe error": "Ошибка при подписке",
     "Invalid email": "Невалидный Email",
     "Email placeholder": "Введите свой Email"
+  },
+  "Home": {
+    "Posted": "По теме ",
+    "Post alt": "Картинка к посту",
+    "By": "От ",
+    "Read more": "Читать дальше"
   }
 }

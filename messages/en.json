@@ -22,5 +22,12 @@
     "Subscribe error": "Subscribe error",
     "Invalid email": "Invalid email",
     "Email placeholder": "Enter Your Email"
+  },
+
+  "Home": {
+    "Posted": "Posted on",
+    "Post alt": "Post picture",
+    "By": "By",
+    "Read more": "Read more"
   }
 }

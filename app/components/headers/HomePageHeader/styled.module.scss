@@ -1,0 +1,111 @@
+@import '@/styles/global.scss';
+
+.container {
+  position: relative;
+  height: auto;
+
+  z-index: 1;
+}
+
+.image {
+  width: 100%;
+  padding: 0;
+  min-height: $minImageHeight;
+  object-fit: cover;
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+
+  width: 100%;
+  height: $shadowHeight;
+
+  background: radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+
+  height: 100%;
+  padding-left: $spacesL;
+
+  @media (max-width: $breakpointL) {
+    padding-left: $spacesS;
+  }
+}
+
+.category {
+  margin-bottom: $spacesM;
+  color: $textColor;
+  text-transform: uppercase;
+  font-size: $fonstSizeS;
+  letter-spacing: $letterSpacing;
+
+  @media (max-width: $breakpointL) {
+    margin-bottom: $spacesXXS;
+  }
+}
+
+.bold {
+  font-weight: $fontWeightXL;
+  cursor: pointer;
+}
+
+.accent {
+  color: $accentColor;
+  cursor: pointer;
+}
+
+.title {
+  width: $homeHeaderTitle;
+  margin-bottom: $spacesS;
+
+  color: $textColor;
+  font-size: $fonstSizeXXL;
+  font-weight: $fontWeightL;
+
+  @media (max-width: $breakpointXL) {
+    width: 100%;
+  }
+
+  @media (max-width: $breakpointL) {
+    margin-bottom: $spacesXXS;
+    font-size: $fonstSizeXL;
+  }
+}
+
+.infoContainer {
+  display: flex;
+}
+
+.info {
+  margin-bottom: $spacesS;
+  color: $textColor;
+  font-size: $fonstSizeS;
+  @media (max-width: $breakpointL) {
+    margin-bottom: $spacesXXS;
+  }
+}
+
+.description {
+  width: $descriptionWidth;
+  margin-bottom: $spacesS;
+
+  color: $textColor;
+  font-size: $fonstSizeS;
+  line-height: $lineHeightL;
+
+  @media (max-width: $breakpointL) {
+    width: 100%;
+    margin-bottom: $spacesXXS;
+  }
+
+  @media (max-width: $breakpointM) {
+    line-height: $lineHeightS;
+    font-size: $fonstSizeXS;
+  }
+}

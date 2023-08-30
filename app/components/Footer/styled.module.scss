@@ -24,7 +24,6 @@
   font-size: $fonstSizeL;
   font-weight: $fontWeightL;
 
-  margin-bottom: $spacesM;
   @media (max-width: $breakpointM) {
     margin-bottom: 0;
   }
@@ -86,6 +85,8 @@
 }
 
 .error {
+  margin-top: $spacesXS;
+
   color: $accentColor;
   font-size: $fonstSizeXS;
   font-weight: $fontWeightS;
@@ -153,7 +154,6 @@
 
 .contacts {
   display: flex;
-  align-items: flex-end;
   justify-content: space-between;
 
   @media (max-width: $breakpointM) {
@@ -164,6 +164,7 @@
 
 .contact {
   margin-top: $spacesXXS;
+  margin-bottom: $spacesXXS;
   color: $contactsColor;
 }
 

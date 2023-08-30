@@ -18,4 +18,10 @@ export const TEXT = {
   EMAIL_ERROR: 'Invalid email',
 
   EMAIL_PLACEHOLDER: 'Email placeholder',
+
+  POSTED: 'Posted',
+  BY: 'By',
+  READ_MORE: 'Read more',
+
+  POST_ALT: 'Post alt',
 };

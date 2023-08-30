@@ -1,6 +1,7 @@
 @import '@/styles/global.scss';
 
 .button {
+  display: inline-block;
   padding: $spacesXS $spacesM;
 
   font-size: $fonstSizeM;
@@ -11,7 +12,7 @@
 
   @media (max-width: $breakpointL) {
     padding: $spacesXS;
-    font-size: $fonstSizeS;
+    font-size: $fonstSizeXS;
   }
 
   cursor: pointer;

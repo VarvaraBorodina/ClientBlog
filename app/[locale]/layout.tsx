@@ -7,7 +7,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import React from 'react';
 
 import { Footer } from '@/components/Footer';
-import { Header } from '@/components/Header';
+import { Header } from '@/components/headers/Header';
 import { ASSETS, TEXT } from '@/constants';
 
 const inter = Inter({ subsets: ['latin'] });
