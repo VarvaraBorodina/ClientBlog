@@ -11,6 +11,7 @@ import * as yup from 'yup';
 import { ICONS, ROUTE, TEXT } from '@/constants';
 import { CONFIG } from '@/constants/config';
 import commonStyles from '@/styles/common.module.scss';
+import { transformPath } from '@/utils';
 
 import styles from './styled.module.scss';
 
@@ -35,7 +36,9 @@ export const Footer = () => {
   const [message, setMessage] = useState<string>('');
 
   const pathName = usePathname();
-  const absolutePath = pathName.replace('/ru', '/');
+  const absolutePath = transformPath(pathName);
+  const translateRoutes = useTranslations('Routes');
+  const translateFooter = useTranslations('Footer');
 
   const handleEmailChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = target;
@@ -73,43 +76,40 @@ export const Footer = () => {
     }
   };
 
-  const t = useTranslations('Index');
-
   return (
     <footer className={styles.container}>
-      <p>{t('title')}</p>
       <div className={styles.header}>
         <h6 className={styles.title}>{TEXT.HEADER}</h6>
         <nav className={styles.navigation}>
           {ROUTE.map(({ name, path }) => (
             <Link href={path} key={name} className={styles.link}>
-              {name}
+              {translateRoutes(name)}
             </Link>
           ))}
         </nav>
       </div>
-      <p className={styles.error}>{message}</p>
+      <p className={styles.error}>{message && translateFooter(message)}</p>
       <div className={styles.content}>
-        <h3 className={styles.formTitle}>{FOOTER_TITLE}</h3>
+        <h3 className={styles.formTitle}>{translateFooter(FOOTER_TITLE)}</h3>
         <form className={styles.form} onSubmit={handleSubmit}>
           <input
             className={styles.input}
-            placeholder={EMAIL_PLACEHOLDER}
+            placeholder={translateFooter(EMAIL_PLACEHOLDER)}
             onChange={handleEmailChange}
             value={email}
           />
           <button type="submit" className={commonStyles.button}>
-            {SUBSCRIBE}
+            {translateFooter(SUBSCRIBE)}
           </button>
         </form>
       </div>
       <div className={styles.contacts}>
         <div>
-          <IntlLink locale="ru" href={absolutePath} className={styles.lang}>
-            De
+          <IntlLink locale={TEXT.RUSSIAN} href={absolutePath} className={styles.lang}>
+            {TEXT.RUSSIAN}
           </IntlLink>
-          <IntlLink locale="en" href={absolutePath} className={styles.lang}>
-            En
+          <IntlLink locale={TEXT.ENGLISH} href={absolutePath} className={styles.lang}>
+            {TEXT.ENGLISH}
           </IntlLink>
           <p className={styles.contact}>{ADDRES}</p>
           <p className={styles.contact}>{EMAIL}</p>

@@ -1,5 +1,25 @@
 {
   "Index": {
     "title": "Russian"
+  },
+  "Routes": {
+    "Home": "Главная",
+    "Blog": "Блог",
+    "About Us": "О нас",
+    "Contact Us": "Контакты",
+    "Privacy Policy": "Приватность"
+  },
+
+  "Header": {
+    "Video": "Видео о нас"
+  },
+
+  "Footer": {
+    "Title": "Подпишитесь на нашу рассылку, чтобы получать последние новости",
+    "Subscribe": "Подписаться",
+    "Subscribe Ok": "Вы подписаны",
+    "Subscribe error": "Ошибка при подписке",
+    "Invalid email": "Невалидный Email",
+    "Email placeholder": "Введите свой Email"
   }
 }

@@ -8,7 +8,7 @@ export const ROUTE = [
     path: '/blog',
   },
   {
-    name: 'About us',
+    name: 'About Us',
     path: '/about',
   },
   {
