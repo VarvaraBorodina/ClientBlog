@@ -19,7 +19,9 @@ export const HomePageHeader = () => {
   const translate = useTranslations('Home');
   const translateMonth = useTranslations('Monthes');
 
-  const postCategory = categories.find((category: Category) => category.id === post.category);
+  const postCategory = (categories as Category[]).find(
+    (category: Category) => category.id === post.category
+  );
   const postAuthor = authors.find((author: Author) => author.id === post.author);
 
   const { day, year, month } = post.creationDate;
