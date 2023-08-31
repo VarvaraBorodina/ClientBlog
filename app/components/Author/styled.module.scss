@@ -1,0 +1,53 @@
+@import '@/styles/global.scss';
+
+.container {
+  width: $authorWidth;
+
+  padding-top: $spacesM;
+  padding-bottom: $spacesM;
+
+  background-color: $borderColor;
+  text-align: center;
+
+  &:hover {
+    background-color: $lightAccentColor;
+  }
+  cursor: pointer;
+}
+
+.image {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  transform: translate3d(0px, 0px, 0.1px);
+  object-fit: cover;
+}
+
+.title {
+  margin-bottom: $spacesXXS;
+  margin-top: $spacesXS;
+
+  color: $mainColor;
+  font-size: $fonstSizeL;
+  font-weight: $fontWeightL;
+}
+
+.description {
+  margin-bottom: $spacesXXS;
+
+  color: $lightTextColor;
+  font-size: $fonstSizeS;
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: $spacesS;
+  width: $socialWidth;
+  svg {
+    path {
+      fill: $mainColor;
+    }
+  }
+}

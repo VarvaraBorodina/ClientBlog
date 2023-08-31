@@ -31,6 +31,12 @@ export const TEXT = {
   MISION_TITLE: 'Mision title',
   MISION_TEXT: 'Mision text',
   CHOOSE_CATEGORY: 'Choose A Catagory',
+  WE_STARTED: 'We started',
+  WE_STARTED_HEADER: 'We started header',
+  WE_STARTED_TEXT: 'We started text',
+  DISCOVER: 'Discover',
+  AUTHORS: 'Authors',
+  WRITTER: 'Content Writer',
 
   POST_ALT: 'Post alt',
 };
