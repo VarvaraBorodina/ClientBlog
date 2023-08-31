@@ -1,0 +1,75 @@
+@import '@/styles/global.scss';
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin: $spacesL;
+
+  @media (max-width: $breakpointL) {
+    flex-direction: column;
+  }
+
+  @media (max-width: $breakpointM) {
+    margin: $spacesXS;
+  }
+}
+
+.singlePost {
+  width: $featuredPost;
+
+  @media (max-width: $breakpointL) {
+    width: 100%;
+  }
+}
+
+.title {
+  color: $mainColor;
+
+  font-size: $fonstSizeXL;
+  font-weight: $fontWeightL;
+
+  @media (max-width: $breakpointM) {
+    font-size: $fonstSizeM;
+  }
+}
+
+.post {
+  margin-top: $spacesS;
+  padding: $spacesS;
+  border: solid $borderWidth $postBorderColor;
+}
+
+.sideTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.aside {
+  width: $aside;
+  margin-left: $spacesS;
+
+  @media (max-width: $breakpointL) {
+    width: 100%;
+    margin-left: 0;
+    margin-top: $spacesS;
+  }
+}
+
+.accent {
+  color: $linkColor;
+  cursor: pointer;
+}
+
+.posts {
+  margin-top: $spacesS;
+}
+
+.shortPost {
+  padding: $spacesS;
+  padding-top: 0;
+  &:hover {
+    background-color: $lightAccentColor;
+  }
+  cursor: pointer;
+}

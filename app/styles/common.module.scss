@@ -1,0 +1,19 @@
+@import '@/styles/global.scss';
+
+.button {
+  display: inline-block;
+  padding: $spacesXS $spacesM;
+
+  font-size: $fonstSizeM;
+  font-weight: $fontWeightL;
+
+  color: $mainColor;
+  background-color: $accentColor;
+
+  @media (max-width: $breakpointL) {
+    padding: $spacesXS;
+    font-size: $fonstSizeXS;
+  }
+
+  cursor: pointer;
+}

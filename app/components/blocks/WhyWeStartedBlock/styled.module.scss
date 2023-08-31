@@ -1,0 +1,80 @@
+@import '@/styles/global.scss';
+
+.container {
+  margin: $spacesL;
+  position: relative;
+
+  @media (max-width: $breakpointL) {
+    margin: $spacesS;
+  }
+}
+
+.image {
+  width: $startImage;
+  @media (max-width: $breakpointL) {
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: $startContent;
+  padding: $spacesL;
+  background-color: $textColor;
+
+  @media (max-width: $breakpointXL) {
+    padding: $spacesM;
+  }
+
+  @media (max-width: $breakpointL) {
+    width: auto;
+    position: static;
+    margin: 0 auto;
+    padding: $spacesS;
+  }
+}
+
+.title {
+  color: $mainColor;
+  text-transform: uppercase;
+  font-size: $fonstSizeS;
+  letter-spacing: $letterSpacing;
+
+  @media (max-width: $breakpointXL) {
+    font-size: $fonstSizeXS;
+  }
+}
+
+.header {
+  margin-top: $spacesS;
+  margin-bottom: $spacesS;
+
+  color: $mainColor;
+  font-weight: $fontWeightM;
+  font-size: $fonstSizeXL;
+  line-height: $lineHeightXL;
+
+  @media (max-width: $breakpointXL) {
+    margin-top: $spacesXS;
+    margin-bottom: $spacesXS;
+
+    line-height: normal;
+    font-size: $fonstSizeL;
+  }
+}
+
+.description {
+  margin-bottom: $spacesS;
+  color: $mainColor;
+  font-weight: $fontWeightS;
+  font-size: $fonstSizeM;
+  line-height: $lineHeightL;
+
+  @media (max-width: $breakpointXL) {
+    line-height: normal;
+    font-size: $fonstSizeS;
+  }
+}

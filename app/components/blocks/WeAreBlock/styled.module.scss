@@ -1,0 +1,46 @@
+@import '@/styles/global.scss';
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: $spacesL;
+
+  @media (max-width: $breakpointXL) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: $spacesXS;
+  }
+
+  @media (max-width: $breakpointL) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: $breakpointM) {
+    grid-template-columns: 1fr;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.info {
+  @media (max-width: $breakpointXL) {
+    text-align: center;
+  }
+}
+
+.text {
+  margin-bottom: $spacesXXS;
+  font-size: $fonstSizeS;
+  color: $lightTextColor;
+}
+
+.bold {
+  font-size: $fonstSizeS;
+  font-weight: $fontWeightL;
+  color: $lightTextColor;
+}
+
+.logo {
+  text-align: center;
+}

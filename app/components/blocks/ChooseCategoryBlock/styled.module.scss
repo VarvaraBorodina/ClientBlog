@@ -1,0 +1,36 @@
+@import '@/styles/global.scss';
+
+.container {
+  margin: $spacesL $spacesXL;
+  @media (max-width: $breakpointXL) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.header {
+  text-align: center;
+  font-weight: $fontWeightL;
+  font-size: $fonstSizeXL;
+
+  @media (max-width: $breakpointM) {
+    font-size: $fonstSizeL;
+  }
+}
+
+.categories {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  @media (max-width: $breakpointXXL) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: $spacesXS;
+  }
+
+  @media (max-width: $breakpointL) {
+    grid-template-columns: 1fr;
+  }
+}

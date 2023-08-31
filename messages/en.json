@@ -22,5 +22,59 @@
     "Subscribe error": "Subscribe error",
     "Invalid email": "Invalid email",
     "Email placeholder": "Enter Your Email"
+  },
+
+  "Home": {
+    "Posted": "Posted on",
+    "Post alt": "Post picture",
+    "By": "By ",
+    "Read more": "Read more >",
+    "Feature Post": "Feature Post",
+    "View all": "View all",
+    "About us": "About us",
+    "Our mision": "Our mision",
+    "About title": "We are a community of content writers who share their learnings",
+    "Mision title": "Creating valuable content for creatives all around the world",
+    "About text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    "Mision text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+    "Choose A Catagory": "Choose A Catagory",
+    "We started": "Why we started",
+    "We started header": "It started out as a simple idea and evolved into our passion",
+    "We started text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+    "Discover": "Discover our story >",
+    "Authors": "List of Authors",
+    "Content Writer": "Content Writer",
+    "We": "We are",
+    "Featured in": "Featured in",
+    "Join header": "Join our team to be a part of our story",
+    "Join text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    "Join button": "Join now"
+  },
+
+  "Categories": {
+    "Business": "Business",
+    "Economy": "Economy",
+    "Technology": "Technology",
+    "Startup": "Startup",
+
+    "Business description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+    "Economy description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    "Technology description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+    "Startup description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+  },
+
+  "Monthes": {
+    "0": "January",
+    "1": "February",
+    "2": "March",
+    "3": "April",
+    "4": "May",
+    "5": "June",
+    "6": "July",
+    "7": "August",
+    "8": "September",
+    "9": "October",
+    "10": "November",
+    "11": "December"
   }
 }

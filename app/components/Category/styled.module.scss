@@ -1,0 +1,44 @@
+@import '@/styles/global.scss';
+
+.container {
+  width: $categoryWidth;
+  margin-top: $spacesM;
+  padding: $spacesS;
+  border: solid $borderWidth $postBorderColor;
+
+  &:hover {
+    background-color: $accentColor;
+  }
+  cursor: pointer;
+
+  @media (max-width: $breakpointS) {
+    width: $categoryWidthSmall;
+  }
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: $iconHeight;
+  width: $iconHeight;
+  margin-bottom: $spacesS;
+
+  border-radius: $spacesXXS;
+  background-color: $lightAccentColor;
+}
+
+.title {
+  color: $mainColor;
+  margin-bottom: $spacesXS;
+
+  font-size: $fonstSizeL;
+  font-weight: $fontWeightL;
+}
+
+.description {
+  color: $lightTextColor;
+
+  font-size: $fonstSizeM;
+  line-height: $lineHeightL;
+}
