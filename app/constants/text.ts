@@ -22,6 +22,15 @@ export const TEXT = {
   POSTED: 'Posted',
   BY: 'By',
   READ_MORE: 'Read more',
+  FEATURE_POST: 'Feature Post',
+  VIEW_ALL: 'View all',
+  ABOUT_US: 'About us',
+  MISION: 'Our mision',
+  ABOUT_US_TITLE: 'About title',
+  ABOUT_TEXT: 'About text',
+  MISION_TITLE: 'Mision title',
+  MISION_TEXT: 'Mision text',
+  CHOOSE_CATEGORY: 'Choose A Catagory',
 
   POST_ALT: 'Post alt',
 };

@@ -1,0 +1,55 @@
+@import '@/styles/global.scss';
+
+.image {
+  width: 100%;
+  height: $postImageHeight;
+  object-fit: cover;
+}
+
+.infoContainer {
+  display: flex;
+}
+
+.info {
+  padding-top: $spacesS;
+  margin-bottom: $spacesS;
+  color: $mediumTextColor;
+  font-size: $fonstSizeS;
+  @media (max-width: $breakpointL) {
+    margin-bottom: $spacesXXS;
+  }
+  @media (max-width: $breakpointM) {
+    font-size: $fonstSizeXS;
+  }
+}
+
+.accent {
+  color: $linkColor;
+  cursor: pointer;
+}
+
+.title {
+  color: $mainColor;
+  font-size: $fonstSizeL;
+  font-weight: $fontWeightL;
+  line-height: $lineHeightL;
+
+  @media (max-width: $breakpointM) {
+    font-size: $fonstSizeS;
+    line-height: $lineHeightS;
+  }
+}
+
+.description {
+  margin-top: $spacesS;
+  margin-bottom: $spacesS;
+
+  color: $lightTextColor;
+  font-size: $fonstSizeM;
+  font-weight: $fontWeightS;
+  line-height: $lineHeightS;
+
+  @media (max-width: $breakpointM) {
+    font-size: $fonstSizeXS;
+  }
+}

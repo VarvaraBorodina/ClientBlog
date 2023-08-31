@@ -1,0 +1,103 @@
+@import '@/styles/global.scss';
+
+.container {
+  margin: $spacesL;
+
+  @media (max-width: $breakpointM) {
+    margin-left: $spacesXS;
+    margin-right: $spacesXS;
+  }
+}
+
+.lines {
+  display: flex;
+
+  justify-content: flex-end;
+}
+
+.lightLine {
+  width: 55%;
+  height: $lineHeight;
+  background-color: $accentColor;
+}
+
+.darckLine {
+  width: 25%;
+  height: $lineHeight;
+  background-color: $linkColor;
+}
+
+.background {
+  padding: $spacesL;
+  background-color: $lightLinkColor;
+
+  @media (max-width: $breakpointL) {
+    padding-left: $spacesM;
+    padding-right: $spacesM;
+  }
+
+  @media (max-width: $breakpointM) {
+    padding-left: $spacesXS;
+    padding-right: $spacesXS;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $breakpointL) {
+    flex-direction: column;
+  }
+}
+
+.info {
+  width: 50%;
+  margin-right: $spacesM;
+  @media (max-width: $breakpointL) {
+    width: 100%;
+  }
+}
+
+.title {
+  color: $mainColor;
+  text-transform: uppercase;
+  font-size: $fonstSizeS;
+  letter-spacing: $letterSpacing;
+  @media (max-width: $breakpointL) {
+    font-size: $fonstSizeXS;
+  }
+}
+
+.header {
+  margin-top: $spacesS;
+  margin-bottom: $spacesS;
+
+  color: $mainColor;
+  font-weight: $fontWeightM;
+  font-size: $fonstSizeXL;
+  line-height: $lineHeightXL;
+
+  @media (max-width: $breakpointL) {
+    line-height: normal;
+    font-size: $fonstSizeL;
+  }
+}
+
+.description {
+  margin-bottom: $spacesS;
+  color: $mainColor;
+  font-weight: $fontWeightS;
+  font-size: $fonstSizeM;
+  line-height: $lineHeightL;
+
+  @media (max-width: $breakpointL) {
+    line-height: normal;
+    font-size: $fonstSizeS;
+  }
+}
+
+.link {
+  color: $linkColor;
+  font-weight: $fontWeightL;
+}

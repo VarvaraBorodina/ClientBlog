@@ -2,25 +2,25 @@
   {
     "id": 0,
     "name": "Business",
-    "icon": "",
-    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+    "icon": "BUSINESS",
+    "description": "Business description"
   },
   {
     "id": 1,
     "name": "Startup",
-    "icon": "",
-    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+    "icon": "STARTUP",
+    "description": "Economy description"
   },
   {
     "id": 2,
     "name": "Economy",
-    "icon": "",
-    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+    "icon": "ECONOMY",
+    "description": "Technology description"
   },
   {
     "id": 3,
     "name": "Technology",
-    "icon": "",
-    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+    "icon": "TECHNOLOGY",
+    "description": "Startup description"
   }
 ]
