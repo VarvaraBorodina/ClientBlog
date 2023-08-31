@@ -17,6 +17,7 @@
     "@typescript-eslint/comma-dangle": "off",
     "operator-linebreak": "off",
     "object-curly-newline": "off",
-    "@next/next/no-img-element": "off"
+    "@next/next/no-img-element": "off",
+    "react/no-array-index-key": "off"
   }
 }

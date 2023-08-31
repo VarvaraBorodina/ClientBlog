@@ -43,7 +43,12 @@
     "We started text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
     "Discover": "Discover our story >",
     "Authors": "List of Authors",
-    "Content Writer": "Content Writer"
+    "Content Writer": "Content Writer",
+    "We": "We are",
+    "Featured in": "Featured in",
+    "Join header": "Join our team to be a part of our story",
+    "Join text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    "Join button": "Join now"
   },
 
   "Categories": {

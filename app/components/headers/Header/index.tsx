@@ -52,8 +52,8 @@ export const Header = () => {
       <h1 className={styles.header}>{HEADER}</h1>
       <div className={styles.content}>
         <nav className={styles.navigation}>
-          {ROUTE.map(({ name, path }, index) => {
-            if (index !== ROUTE.length - 1) {
+          {Object.values(ROUTE).map(({ name, path }, index) => {
+            if (index !== Object.values(ROUTE).length - 1) {
               return (
                 <Link
                   className={`${styles.link} ${absolutePath === path && styles.currentLink}`}
@@ -83,7 +83,7 @@ export const Header = () => {
           <button type="button" className={styles.imgButton} onClick={toggleLeftSideBar}>
             {CLOSE}
           </button>
-          {ROUTE.map(({ name, path }) => (
+          {Object.values(ROUTE).map(({ name, path }) => (
             <Link
               className={`${styles.link} ${absolutePath === path && styles.currentLink}`}
               href={path}

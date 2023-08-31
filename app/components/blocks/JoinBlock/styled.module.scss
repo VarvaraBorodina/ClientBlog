@@ -1,0 +1,33 @@
+@import '@/styles/global.scss';
+
+.container {
+  margin: 0 auto;
+  margin-top: $spacesL;
+  margin-bottom: $spacesL;
+  width: $joinWidth;
+  text-align: center;
+
+  @media (max-width: $breakpointM) {
+    width: 100%;
+  }
+}
+
+.header {
+  margin-bottom: $spacesS;
+  font-weight: $fontWeightL;
+  font-size: $fonstSizeXL;
+
+  @media (max-width: $breakpointM) {
+    font-size: $fonstSizeL;
+  }
+}
+
+.text {
+  margin-bottom: $spacesS;
+
+  font-weight: $fontWeightS;
+  font-size: $fonstSizeS;
+  line-height: $lineHeightL;
+
+  color: $lightTextColor;
+}

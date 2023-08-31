@@ -37,6 +37,11 @@ export const TEXT = {
   DISCOVER: 'Discover',
   AUTHORS: 'Authors',
   WRITTER: 'Content Writer',
+  WE: 'We',
+  FEATURED_IN: 'Featured in',
+  JOIN_HEADER: 'Join header',
+  JOIN_TEXT: 'Join text',
+  JOUN_BUTTON: 'Join button',
 
   POST_ALT: 'Post alt',
 };

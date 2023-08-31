@@ -81,7 +81,7 @@ export const Footer = () => {
       <div className={styles.header}>
         <h6 className={styles.title}>{TEXT.HEADER}</h6>
         <nav className={styles.navigation}>
-          {ROUTE.map(({ name, path }) => (
+          {Object.values(ROUTE).map(({ name, path }) => (
             <Link href={path} key={name} className={styles.link}>
               {translateRoutes(name)}
             </Link>

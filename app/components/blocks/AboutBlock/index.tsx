@@ -2,11 +2,12 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
-import { TEXT } from '@/constants';
+import { ROUTE, TEXT } from '@/constants';
 
 import styles from './styled.module.scss';
 
 const { ABOUT_US, MISION, READ_MORE, ABOUT_US_TITLE, MISION_TITLE, ABOUT_TEXT, MISION_TEXT } = TEXT;
+const { ABOUT } = ROUTE;
 
 export const AboutBlock = () => {
   const translate = useTranslations('Home');
@@ -30,7 +31,7 @@ export const AboutBlock = () => {
             <p className={styles.description}>{translate(MISION_TEXT)}</p>
           </div>
         </div>
-        <Link href="/" className={styles.link}>
+        <Link href={ABOUT.path} className={styles.link}>
           {translate(READ_MORE)}
         </Link>
       </div>
