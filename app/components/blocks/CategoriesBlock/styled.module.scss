@@ -9,12 +9,16 @@
 }
 
 .header {
-  text-align: center;
+  margin-left: $spacesXXS;
   font-weight: $fontWeightL;
   font-size: $fonstSizeXL;
 
   @media (max-width: $breakpointM) {
     font-size: $fonstSizeL;
+  }
+  @media (max-width: $breakpointXXL) {
+    width: $categoryWidth;
+    margin: 0 auto;
   }
 }
 
