@@ -1,0 +1,60 @@
+@import '@/styles/global.scss';
+
+.container {
+  margin: $spacesL $spacesXL;
+
+  @media (max-width: $breakpointXXL) {
+    margin: $spacesL;
+  }
+
+  @media (max-width: $breakpointM) {
+    margin: $spacesS;
+  }
+}
+
+.line {
+  width: 100%;
+  height: $borderWidth;
+
+  margin-top: $spacesM;
+  margin-bottom: $spacesM;
+
+  background-color: $postBorderColor;
+}
+
+.header {
+  color: $mainColor;
+
+  font-size: $fonstSizeXL;
+  font-weight: $fontWeightL;
+}
+
+.posts {
+  margin-right: $spacesL;
+
+  @media (max-width: $breakpointXXL) {
+    margin-right: 0;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  width: $categoryWidth;
+  margin: 0 auto;
+}
+
+.button {
+  font-size: $fonstSizeL;
+  font-weight: $fontWeightL;
+
+  background-color: $textColor;
+  color: $mainColor;
+
+  cursor: pointer;
+
+  &:disabled {
+    font-size: $fonstSizeS;
+    color: $lightTextColor;
+  }
+}

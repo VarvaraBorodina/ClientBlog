@@ -10,7 +10,7 @@ import { Author, Post } from '@/types';
 
 import styles from './styled.module.scss';
 
-const FEATURE_POST_INDEX = 1;
+const FEATURE_POST_INDEX = 2;
 
 const { BY, READ_MORE, FEATURE_POST } = TEXT;
 

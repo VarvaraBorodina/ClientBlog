@@ -47,6 +47,9 @@ export const TEXT = {
   TESTIMONIAL_TITLE: 'TESTIMONIAL title',
 
   ALL_CATEGORIES: 'All Categories',
+  ALL_POST: 'All posts',
+  NEXT: 'Next >',
+  PREV: 'Prev >',
 
   POST_ALT: 'Post alt',
 };

@@ -19,27 +19,41 @@
     "author": 1,
     "creationDate": {
       "month": 4,
+      "day": 10,
+      "year": 2023
+    },
+    "title": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+    "content": "",
+    "image": "/img/posts/1838640.jpg"
+  },
+  {
+    "id": 6,
+    "category": 2,
+    "author": 1,
+    "creationDate": {
+      "month": 4,
       "day": 12,
       "year": 2022
     },
-    "title": "Step-by-step guide to choosing great font pairs.",
+    "title": "Design tips for designers that cover everything you need",
     "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
     "content": "",
     "image": "/img/posts/840996.jpg"
   },
   {
     "id": 2,
-    "category": 2,
+    "category": 3,
     "author": 4,
     "creationDate": {
       "month": 11,
       "day": 19,
       "year": 2022
     },
-    "title": "8 Figma design systems that you can download for free today.",
+    "title": "How to build rapport with your web design clients",
     "description": "8 Figma design systems that you can download for free today.",
     "content": "",
-    "image": "/img/posts/3772622.jpg"
+    "image": "/img/posts/3183197.jpg"
   },
   {
     "id": 3,
@@ -50,28 +64,70 @@
       "day": 2,
       "year": 2023
     },
-    "title": "8 Figma design systems that you can download for free today.",
+    "title": "Logo design trends to avoid in 2022",
     "description": "8 Figma design systems that you can download for free today.",
     "content": "",
-    "image": "/img/posts/3772622.jpg"
+    "image": "/img/posts/1181533.jpg"
   },
   {
     "id": 4,
-    "category": 3,
+    "category": 1,
     "author": 1,
     "creationDate": {
       "month": 2,
       "day": 31,
       "year": 2023
     },
-    "title": "Excepteur sint occaecat cupidatat non proident.",
+    "title": "8 Figma design systems you can download for free todays",
     "description": "Excepteur sint occaecat cupidatat non proident.",
+    "content": "",
+    "image": "/img/posts/3184405.jpg"
+  },
+  {
+    "id": 5,
+    "category": 2,
+    "author": 1,
+    "creationDate": {
+      "month": 4,
+      "day": 10,
+      "year": 2023
+    },
+    "title": "Font sizes in UI design: The complete guide to follow",
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+    "content": "",
+    "image": "/img/posts/3183173.jpg"
+  },
+  {
+    "id": 7,
+    "category": 0,
+    "author": 1,
+    "creationDate": {
+      "month": 4,
+      "day": 10,
+      "year": 2023
+    },
+    "title": "Font sizes in UI design: The complete guide to follow",
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+    "content": "",
+    "image": "/img/posts/3182811.jpg"
+  },
+  {
+    "id": 10,
+    "category": 1,
+    "author": 0,
+    "creationDate": {
+      "month": 7,
+      "day": 1,
+      "year": 2023
+    },
+    "title": "Step-by-step guide to choosing great font pairs",
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
     "content": "",
     "image": "/img/posts/3772622.jpg"
   },
   {
-    "id": 1,
-    "category": 2,
+    "id": 11,
+    "category": 0,
     "author": 1,
     "creationDate": {
       "month": 4,
@@ -82,5 +138,89 @@
     "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
     "content": "",
     "image": "/img/posts/1838640.jpg"
+  },
+  {
+    "id": 16,
+    "category": 2,
+    "author": 1,
+    "creationDate": {
+      "month": 4,
+      "day": 12,
+      "year": 2022
+    },
+    "title": "Design tips for designers that cover everything you need",
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+    "content": "",
+    "image": "/img/posts/840996.jpg"
+  },
+  {
+    "id": 12,
+    "category": 3,
+    "author": 4,
+    "creationDate": {
+      "month": 11,
+      "day": 19,
+      "year": 2022
+    },
+    "title": "How to build rapport with your web design clients",
+    "description": "8 Figma design systems that you can download for free today.",
+    "content": "",
+    "image": "/img/posts/3183197.jpg"
+  },
+  {
+    "id": 13,
+    "category": 3,
+    "author": 3,
+    "creationDate": {
+      "month": 6,
+      "day": 2,
+      "year": 2023
+    },
+    "title": "Logo design trends to avoid in 2022",
+    "description": "8 Figma design systems that you can download for free today.",
+    "content": "",
+    "image": "/img/posts/1181533.jpg"
+  },
+  {
+    "id": 14,
+    "category": 1,
+    "author": 1,
+    "creationDate": {
+      "month": 2,
+      "day": 31,
+      "year": 2023
+    },
+    "title": "8 Figma design systems you can download for free todays",
+    "description": "Excepteur sint occaecat cupidatat non proident.",
+    "content": "",
+    "image": "/img/posts/3184405.jpg"
+  },
+  {
+    "id": 15,
+    "category": 0,
+    "author": 1,
+    "creationDate": {
+      "month": 4,
+      "day": 10,
+      "year": 2023
+    },
+    "title": "Font sizes in UI design: The complete guide to follow",
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+    "content": "",
+    "image": "/img/posts/3183173.jpg"
+  },
+  {
+    "id": 16,
+    "category": 2,
+    "author": 1,
+    "creationDate": {
+      "month": 4,
+      "day": 10,
+      "year": 2023
+    },
+    "title": "Font sizes in UI design: The complete guide to follow",
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+    "content": "",
+    "image": "/img/posts/3182811.jpg"
   }
 ]

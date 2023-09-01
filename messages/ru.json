@@ -53,7 +53,9 @@
   },
 
   "Blog": {
-    "All Categories": "Все категории"
+    "All posts": "Все посты",
+    "Next >": "Вперед >",
+    "Prev >": "< Назад"
   },
 
   "Categories": {
