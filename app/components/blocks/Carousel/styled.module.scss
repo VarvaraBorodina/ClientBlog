@@ -1,0 +1,173 @@
+@import '@/styles/global.scss';
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: $spacesL $spacesXL;
+  padding: $spacesL;
+
+  background-color: $lightAccentColor;
+
+  @media (max-width: $breakpointXL) {
+    flex-direction: column;
+  }
+
+  @media (max-width: $breakpointL) {
+    padding: $spacesL $spacesS;
+    margin: $spacesL $spacesS;
+  }
+}
+
+.info {
+  width: $aside;
+  @media (max-width: $breakpointXL) {
+    width: 100%;
+  }
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-width: 100%;
+  height: 100%;
+}
+
+.title {
+  color: $mainColor;
+  text-transform: uppercase;
+  font-size: $fonstSizeS;
+  letter-spacing: $letterSpacing;
+
+  @media (max-width: $breakpointXL) {
+    font-size: $fonstSizeXS;
+  }
+}
+
+.header {
+  margin-top: $spacesS;
+  margin-bottom: $spacesS;
+
+  color: $mainColor;
+  font-weight: $fontWeightM;
+  font-size: $fonstSizeXL;
+  line-height: $lineHeightXL;
+
+  @media (max-width: $breakpointXL) {
+    margin-top: $spacesXS;
+    margin-bottom: $spacesXS;
+
+    line-height: normal;
+    font-size: $fonstSizeL;
+  }
+
+  @media (max-width: $breakpointM) {
+    font-size: $fonstSizeS;
+  }
+}
+
+.description {
+  margin-bottom: $spacesL;
+  color: $mainColor;
+  font-weight: $fontWeightS;
+  font-size: $fonstSizeM;
+  line-height: $lineHeightL;
+
+  @media (max-width: $breakpointXL) {
+    margin-bottom: $spacesM;
+  }
+
+  @media (max-width: $breakpointM) {
+    font-size: $fonstSizeS;
+    line-height: $lineHeightS;
+  }
+}
+
+.line {
+  width: $borderWidth;
+
+  background-color: $postBorderColor;
+
+  @media (max-width: $breakpointXL) {
+    display: none;
+  }
+}
+
+.text {
+  color: $mainColor;
+  font-weight: $fontWeightM;
+  font-size: $fonstSizeL;
+  line-height: $lineHeightL;
+  @media (max-width: $breakpointXL) {
+    margin-bottom: $spacesM;
+  }
+
+  @media (max-width: $breakpointM) {
+    font-size: $fonstSizeS;
+  }
+
+  @media (max-width: $breakpointS) {
+    font-size: $fonstSizeXS;
+    line-height: $lineHeightS;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: $breakpointM) {
+    flex-direction: column;
+  }
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.userInfo {
+  margin-left: $spacesXS;
+}
+
+.name {
+  color: $mainColor;
+  margin-bottom: $spacesXXS;
+  font-size: $fonstSizeM;
+  font-weight: $fontWeightL;
+
+  @media (max-width: $breakpointM) {
+    font-size: $fonstSizeXS;
+  }
+}
+
+.city {
+  color: $lightTextColor;
+  @media (max-width: $breakpointM) {
+    font-size: $fonstSizeXS;
+  }
+}
+
+.button {
+  background-color: $lightAccentColor;
+  cursor: pointer;
+}
+
+.slider {
+  width: 100%;
+  display: flex;
+  height: 100%;
+  transition: transform 1s;
+}
+
+.window {
+  overflow: hidden;
+
+  width: 50%;
+
+  margin: 0 auto;
+
+  @media (max-width: $breakpointXL) {
+    width: 100%;
+  }
+}
