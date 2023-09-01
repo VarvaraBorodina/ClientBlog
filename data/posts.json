@@ -11,7 +11,7 @@
     "title": "Step-by-step guide to choosing great font pairs",
     "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
     "content": "",
-    "image": "/img/3772622.jpg"
+    "image": "/img/posts/3772622.jpg"
   },
   {
     "id": 1,
@@ -19,13 +19,13 @@
     "author": 1,
     "creationDate": {
       "month": 4,
-      "day": 10,
-      "year": 2023
+      "day": 12,
+      "year": 2022
     },
-    "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "title": "Step-by-step guide to choosing great font pairs.",
     "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
     "content": "",
-    "image": "/img/1838640.jpg"
+    "image": "/img/posts/840996.jpg"
   },
   {
     "id": 2,
@@ -39,7 +39,7 @@
     "title": "8 Figma design systems that you can download for free today.",
     "description": "8 Figma design systems that you can download for free today.",
     "content": "",
-    "image": "/img/3772622.jpg"
+    "image": "/img/posts/3772622.jpg"
   },
   {
     "id": 3,
@@ -53,7 +53,7 @@
     "title": "8 Figma design systems that you can download for free today.",
     "description": "8 Figma design systems that you can download for free today.",
     "content": "",
-    "image": "/img/3772622.jpg"
+    "image": "/img/posts/3772622.jpg"
   },
   {
     "id": 4,
@@ -67,6 +67,20 @@
     "title": "Excepteur sint occaecat cupidatat non proident.",
     "description": "Excepteur sint occaecat cupidatat non proident.",
     "content": "",
-    "image": "/img/3772622.jpg"
+    "image": "/img/posts/3772622.jpg"
+  },
+  {
+    "id": 1,
+    "category": 2,
+    "author": 1,
+    "creationDate": {
+      "month": 4,
+      "day": 10,
+      "year": 2023
+    },
+    "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+    "content": "",
+    "image": "/img/posts/1838640.jpg"
   }
 ]

@@ -37,7 +37,6 @@
     "Mision title": "Creating valuable content for creatives all around the world",
     "About text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     "Mision text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-    "Choose A Catagory": "Choose A Catagory",
     "We started": "Why we started",
     "We started header": "It started out as a simple idea and evolved into our passion",
     "We started text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
@@ -55,6 +54,9 @@
   },
 
   "Categories": {
+    "All Categories": "All Categories",
+    "Choose A Catagory": "Choose A Catagory",
+
     "Business": "Business",
     "Economy": "Economy",
     "Technology": "Technology",
