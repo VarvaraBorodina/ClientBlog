@@ -4,12 +4,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: $spacesL;
+  margin: $spacesXL;
 
   @media (max-width: $breakpointXL) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: $spacesXS;
+    margin: $spacesL;
   }
 
   @media (max-width: $breakpointL) {

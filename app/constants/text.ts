@@ -42,6 +42,9 @@ export const TEXT = {
   JOIN_HEADER: 'Join header',
   JOIN_TEXT: 'Join text',
   JOUN_BUTTON: 'Join button',
+  TESTIMONIAL: 'TESTIMONIAL',
+  TESTIMONIAL_TEXT: 'TESTIMONIAL text',
+  TESTIMONIAL_TITLE: 'TESTIMONIAL title',
 
   POST_ALT: 'Post alt',
 };

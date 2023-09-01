@@ -48,7 +48,10 @@
     "Featured in": "Featured in",
     "Join header": "Join our team to be a part of our story",
     "Join text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-    "Join button": "Join now"
+    "Join button": "Join now",
+    "TESTIMONIAL": "TESTIMONIAL",
+    "TESTIMONIAL text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "TESTIMONIAL title": "What people say about our blog"
   },
 
   "Categories": {
