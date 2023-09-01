@@ -53,6 +53,12 @@
     "TESTIMONIAL title": "What people say about our blog"
   },
 
+  "Blog": {
+    "All posts": "All posts",
+    "Next >": "Next >",
+    "Prev >": "< Prev"
+  },
+
   "Categories": {
     "All Categories": "All Categories",
     "Choose A Catagory": "Choose A Catagory",
