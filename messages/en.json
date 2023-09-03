@@ -61,7 +61,11 @@
   "Blog": {
     "All posts": "All posts",
     "Next >": "Next >",
-    "Prev >": "< Prev"
+    "Prev >": "< Prev",
+    "My posts": "My posts",
+    "No posts": "No posts yet",
+    "Hello": "Hey there, I’m ",
+    "Welcom": " and welcome to my Blog"
   },
 
   "About": {
@@ -108,5 +112,9 @@
     "9": "October",
     "10": "November",
     "11": "December"
+  },
+
+  "Not found": {
+    "Not found": "Not found"
   }
 }

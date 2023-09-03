@@ -8,7 +8,8 @@ import IntlLink from 'next-intl/link';
 import React, { useState } from 'react';
 import * as yup from 'yup';
 
-import { ICONS, ROUTE, TEXT } from '@/constants';
+import { Networks } from '@/components/Networks';
+import { ROUTE, TEXT } from '@/constants';
 import { CONFIG } from '@/constants/config';
 import commonStyles from '@/styles/common.module.scss';
 import { transformPath } from '@/utils';
@@ -29,7 +30,6 @@ const {
 
 const { NEXT_PUBLIC_EMAIL_KEY, NEXT_PUBLIC_EMAIL_SERVICE_ID, NEXT_PUBLIC_EMAIL_TEMPLATE_ID } =
   CONFIG;
-const { INSTAGRAM, LINKED_IN, FACEBOOK, TWITTER } = ICONS;
 
 export const Footer = () => {
   const [email, setEmail] = useState<string>('');
@@ -114,11 +114,8 @@ export const Footer = () => {
           <p className={styles.contact}>{ADDRES}</p>
           <p className={styles.contact}>{EMAIL}</p>
         </div>
-        <div className={styles.social}>
-          {FACEBOOK}
-          {TWITTER}
-          {INSTAGRAM}
-          {LINKED_IN}
+        <div className={styles.networks}>
+          <Networks />
         </div>
       </div>
     </footer>

@@ -40,16 +40,3 @@
   color: $lightTextColor;
   font-size: $fonstSizeS;
 }
-
-.social {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  margin-top: $spacesS;
-  width: $socialWidth;
-  svg {
-    path {
-      fill: $mainColor;
-    }
-  }
-}
