@@ -30,6 +30,8 @@ export const TEXT = {
   ABOUT_TEXT: 'About text',
   MISION_TITLE: 'Mision title',
   MISION_TEXT: 'Mision text',
+  VISION: 'Our vision',
+  VISION_TITLE: 'Vision title',
   CHOOSE_CATEGORY: 'Choose A Catagory',
   WE_STARTED: 'We started',
   WE_STARTED_HEADER: 'We started header',
@@ -46,10 +48,19 @@ export const TEXT = {
   TESTIMONIAL_TEXT: 'TESTIMONIAL text',
   TESTIMONIAL_TITLE: 'TESTIMONIAL title',
 
+  BLOG_PUBLISHED: 'Blog Published',
+  VIEW_FIN: 'Views on Finsweet',
+  ACTIVE_USER: 'Total active Users',
+
   ALL_CATEGORIES: 'All Categories',
   ALL_POST: 'All posts',
   NEXT: 'Next >',
   PREV: 'Prev >',
+
+  ABOUT_TEAM: 'About team',
+  ABOUT_BLOG: 'About blog',
+  ABOUT_SUBTITLE: 'About subtitle',
+  ABOUT_CONTENT: 'About text',
 
   POST_ALT: 'Post alt',
 };

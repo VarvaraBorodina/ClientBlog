@@ -3,21 +3,21 @@
     "id": "0",
     "user": "Jonathan Vallem",
     "city": "New york, USA",
-    "photo": "/img/1234567.png",
+    "photo": "/img/user.png",
     "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
   {
     "id": "2",
     "user": "Ivan Ivanov",
     "city": "Minsk, Belarus",
-    "photo": "/img/1234567.png",
+    "photo": "/img/user.png",
     "review": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
   },
   {
     "id": "3",
     "user": "Jenny Fox",
     "city": "London, the UK",
-    "photo": "/img/1234567.png",
+    "photo": "/img/user.png",
     "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   }
 ]

@@ -11,7 +11,7 @@
     "name": "Dianne",
     "lastName": "Russell",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
-    "photo": "/img/authors/5704849.jpg"
+    "photo": "/img/authors/6874674.jpg"
   },
   {
     "id": 7,
@@ -28,31 +28,32 @@
     "photo": "/img/authors/6205509.jpg"
   },
   {
-    "id": 1,
-    "name": "Jacob",
-    "lastName": "Jones",
+    "id": 5,
+    "name": "Guy",
+    "lastName": "Hawkins",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
-    "photo": "/img/authors/5704849.jpg"
+    "photo": "/img/authors/1212984.jpg"
   },
   {
     "id": 3,
     "name": "Eleanor",
     "lastName": "Pena",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
-    "photo": "https://www.pexels.com/photo/woman-in-white-and-black-striped-shirt-wearing-black-sunglasses-3671083/"
+    "photo": "/img/authors/4946382.jpg"
   },
-  {
-    "id": 5,
-    "name": "Guy",
-    "lastName": "Hawkins",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
-    "photo": "https://www.pexels.com/photo/man-in-yellow-button-up-shirt-wearing-black-framed-eyeglasses-7562313/"
-  },
+
   {
     "id": 6,
     "name": "Robert",
     "lastName": "Fox",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
-    "photo": "https://www.pexels.com/photo/man-in-yellow-button-up-shirt-wearing-black-framed-eyeglasses-7562313/"
+    "photo": "/img/authors/5262459.jpg"
+  },
+  {
+    "id": 1,
+    "name": "Jacob",
+    "lastName": "Jones",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
+    "photo": "/img/authors/6147118.jpg"
   }
 ]

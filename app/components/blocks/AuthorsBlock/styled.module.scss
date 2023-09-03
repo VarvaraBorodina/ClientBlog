@@ -1,7 +1,7 @@
 @import '@/styles/global.scss';
 
 .container {
-  margin: $spacesL $spacesXL;
+  margin: $spacesL;
   @media (max-width: $breakpointXL) {
     margin-left: 0;
     margin-right: 0;

@@ -1,0 +1,143 @@
+@import '@/styles/global.scss';
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin: $spacesL;
+
+  @media (max-width: $breakpointL) {
+    margin: $spacesS;
+    display: block;
+  }
+}
+
+.image {
+  width: $articleImageWidth;
+
+  @media (max-width: $breakpointXXL) {
+    width: $videoWidth;
+  }
+
+  @media (max-width: $breakpointXL) {
+    width: $featuredPost;
+  }
+
+  @media (max-width: $breakpointL) {
+    width: 100%;
+  }
+}
+
+.circle {
+  position: absolute;
+  bottom: -$shapeSize / 2;
+  left: $shapeSize;
+
+  width: $shapeSize;
+  height: $shapeSize;
+
+  background-color: $linkColor;
+  border-radius: 50%;
+
+  @media (max-width: $breakpointXL) {
+    display: none;
+  }
+}
+
+.rect {
+  position: absolute;
+  right: $articleImageWidth;
+  top: $spacesL;
+
+  width: $shapeSize;
+  height: $shapeSize;
+
+  background-color: $accentColor;
+  border-top-left-radius: 50%;
+
+  @media (max-width: $breakpointXXL) {
+    right: $videoWidth - $shapeSize / 2 + $spacesXS;
+  }
+
+  @media (max-width: $breakpointXL) {
+    display: none;
+  }
+}
+
+.content {
+  width: $descriptionWidth;
+  height: 100%;
+  margin-top: $spacesS;
+
+  @media (max-width: $breakpointL) {
+    width: 100%;
+  }
+}
+
+.marginLeft {
+  margin-left: $spacesM;
+  @media (max-width: $breakpointXL) {
+    margin-left: $spacesS;
+  }
+
+  @media (max-width: $breakpointL) {
+    margin-left: 0;
+  }
+}
+
+.title {
+  color: $mainColor;
+  font-weight: $fontWeightM;
+  font-size: $fonstSizeXL;
+  line-height: $lineHeightL;
+
+  @media (max-width: $breakpointXL) {
+    font-size: $fonstSizeL;
+    line-height: $lineHeightS;
+  }
+
+  @media (max-width: $breakpointL) {
+    font-size: $fonstSizeXS;
+    line-height: normal;
+  }
+}
+
+.subtitle {
+  margin-top: $spacesS;
+  margin-bottom: $spacesS;
+
+  color: $mainColor;
+  font-weight: $fontWeightM;
+  font-size: $fonstSizeL;
+  line-height: $lineHeightL;
+
+  @media (max-width: $breakpointXL) {
+    margin-top: $spacesXS;
+    margin-bottom: $spacesXS;
+
+    font-size: $fonstSizeM;
+    line-height: normal;
+  }
+
+  @media (max-width: $breakpointL) {
+    font-size: $fonstSizeS;
+  }
+}
+
+.description {
+  color: $mainColor;
+  font-weight: $fontWeightS;
+  font-size: $fonstSizeM;
+  line-height: $lineHeightL;
+
+  @media (max-width: $breakpointXXL) {
+    font-size: $fonstSizeS;
+    line-height: $lineHeightS;
+  }
+
+  @media (max-width: $breakpointL) {
+    font-size: $fonstSizeXS;
+    line-height: normal;
+  }
+}
