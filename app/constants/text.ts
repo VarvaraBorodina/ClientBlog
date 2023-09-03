@@ -70,4 +70,11 @@ export const TEXT = {
   POLICY_TITLE_BOTTOM: 'Policy title bottom',
   POLICY_TEXT_TOP: 'Policy text top',
   POLICY_TEXT_BOTTOM: 'Policy text bottom',
+
+  MY_POSTS: 'My posts',
+  NO_POST: 'No posts',
+
+  NOT_FOUND: 'Not found',
+  HELLO: 'Hello',
+  WELCOM: 'Welcom',
 };

@@ -1,0 +1,116 @@
+@import '@/styles/global.scss';
+
+.content {
+  display: flex;
+  margin-bottom: $spacesL;
+  @media (max-width: $breakpointL) {
+    margin-bottom: $spacesS;
+  }
+  @media (max-width: $breakpointM) {
+    flex-direction: column;
+  }
+}
+
+.background {
+  padding-top: $spacesL;
+  padding-right: $spacesXXL;
+  padding-left: $spacesXXL;
+  background-color: $lightLinkColor;
+
+  @media (max-width: $breakpointXL) {
+    padding-right: $spacesL;
+    padding-left: $spacesL;
+  }
+
+  @media (max-width: $breakpointL) {
+    padding-right: $spacesS;
+    padding-left: $spacesS;
+    padding-top: $spacesS;
+  }
+}
+
+.image {
+  width: $authorImageWidth;
+  height: $authorImageHeight;
+  object-fit: cover;
+
+  @media (max-width: $breakpointM) {
+    width: 100%;
+    height: auto;
+    margin-bottom: $spacesS;
+  }
+}
+
+.authorInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: $spacesM;
+
+  @media (max-width: $breakpointL) {
+    margin-left: $spacesXS;
+  }
+
+  @media (max-width: $breakpointM) {
+    margin-left: 0;
+  }
+}
+
+.header {
+  margin-bottom: $spacesS;
+  color: $mainColor;
+  font-size: $fonstSizeXL;
+  font-weight: $fontWeightL;
+  line-height: $lineHeightXL;
+
+  @media (max-width: $breakpointL) {
+    margin-bottom: $spacesXXS;
+    font-size: $fonstSizeL;
+    line-height: normal;
+  }
+}
+
+.description {
+  margin-bottom: $spacesS;
+  color: $mediumTextColor;
+  font-size: $fonstSizeS;
+  font-weight: $fontWeightS;
+  line-height: $lineHeightL;
+
+  @media (max-width: $breakpointL) {
+    margin-bottom: 0;
+    font-size: $fonstSizeXS;
+    line-height: $lineHeightS;
+  }
+}
+
+.networks {
+  width: $socialWidth;
+  margin-left: 0;
+}
+
+.lines {
+  display: flex;
+  width: 100%;
+}
+
+.lightLine {
+  width: 75%;
+  height: $lineHeight;
+  background-color: $accentColor;
+}
+
+.darckLine {
+  width: 25%;
+  height: $lineHeight;
+  background-color: $linkColor;
+}
+
+.notFound {
+  margin-top: $spacesL;
+  margin-bottom: $spacesXL;
+  text-align: center;
+  color: $mainColor;
+
+  font-size: $fonstSizeXL;
+}

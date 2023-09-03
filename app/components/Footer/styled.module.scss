@@ -174,8 +174,12 @@
   color: $accentColor;
 }
 
-.social {
-  display: flex;
-  justify-content: space-between;
-  width: $socialWidth;
+.networks {
+  div {
+    svg {
+      path {
+        fill: $lightTextColor;
+      }
+    }
+  }
 }

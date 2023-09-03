@@ -1,6 +1,5 @@
 'use client';
 
-import posts from '@data/posts.json';
 import { useTranslations } from 'next-intl';
 import React, { useState } from 'react';
 
@@ -8,11 +7,12 @@ import { CategoryPost } from '@/components/posts/CategoryPost';
 import { TEXT } from '@/constants';
 
 import styles from './styled.module.scss';
+import { CategoryPostBlockType } from './types';
 
 const POST_PER_PAGE = 5;
-const { ALL_POST, PREV, NEXT } = TEXT;
+const { PREV, NEXT, NO_POST } = TEXT;
 
-export const CategoryPostsBlock = () => {
+export const CategoryPostsBlock = ({ title, posts }: CategoryPostBlockType) => {
   const translate = useTranslations('Blog');
 
   const [firstPost, setFirstPost] = useState(0);
@@ -33,31 +33,37 @@ export const CategoryPostsBlock = () => {
 
   return (
     <div className={styles.container}>
-      <h3 className={styles.header}>{translate(ALL_POST)}</h3>
+      <h3 className={styles.header}>{translate(title)}</h3>
       <div className={styles.line} />
-      <div className={styles.posts}>
-        {pagePosts.map((post) => (
-          <CategoryPost post={post} key={post.id} />
-        ))}
-      </div>
-      <div className={styles.buttons}>
-        <button
-          className={styles.button}
-          type="button"
-          onClick={onPrevClick}
-          disabled={firstPost === 0}
-        >
-          {translate(PREV)}
-        </button>
-        <button
-          className={styles.button}
-          type="button"
-          onClick={onNextClick}
-          disabled={firstPost + POST_PER_PAGE > posts.length}
-        >
-          {translate(NEXT)}
-        </button>
-      </div>
+      {!posts.length ? (
+        <p className={styles.notPosts}>{translate(NO_POST)}</p>
+      ) : (
+        <div className={styles.posts}>
+          {pagePosts.map((post) => (
+            <CategoryPost post={post} key={post.id} />
+          ))}
+        </div>
+      )}
+      {posts.length > POST_PER_PAGE && (
+        <div className={styles.buttons}>
+          <button
+            className={styles.button}
+            type="button"
+            onClick={onPrevClick}
+            disabled={firstPost === 0}
+          >
+            {translate(PREV)}
+          </button>
+          <button
+            className={styles.button}
+            type="button"
+            onClick={onNextClick}
+            disabled={firstPost + POST_PER_PAGE > posts.length}
+          >
+            {translate(NEXT)}
+          </button>
+        </div>
+      )}
     </div>
   );
 };

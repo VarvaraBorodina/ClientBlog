@@ -20,3 +20,7 @@ export const ROUTE = {
     path: '/policy',
   },
 };
+
+export const DINAMIC_ROUTES = {
+  AUTHOR: '/author',
+};
