@@ -1,0 +1,51 @@
+@import '@/styles/global.scss';
+
+.header {
+  text-align: center;
+
+  padding-top: $spacesL;
+  padding-bottom: $spacesL;
+
+  background-color: $lightLinkColor;
+}
+
+.title {
+  margin-bottom: $spacesS;
+  color: $mainColor;
+  font-size: $fonstSizeXL;
+  font-weight: $fontWeightL;
+
+  @media (max-width: $breakpointL) {
+    margin-bottom: $spacesXXS;
+    font-size: $fonstSizeL;
+  }
+}
+
+.text {
+  margin-bottom: $spacesS;
+  color: $mediumTextColor;
+  font-size: $fonstSizeS;
+  font-weight: $fontWeightS;
+  line-height: $lineHeightL;
+
+  @media (max-width: $breakpointL) {
+    font-size: $fonstSizeXS;
+    line-height: $lineHeightS;
+  }
+}
+
+.content {
+  width: $policyWidth;
+  margin: 0 auto;
+  margin-top: $spacesXL;
+  margin-bottom: $spacesXL;
+
+  @media (max-width: $breakpointL) {
+    width: auto;
+    margin: $spacesM;
+  }
+
+  @media (max-width: $breakpointM) {
+    margin: $spacesXS;
+  }
+}
