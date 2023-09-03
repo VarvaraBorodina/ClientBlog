@@ -63,4 +63,11 @@ export const TEXT = {
   ABOUT_CONTENT: 'About text',
 
   POST_ALT: 'Post alt',
+
+  PRIVACY_POLICY: 'Privacy Policy',
+  LAST_UPDATED: 'Last Updated',
+  POLICY_TITLE_TOP: 'Policy title top',
+  POLICY_TITLE_BOTTOM: 'Policy title bottom',
+  POLICY_TEXT_TOP: 'Policy text top',
+  POLICY_TEXT_BOTTOM: 'Policy text bottom',
 };
