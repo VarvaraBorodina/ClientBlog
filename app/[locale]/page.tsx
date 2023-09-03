@@ -21,7 +21,7 @@ const App = () => {
       <AboutBlock />
       <CategoriesBlock title={CHOOSE_CATEGORY} titleAlign="center" />
       <WhyWeStarted />
-      <AuthorsBlock />
+      <AuthorsBlock authorsAmount={4} />
       <WeAre />
       <Carousel />
       <JoinBlock />

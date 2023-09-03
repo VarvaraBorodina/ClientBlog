@@ -50,13 +50,25 @@
     "Join button": "Join now",
     "TESTIMONIAL": "TESTIMONIAL",
     "TESTIMONIAL text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-    "TESTIMONIAL title": "What people say about our blog"
+    "TESTIMONIAL title": "What people say about our blog",
+    "Our vision": "Our vision",
+    "Vision title": "A platform that empowers individuals to improve",
+    "Blog Published": "Blogs Published",
+    "Views on Finsweet": "Views on Finsweet",
+    "Total active Users": "Total active Users"
   },
 
   "Blog": {
     "All posts": "All posts",
     "Next >": "Next >",
     "Prev >": "< Prev"
+  },
+
+  "About": {
+    "About team": "Our team of creatives",
+    "About blog": "Why we started this Blog",
+    "About subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    "About text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat."
   },
 
   "Categories": {

@@ -10,9 +10,9 @@ import styles from './styled.module.scss';
 
 const { AUTHORS } = TEXT;
 
-export const AuthorsBlock = () => {
+export const AuthorsBlock = ({ authorsAmount }: { authorsAmount: number }) => {
   const translate = useTranslations('Home');
-  const mainAuthors: AuthorType[] = authors.slice(0, 4);
+  const mainAuthors: AuthorType[] = authors.slice(0, authorsAmount);
 
   return (
     <div className={styles.container}>
