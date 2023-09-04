@@ -5,13 +5,14 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
-import { TEXT } from '@/constants';
+import { DINAMIC_ROUTES, TEXT } from '@/constants';
 import commonStyles from '@/styles/common.module.scss';
 import { Author, Category, Post } from '@/types';
 
 import styles from './styled.module.scss';
 
 const { POST_ALT, POSTED, BY, READ_MORE } = TEXT;
+const { POST } = DINAMIC_ROUTES;
 
 export const HomePageHeader = () => {
   const post: Post = posts[0];
@@ -47,7 +48,7 @@ export const HomePageHeader = () => {
             </p>
           </div>
           <p className={styles.description}>{post.description}</p>
-          <Link href="/about" className={commonStyles.button}>
+          <Link href={`${POST}/${post.id}`} className={commonStyles.button}>
             {`${translate(READ_MORE)}`}
           </Link>
         </div>

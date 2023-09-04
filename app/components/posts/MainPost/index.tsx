@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
-import { TEXT } from '@/constants';
+import { DINAMIC_ROUTES, TEXT } from '@/constants';
 import commonStyles from '@/styles/common.module.scss';
 import { Author, Post } from '@/types';
 
@@ -13,6 +13,7 @@ import styles from './styled.module.scss';
 const FEATURE_POST_INDEX = 2;
 
 const { BY, READ_MORE, FEATURE_POST } = TEXT;
+const { POST } = DINAMIC_ROUTES;
 
 export const MainPost = () => {
   const translate = useTranslations('Home');
@@ -35,7 +36,7 @@ export const MainPost = () => {
           {` | ${translateMonth(String(month))} ${day}, ${year}`}
         </p>
         <p className={styles.description}>{description}</p>
-        <Link href="/about" className={commonStyles.button}>
+        <Link href={`${POST}/${post.id}`} className={commonStyles.button}>
           {`${translate(READ_MORE)}`}
         </Link>
       </div>

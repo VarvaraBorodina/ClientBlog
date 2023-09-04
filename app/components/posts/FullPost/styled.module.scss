@@ -1,0 +1,81 @@
+@import '@/styles/global.scss';
+
+.container {
+  margin: $spacesL;
+}
+
+.postInfo {
+  width: $policyWidth;
+  margin: 0 auto;
+}
+
+.info {
+  display: flex;
+}
+
+.authorImage {
+  width: $authorSmallImage;
+  height: $authorSmallImage;
+  object-fit: cover;
+
+  border-radius: 50%;
+}
+
+.authorInfo {
+  align-self: center;
+  margin-left: $spacesXS;
+}
+
+.author {
+  margin-bottom: $spacesXXS;
+  color: $linkColor;
+  font-size: $fonstSizeM;
+  font-weight: $fontWeightL;
+}
+
+.date {
+  color: $lightTextColor;
+  font-size: $fonstSizeXS;
+}
+
+.postTitle {
+  margin-top: $spacesS;
+  color: $mainColor;
+  font-size: $fonstSizeXL;
+  font-weight: $fontWeightL;
+  line-height: $lineHeightXL;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  margin-top: $spacesS;
+  margin-bottom: $spacesM;
+}
+
+.categoryName {
+  color: $mainColor;
+  font-size: $fonstSizeM;
+  font-weight: $fontWeightL;
+}
+
+.postImage {
+  width: 100%;
+  max-height: $articleImageWidth;
+  object-fit: cover;
+}
+
+.description {
+  margin-top: $spacesM;
+  margin-bottom: $spacesS;
+  color: $mainColor;
+  font-size: $fonstSizeL;
+  font-weight: $fontWeightL;
+  line-height: $lineHeightL;
+}
+
+.text {
+  color: $lightTextColor;
+  font-size: $fonstSizeS;
+  line-height: $lineHeightL;
+}
