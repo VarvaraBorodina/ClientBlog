@@ -45,9 +45,9 @@
   margin-bottom: $spacesS;
 
   color: $lightTextColor;
-  font-size: $fonstSizeM;
+  font-size: $fonstSizeS;
   font-weight: $fontWeightS;
-  line-height: $lineHeightS;
+  line-height: $lineHeightL;
 
   @media (max-width: $breakpointM) {
     font-size: $fonstSizeXS;

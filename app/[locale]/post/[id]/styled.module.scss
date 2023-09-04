@@ -1,0 +1,21 @@
+@import '@/styles/global.scss';
+
+.title {
+  margin: $spacesM $spacesL;
+  color: $mainColor;
+  font-size: $fonstSizeXL;
+  font-weight: $fontWeightL;
+  line-height: $lineHeightL;
+}
+
+.container {
+  display: flex;
+  gap: $spacesS;
+  margin: $spacesM $spacesL;
+}
+
+.line {
+  height: $borderWidth;
+  margin: $spacesM $spacesL;
+  background-color: $postBorderColor;
+}

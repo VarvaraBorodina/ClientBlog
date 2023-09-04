@@ -1,13 +1,15 @@
 import authors from '@data/authors.json';
+import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
-import { TEXT } from '@/constants';
+import { DINAMIC_ROUTES, TEXT } from '@/constants';
 import { Author, Post } from '@/types';
 
 import styles from './styled.module.scss';
 
 const { BY } = TEXT;
+const { POST } = DINAMIC_ROUTES;
 
 export const ShortcutPost = ({ post, full }: { post: Post; full: boolean }) => {
   const postAuthor = authors.find((author: Author) => author.id === post.author);
@@ -17,7 +19,7 @@ export const ShortcutPost = ({ post, full }: { post: Post; full: boolean }) => {
   const { day, year, month } = post.creationDate;
 
   return (
-    <div className={styles.container}>
+    <Link className={styles.container} href={`${POST}/${post.id}`}>
       {full && <img src={post.image} alt="post" className={styles.image} />}
       <p className={styles.info}>
         {translate(BY)}
@@ -26,6 +28,6 @@ export const ShortcutPost = ({ post, full }: { post: Post; full: boolean }) => {
       </p>
       <h6 className={styles.title}>{post.title}</h6>
       {full && <p className={styles.description}>{post.description}</p>}
-    </div>
+    </Link>
   );
 };
