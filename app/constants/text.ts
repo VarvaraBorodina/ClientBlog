@@ -73,6 +73,8 @@ export const TEXT = {
 
   MY_POSTS: 'My posts',
   NO_POST: 'No posts',
+  POSTED_ON: 'Posted on',
+  READ_NEXT: 'What to read next',
 
   NOT_FOUND: 'Not found',
   HELLO: 'Hello',

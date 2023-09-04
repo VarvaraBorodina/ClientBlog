@@ -2,11 +2,18 @@
 
 .container {
   margin: $spacesL;
+  @media (max-width: $breakpointL) {
+    margin: $spacesM $spacesS;
+  }
 }
 
 .postInfo {
   width: $policyWidth;
   margin: 0 auto;
+
+  @media (max-width: $breakpointL) {
+    width: 100%;
+  }
 }
 
 .info {
@@ -44,6 +51,15 @@
   font-size: $fonstSizeXL;
   font-weight: $fontWeightL;
   line-height: $lineHeightXL;
+
+  @media (max-width: $breakpointL) {
+    font-size: $fonstSizeL;
+  }
+
+  @media (max-width: $breakpointM) {
+    font-size: $fonstSizeM;
+    line-height: $lineHeightL;
+  }
 }
 
 .category {
@@ -54,6 +70,7 @@
 }
 
 .categoryName {
+  margin-left: $spacesXS;
   color: $mainColor;
   font-size: $fonstSizeM;
   font-weight: $fontWeightL;
@@ -72,10 +89,16 @@
   font-size: $fonstSizeL;
   font-weight: $fontWeightL;
   line-height: $lineHeightL;
+  @media (max-width: $breakpointL) {
+    font-size: $fonstSizeM;
+  }
 }
 
 .text {
   color: $lightTextColor;
   font-size: $fonstSizeS;
   line-height: $lineHeightL;
+  @media (max-width: $breakpointM) {
+    font-size: $fonstSizeXS;
+  }
 }
