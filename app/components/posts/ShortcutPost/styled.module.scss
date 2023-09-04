@@ -1,5 +1,11 @@
 @import '@/styles/global.scss';
 
+.container {
+  &:hover {
+    background-color: $lightAccentColor;
+  }
+}
+
 .image {
   width: 100%;
   height: $postImageHeight;

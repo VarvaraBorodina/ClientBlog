@@ -1,48 +1,50 @@
 'use client';
 
+import authors from '@data/authors.json';
+import categories from '@data/categories.json';
+import { useTranslations } from 'next-intl';
 import React from 'react';
 
-import { ICONS } from '@/constants';
-import { Post } from '@/types';
+import { ICONS, TEXT } from '@/constants';
+import { Author, Category, Post } from '@/types';
 
 import styles from './styled.module.scss';
 
-const { BUSINESS } = ICONS;
+const { POSTED_ON } = TEXT;
 
 export const FullPost = ({ post }: { post: Post }) => {
+  const translate = useTranslations('Blog');
+  const translateMonth = useTranslations('Monthes');
+  const translateCategory = useTranslations('Categories');
+
+  const { description, content, image, category, author, title } = post;
+  const { day, month, year } = post.creationDate;
+
+  const { icon, name: categoryName } = categories.find(({ id }) => id === category) as Category;
+  const { name, lastName, photo: authorImage } = authors.find(({ id }) => id === author) as Author;
+
   return (
     <article className={styles.container}>
       <div className={styles.postInfo}>
         <div className={styles.info}>
-          <img className={styles.authorImage} alt="author" src={post.image} />
+          <img className={styles.authorImage} alt="author" src={authorImage} />
           <div className={styles.authorInfo}>
-            <p className={styles.author}>Andrew Jonson</p>
-            <p className={styles.date}>Posted on 27th January 2022</p>
+            <p className={styles.author}>{`${name} ${lastName}`}</p>
+            <p className={styles.date}>
+              {`${translate(POSTED_ON)}${translateMonth(String(month))} ${day}, ${year}`}
+            </p>
           </div>
         </div>
-        <h3 className={styles.postTitle}>Step-by-step guide to choosing great font pairs</h3>
+        <h3 className={styles.postTitle}>{title}</h3>
         <div className={styles.category}>
-          {BUSINESS}
-          <p className={styles.categoryName}>Startup</p>
+          {ICONS[icon]}
+          <p className={styles.categoryName}>{translateCategory(categoryName)}</p>
         </div>
       </div>
-      <img className={styles.postImage} src={post.image} alt="post" />
+      <img className={styles.postImage} src={image} alt="post" />
       <div className={styles.postInfo}>
-        <h6 className={styles.description}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
-        </h6>
-        <p className={styles.text}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris
-          in aliquam sem. At risus viverra adipiscing at in tellus. Sociis natoque penatibus et
-          magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo. Neque egestas
-          congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque non. Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam
-          sem. At risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis
-          parturient montes. Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque
-          egestas diam. Risus in hendrerit gravida rutrum quisque non.
-        </p>
+        <h6 className={styles.description}>{description}</h6>
+        <p className={styles.text}>{content}</p>
       </div>
     </article>
   );
