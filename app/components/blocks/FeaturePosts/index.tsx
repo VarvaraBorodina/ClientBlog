@@ -9,7 +9,7 @@ import commonStyles from '@/styles/common.module.scss';
 
 import styles from './styled.module.scss';
 
-const { FEATURE_POST, READ_MORE, VIEW_ALL } = TEXT;
+const { FEATURE_POST, READ_MORE, VIEW_ALL, ALL_POST } = TEXT;
 const { BLOG } = ROUTE;
 
 export const FeaturePosts = () => {
@@ -29,14 +29,14 @@ export const FeaturePosts = () => {
       </div>
       <aside className={styles.aside}>
         <div className={styles.sideTitle}>
-          <h3 className={styles.title}>All posts</h3>
+          <h3 className={styles.title}>{translate(ALL_POST)}</h3>
           <Link href={BLOG.path} className={styles.accent}>
             {translate(VIEW_ALL)}
           </Link>
         </div>
         <div className={styles.posts}>
           {recentPosts.map((post) => (
-            <div className={styles.shortPost}>
+            <div className={styles.shortPost} key={post.id}>
               <ShortcutPost post={post} full={false} />
             </div>
           ))}
