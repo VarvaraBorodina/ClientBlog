@@ -10,16 +10,16 @@ import { Category as CategoryType } from '@/types';
 import styles from './styled.module.scss';
 import { CategoriesBlockProps } from './types';
 
-export const CategoriesBlock = ({ title, titleAlign }: CategoriesBlockProps) => {
+export const CategoriesBlock = ({ title, titleAlign, column }: CategoriesBlockProps) => {
   const translate = useTranslations('Categories');
   return (
     <div className={styles.container}>
       <h3 className={styles.header} style={{ textAlign: titleAlign }}>
         {translate(title)}
       </h3>
-      <div className={styles.categories}>
+      <div className={`${styles.categories} ${column && styles.column}`}>
         {(categories as CategoryType[]).map((category) => (
-          <Category category={category} key={category.id} />
+          <Category category={category} key={category.id} full={!column} />
         ))}
       </div>
     </div>

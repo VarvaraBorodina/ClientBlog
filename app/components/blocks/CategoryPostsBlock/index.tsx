@@ -33,8 +33,12 @@ export const CategoryPostsBlock = ({ title, posts }: CategoryPostBlockType) => {
 
   return (
     <div className={styles.container}>
-      <h3 className={styles.header}>{translate(title)}</h3>
-      <div className={styles.line} />
+      {title && (
+        <>
+          <h3 className={styles.header}>{translate(title)}</h3>
+          <div className={styles.line} />
+        </>
+      )}
       {!posts.length ? (
         <p className={styles.notPosts}>{translate(NO_POST)}</p>
       ) : (

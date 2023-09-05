@@ -7,23 +7,28 @@ import { JoinBlock } from '@/components/blocks/JoinBlock';
 import { FullPost } from '@/components/posts/FullPost';
 import { ShortcutPost } from '@/components/posts/ShortcutPost';
 import { TEXT } from '@/constants';
-import { Post as PostType } from '@/types';
+import commonStyles from '@/styles/common.module.scss';
 
 import styles from './styled.module.scss';
 
 const mulish = Mulish({ subsets: ['latin'] });
 const NEXT_POSTS_AMOUNT = 3;
-const { READ_NEXT } = TEXT;
+const { READ_NEXT, NOT_FOUND } = TEXT;
 
 const Post = ({ params: { id } }: { params: { id: number } }) => {
+  const translateNotFound = useTranslations(NOT_FOUND);
   const translate = useTranslations('Blog');
 
-  const currentPost = posts.find((post) => post.id === Number(id)) as PostType;
+  const currentPost = posts.find((post) => post.id === Number(id));
   const nextPosts = posts
     .filter(
       ({ category, id: postId }) => category === currentPost?.category && postId !== Number(id)
     )
     .slice(0, NEXT_POSTS_AMOUNT);
+
+  if (!currentPost) {
+    return <p className={commonStyles.notFound}>{translateNotFound(NOT_FOUND)}</p>;
+  }
 
   return (
     <>

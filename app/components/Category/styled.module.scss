@@ -2,7 +2,6 @@
 
 .container {
   width: $categoryWidth;
-  margin-top: $spacesM;
   padding: $spacesS;
   border: solid $borderWidth $postBorderColor;
 
@@ -22,7 +21,7 @@
   align-items: center;
   height: $iconHeight;
   width: $iconHeight;
-  margin-bottom: $spacesS;
+  margin-right: $spacesS;
 
   border-radius: $spacesXXS;
   background-color: $lightAccentColor;
@@ -30,15 +29,20 @@
 
 .title {
   color: $mainColor;
-  margin-bottom: $spacesXS;
 
   font-size: $fonstSizeL;
   font-weight: $fontWeightL;
 }
 
 .description {
+  margin-top: $spacesXS;
   color: $lightTextColor;
 
   font-size: $fonstSizeM;
   line-height: $lineHeightL;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
 }

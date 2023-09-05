@@ -106,7 +106,7 @@
   },
   {
     "id": 7,
-    "category": 0,
+    "category": 4,
     "author": 7,
     "creationDate": {
       "month": 4,
@@ -135,7 +135,7 @@
   },
   {
     "id": 11,
-    "category": 0,
+    "category": 4,
     "author": 4,
     "creationDate": {
       "month": 4,
@@ -210,7 +210,7 @@
   },
   {
     "id": 15,
-    "category": 0,
+    "category": 4,
     "author": 1,
     "creationDate": {
       "month": 4,

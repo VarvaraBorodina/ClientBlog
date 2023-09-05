@@ -1,0 +1,9 @@
+@import '@/styles/global.scss';
+
+.container {
+  margin: 0 $spacesM;
+
+  @media (max-width: $breakpointL) {
+    margin: 0 $spacesXS;
+  }
+}

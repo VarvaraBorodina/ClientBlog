@@ -13,13 +13,17 @@ import { WhyWeStarted } from '@/components/blocks/WhyWeStartedBlock';
 import { HomePageHeader } from '@/components/headers/HomePageHeader';
 import { TEXT } from '@/constants';
 
+import styles from './styled.module.scss';
+
 const { CHOOSE_CATEGORY } = TEXT;
 
 const blocks = [
   <HomePageHeader />,
   <FeaturePosts />,
   <AboutBlock />,
-  <CategoriesBlock title={CHOOSE_CATEGORY} titleAlign="center" />,
+  <div className={styles.container}>
+    <CategoriesBlock title={CHOOSE_CATEGORY} titleAlign="center" column={false} />
+  </div>,
   <WhyWeStarted />,
   <AuthorsBlock authorsAmount={4} />,
   <WeAre />,

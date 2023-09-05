@@ -24,4 +24,5 @@ export const ROUTE = {
 export const DINAMIC_ROUTES = {
   AUTHOR: '/author',
   POST: '/post',
+  CATEGORY: '/category',
 };

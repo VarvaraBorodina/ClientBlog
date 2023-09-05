@@ -1,5 +1,13 @@
 @import '@/styles/global.scss';
 
+.container {
+  margin: 0 $spacesXXL;
+
+  @media (max-width: $breakpointL) {
+    margin: 0 $spacesXS;
+  }
+}
+
 .content {
   display: flex;
   margin-bottom: $spacesL;
@@ -104,13 +112,4 @@
   width: 25%;
   height: $lineHeight;
   background-color: $linkColor;
-}
-
-.notFound {
-  margin-top: $spacesL;
-  margin-bottom: $spacesXL;
-  text-align: center;
-  color: $mainColor;
-
-  font-size: $fonstSizeXL;
 }

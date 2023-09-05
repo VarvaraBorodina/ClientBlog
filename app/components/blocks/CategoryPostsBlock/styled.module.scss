@@ -1,14 +1,10 @@
 @import '@/styles/global.scss';
 
 .container {
-  margin: $spacesL $spacesXL;
+  margin: $spacesL 0;
 
-  @media (max-width: $breakpointXXL) {
-    margin: $spacesL;
-  }
-
-  @media (max-width: $breakpointM) {
-    margin: $spacesS;
+  @media (max-width: $breakpointL) {
+    margin: $spacesS 0;
   }
 }
 

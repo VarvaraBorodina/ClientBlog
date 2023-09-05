@@ -6,6 +6,7 @@ import React from 'react';
 import { CategoryPostsBlock } from '@/components/blocks/CategoryPostsBlock';
 import { Networks } from '@/components/Networks';
 import { TEXT } from '@/constants';
+import commonStyles from '@/styles/common.module.scss';
 
 import styles from './styled.module.scss';
 import { AuthorProps } from './types';
@@ -20,13 +21,13 @@ const Author = ({ params: { id } }: AuthorProps) => {
   const authorPosts = posts.filter(({ author }) => author === Number(id));
 
   if (!currentAuthor) {
-    return <p className={styles.notFound}>{translateNotFound(NOT_FOUND)}</p>;
+    return <p className={commonStyles.notFound}>{translateNotFound(NOT_FOUND)}</p>;
   }
 
   const { photo, name, lastName, description } = currentAuthor;
 
   return (
-    <div className={styles.container}>
+    <>
       <div className={styles.background}>
         <div className={styles.content}>
           <img src={photo} alt="author" className={styles.image} />
@@ -45,8 +46,10 @@ const Author = ({ params: { id } }: AuthorProps) => {
           <div className={styles.darckLine} />
         </div>
       </div>
-      <CategoryPostsBlock posts={authorPosts} title={MY_POSTS} />
-    </div>
+      <div className={styles.container}>
+        <CategoryPostsBlock posts={authorPosts} title={MY_POSTS} />
+      </div>
+    </>
   );
 };
 

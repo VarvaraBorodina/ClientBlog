@@ -1,10 +1,9 @@
 @import '@/styles/global.scss';
 
 .container {
-  margin: $spacesL $spacesXL;
-  @media (max-width: $breakpointXL) {
-    margin-left: 0;
-    margin-right: 0;
+  margin: $spacesL 0;
+  @media (max-width: $breakpointL) {
+    margin: $spacesXXS 0;
   }
 }
 
@@ -25,6 +24,7 @@
 .categories {
   width: 100%;
   margin: 0 auto;
+  margin-top: $spacesS;
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -37,4 +37,9 @@
   @media (max-width: $breakpointL) {
     grid-template-columns: 1fr;
   }
+}
+
+.column {
+  grid-template-columns: 1fr;
+  grid-gap: $spacesXS;
 }

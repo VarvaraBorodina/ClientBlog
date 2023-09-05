@@ -17,3 +17,12 @@
 
   cursor: pointer;
 }
+
+.notFound {
+  margin-top: $spacesL;
+  margin-bottom: $spacesXL;
+  text-align: center;
+  color: $mainColor;
+
+  font-size: $fonstSizeXL;
+}

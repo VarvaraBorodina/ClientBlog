@@ -29,7 +29,7 @@
 
 .content {
   height: 100%;
-  margin-left: $spacesM;
+  margin-left: $spacesS;
   @media (max-width: $breakpointL) {
     margin-left: 0;
   }
@@ -59,9 +59,9 @@
   margin-bottom: $spacesS;
 
   color: $mainColor;
-  font-size: $fonstSizeXL;
+  font-size: $fonstSizeL;
   font-weight: $fontWeightL;
-  line-height: $lineHeightXL;
+  line-height: $lineHeightL;
 
   @media (max-width: $breakpointL) {
     margin-bottom: $spacesXS;
