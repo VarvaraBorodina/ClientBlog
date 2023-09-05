@@ -1,5 +1,21 @@
 @import '@/styles/global.scss';
 
+$postsWidth: 80%;
+
+.container {
+  display: flex;
+  margin: 0 $spacesL;
+
+  @media (max-width: $breakpointXL) {
+    margin: 0 $spacesS;
+  }
+
+  @media (max-width: $breakpointL) {
+    margin: $spacesXXS;
+    flex-direction: column-reverse;
+  }
+}
+
 .header {
   width: 100%;
   padding-top: $spacesL;
@@ -47,4 +63,89 @@
     margin-bottom: $spacesXS;
     font-size: $fonstSizeS;
   }
+}
+
+.posts {
+  width: $postsWidth;
+  margin: 0 auto;
+
+  @media (max-width: $breakpointL) {
+    width: 100%;
+  }
+}
+
+.input {
+  margin-top: $spacesL;
+
+  width: $formInput;
+  padding: $spacesXS;
+
+  font-size: $fonstSizeM;
+  font-weight: $fontWeightS;
+
+  background-color: inherit;
+  color: $mainColor;
+
+  border: solid 1px $postBorderColor;
+  outline: none;
+
+  &::-webkit-input-placeholder {
+    color: $placeholderColor;
+  }
+  &:-moz-placeholder {
+    color: $placeholderColor;
+  }
+  &::-moz-placeholder {
+    color: $placeholderColor;
+  }
+  &:-ms-input-placeholder {
+    color: $placeholderColor;
+  }
+  @media (max-width: $breakpointXL) {
+    font-size: $fonstSizeS;
+  }
+
+  @media (max-width: $breakpointL) {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+
+.tagsTitle {
+  margin: $spacesS 0;
+  font-size: $fonstSizeXL;
+  font-weight: $fontWeightL;
+  color: $mainColor;
+}
+
+.tags {
+  width: $formInput;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: $breakpointL) {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+
+.tag {
+  margin-top: $spacesXXS;
+  margin-right: $spacesXXS;
+  padding: $spacesXXS $spacesS;
+  color: $mainColor;
+  border: solid 1px $mainColor;
+  border-radius: $spacesXS;
+
+  font-size: $fonstSizeS;
+  font-weight: $fontWeightS;
+
+  cursor: pointer;
+}
+
+.active {
+  background: $accentColor;
+  color: $textColor;
+  font-weight: $fontWeightM;
+  border: none;
 }

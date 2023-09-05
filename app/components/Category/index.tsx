@@ -11,16 +11,18 @@ import styles from './styled.module.scss';
 
 const { CATEGORY } = DINAMIC_ROUTES;
 
-export const Category = ({ category }: { category: CategoryType }) => {
+export const Category = ({ category, full }: { category: CategoryType; full: boolean }) => {
   const { name, description, icon, id } = category;
 
   const translate = useTranslations('Categories');
 
   return (
     <Link className={styles.container} href={`${CATEGORY}/${id}`}>
-      <div className={styles.icon}>{ICONS[icon]}</div>
-      <h6 className={styles.title}>{translate(name)}</h6>
-      <p className={styles.description}>{translate(description)}</p>
+      <div className={full ? '' : styles.flex}>
+        <div className={styles.icon}>{ICONS[icon]}</div>
+        <h6 className={styles.title}>{translate(name)}</h6>
+      </div>
+      {full && <p className={styles.description}>{translate(description)}</p>}
     </Link>
   );
 };

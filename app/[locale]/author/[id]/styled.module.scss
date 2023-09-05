@@ -1,5 +1,13 @@
 @import '@/styles/global.scss';
 
+.container {
+  margin: 0 $spacesXXL;
+
+  @media (max-width: $breakpointL) {
+    margin: 0 $spacesXS;
+  }
+}
+
 .content {
   display: flex;
   margin-bottom: $spacesL;

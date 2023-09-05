@@ -27,7 +27,7 @@ const Author = ({ params: { id } }: AuthorProps) => {
   const { photo, name, lastName, description } = currentAuthor;
 
   return (
-    <div className={styles.container}>
+    <>
       <div className={styles.background}>
         <div className={styles.content}>
           <img src={photo} alt="author" className={styles.image} />
@@ -46,8 +46,10 @@ const Author = ({ params: { id } }: AuthorProps) => {
           <div className={styles.darckLine} />
         </div>
       </div>
-      <CategoryPostsBlock posts={authorPosts} title={MY_POSTS} />
-    </div>
+      <div className={styles.container}>
+        <CategoryPostsBlock posts={authorPosts} title={MY_POSTS} />
+      </div>
+    </>
   );
 };
 
