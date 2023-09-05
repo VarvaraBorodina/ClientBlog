@@ -1,16 +1,12 @@
 import React from 'react';
 
+import { Map } from '@/components/Map';
+import { LOCATIONS } from '@/constants';
+
 const Contact = () => {
-  const t = [];
-  for (let i = 0; i < 10_000; i += 1) {
-    t.push(i);
-  }
   return (
     <div>
-      {t.map(() => (
-        <p>Contact</p>
-      ))}
-      <p>Contact</p>
+      <Map places={LOCATIONS} />
     </div>
   );
 };

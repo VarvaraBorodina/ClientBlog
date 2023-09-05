@@ -15,11 +15,14 @@
     "@emailjs/browser": "^3.11.0",
     "@formatjs/intl-localematcher": "^0.4.0",
     "@svgr/webpack": "^8.1.0",
+    "@types/leaflet": "^1.9.4",
+    "leaflet": "^1.9.4",
     "negotiator": "^0.6.3",
     "next": "13.4.19",
     "next-intl": "3.0.0-beta.13",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-leaflet": "^4.2.1",
     "yup": "^1.2.0"
   },
   "devDependencies": {
