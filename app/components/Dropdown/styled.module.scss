@@ -1,0 +1,67 @@
+@import '@/styles/global.scss';
+
+.container {
+  position: relative;
+  margin-bottom: $spacesXS;
+
+  @media (max-width: $breakpointL) {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: $policyWidth - $spacesS - $spacesS;
+  margin-bottom: $spacesXXS;
+  padding: $spacesS;
+
+  font-size: $fonstSizeS;
+  border: solid $borderWidth $postBorderColor;
+
+  cursor: pointer;
+
+  &::-webkit-input-placeholder {
+    color: $mainColor;
+  }
+  @media (max-width: $breakpointL) {
+    width: auto;
+  }
+}
+
+.input {
+  border: none;
+  outline: none;
+  font-size: $fonstSizeS;
+
+  color: $mainColor;
+
+  @media (max-width: $breakpointM) {
+    max-width: $formInputSmall;
+  }
+}
+
+.options {
+  position: absolute;
+
+  width: $policyWidth;
+  margin: 0 auto;
+
+  background-color: $textColor;
+  border: solid $borderWidth $postBorderColor;
+  z-index: 1;
+
+  @media (max-width: $breakpointL) {
+    width: 100%;
+  }
+}
+
+.option {
+  padding: $spacesXS $spacesS;
+  &:hover {
+    background-color: $lightAccentColor;
+  }
+  cursor: pointer;
+}

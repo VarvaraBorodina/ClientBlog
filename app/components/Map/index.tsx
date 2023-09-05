@@ -22,7 +22,7 @@ const Map = ({ places }: { places: LatLngExpression[] }) => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       {places.map((place) => (
-        <Marker position={place} icon={iconPerson} />
+        <Marker position={place} icon={iconPerson} key={place.toString()} />
       ))}
     </MapContainer>
   );

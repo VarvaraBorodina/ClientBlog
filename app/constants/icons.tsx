@@ -2,6 +2,7 @@
 
 import React from 'react';
 
+import Arrow from '@/assets/arrow.svg';
 import BackArrow from '@/assets/backArrow.svg';
 import Business from '@/assets/categories/business.svg';
 import Economy from '@/assets/categories/economy.svg';
@@ -37,4 +38,5 @@ export const ICONS = {
 
   NEXT_ARROW: <NextArrow />,
   BACK_ARROW: <BackArrow />,
+  DROPDOWN_ARROW: <Arrow />,
 };

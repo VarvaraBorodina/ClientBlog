@@ -10,7 +10,8 @@ export const TEXT = {
 
   FOOTER_TITLE: 'Title',
   ADDRES: 'Finstreet 118 2561 Fintown',
-  EMAIL: 'Hello@finsweet.com 020 7993 2905',
+  EMAIL: 'Hello@finsweet.com',
+  PHONE: '020 7993 2905',
   SUBSCRIBE: 'Subscribe',
   SUBSCRIBE_OK: 'Subscribe Ok',
 
@@ -18,6 +19,19 @@ export const TEXT = {
   EMAIL_ERROR: 'Invalid email',
 
   EMAIL_PLACEHOLDER: 'Email placeholder',
+  FULL_EMAIL_PLACEHOLDER: 'Full email',
+  NAME_PLACEHOLDER: 'Name placeholder',
+  QUERY_PLACEHOLDER: 'Query Related',
+  MESSAGE_PLACEHOLDER: 'Message placeholder',
+  SEND: 'Send',
+  CONTACT_ERROR: 'Contact error',
+  SENDING: 'Sending',
+  SENDING_OK: 'Sending ok',
+
+  NAME_REQUIRED: 'name is a required field',
+  EMAIL_REQUIRED: 'email is a required field',
+  QUERY_REQUIRED: 'query is a required field',
+  MESSAGE_REQUIRED: 'message is a required field',
 
   POSTED: 'Posted',
   BY: 'By',
@@ -79,4 +93,12 @@ export const TEXT = {
   NOT_FOUND: 'Not found',
   HELLO: 'Hello',
   WELCOM: 'Welcom',
+
+  CONTACT_US: 'Contact us',
+  LET_START: 'let start',
+  CONTACTS_TEXT: 'Contact text',
+  WORKING_HOURS: 'Working hours',
+  WORKING_DAYS: 'Working days',
+  WORKING_TIME: 'Working time',
+  SUPPORT: 'Support',
 };

@@ -1,22 +1,26 @@
 'use client';
 
-import emailjs from '@emailjs/browser';
+import { yupResolver } from '@hookform/resolvers/yup';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import IntlLink from 'next-intl/link';
 import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 
 import { Networks } from '@/components/Networks';
 import { ROUTE, TEXT } from '@/constants';
-import { CONFIG } from '@/constants/config';
+import { subscribe } from '@/service/email';
 import commonStyles from '@/styles/common.module.scss';
 import { transformPath } from '@/utils';
 
 import styles from './styled.module.scss';
 
-const emailSchema = yup.string().email().required();
+const emailSchema = yup.object().shape({
+  email: yup.string().email().required(),
+});
+
 const {
   EMAIL,
   EMAIL_ERROR,
@@ -28,23 +32,20 @@ const {
   FOOTER_TITLE,
 } = TEXT;
 
-const { NEXT_PUBLIC_EMAIL_KEY, NEXT_PUBLIC_EMAIL_SERVICE_ID, NEXT_PUBLIC_EMAIL_TEMPLATE_ID } =
-  CONFIG;
-
 export const Footer = () => {
-  const [email, setEmail] = useState<string>('');
   const [message, setMessage] = useState<string>('');
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<{ email: string }>({
+    resolver: yupResolver(emailSchema),
+  });
 
   const pathName = usePathname();
   const absolutePath = transformPath(pathName);
   const translateRoutes = useTranslations('Routes');
   const translateFooter = useTranslations('Footer');
-
-  const handleEmailChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
-    const { value } = target;
-    setEmail(value);
-    setMessage('');
-  };
 
   const addTemporaryMessage = (newMessage: string) => {
     setMessage(newMessage);
@@ -53,28 +54,15 @@ export const Footer = () => {
     }, 3000);
   };
 
-  const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
-    e.preventDefault();
-    try {
-      emailSchema.validateSync(email);
-      emailjs
-        .send(
-          NEXT_PUBLIC_EMAIL_SERVICE_ID,
-          NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
-          { email },
-          NEXT_PUBLIC_EMAIL_KEY
-        )
-        .then(
-          () => {
-            setEmail('');
-            addTemporaryMessage(SUBSCRIBE_OK);
-          },
-          () => addTemporaryMessage(SUBSCRIBE_ERROR)
-        );
-    } catch (err) {
-      addTemporaryMessage(EMAIL_ERROR);
-    }
+  const submit = ({ email }: { email: string }) => {
+    subscribe(email)
+      .then(() => {
+        addTemporaryMessage(SUBSCRIBE_OK);
+      })
+      .catch(() => addTemporaryMessage(SUBSCRIBE_ERROR));
   };
+
+  const { email } = errors;
 
   return (
     <footer className={styles.container}>
@@ -88,20 +76,23 @@ export const Footer = () => {
           ))}
         </nav>
       </div>
-      <p className={styles.error}>{message && translateFooter(message)}</p>
       <div className={styles.content}>
         <h3 className={styles.formTitle}>{translateFooter(FOOTER_TITLE)}</h3>
-        <form className={styles.form} onSubmit={handleSubmit}>
-          <input
-            className={styles.input}
-            placeholder={translateFooter(EMAIL_PLACEHOLDER)}
-            onChange={handleEmailChange}
-            value={email}
-          />
-          <button type="submit" className={commonStyles.button}>
-            {translateFooter(SUBSCRIBE)}
-          </button>
-        </form>
+        <div>
+          <form className={styles.form} onSubmit={handleSubmit(submit)}>
+            <input
+              className={styles.input}
+              placeholder={translateFooter(EMAIL_PLACEHOLDER)}
+              {...register('email')}
+            />
+            <button type="submit" className={commonStyles.button}>
+              {translateFooter(SUBSCRIBE)}
+            </button>
+          </form>
+          <p className={styles.error}>
+            {(message && translateFooter(message)) || (email && translateFooter(EMAIL_ERROR))}
+          </p>
+        </div>
       </div>
       <div className={styles.contacts}>
         <div>

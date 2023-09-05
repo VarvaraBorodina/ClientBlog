@@ -18,6 +18,8 @@
     "operator-linebreak": "off",
     "object-curly-newline": "off",
     "@next/next/no-img-element": "off",
-    "react/no-array-index-key": "off"
+    "react/no-array-index-key": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "react/jsx-props-no-spreading": "off"
   }
 }
