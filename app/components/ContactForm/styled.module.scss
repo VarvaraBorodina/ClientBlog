@@ -1,0 +1,68 @@
+@import '@/styles/global.scss';
+
+.container {
+  width: $policyWidth;
+  margin: 0 auto;
+  margin-top: $spacesL;
+
+  @media (max-width: $breakpointL) {
+    width: auto;
+    margin-left: $spacesM;
+    margin-right: $spacesM;
+  }
+
+  @media (max-width: $breakpointM) {
+    margin-left: $spacesS;
+    margin-right: $spacesS;
+  }
+}
+
+.form {
+  width: 100%;
+}
+
+.input {
+  width: $policyWidth - $spacesS - $spacesS;
+  margin: 0 auto;
+  margin-bottom: $spacesXXS;
+  padding: $spacesS;
+
+  font-size: $fonstSizeS;
+  font-family: inherit;
+  border: solid $borderWidth $postBorderColor;
+
+  resize: none;
+
+  &::-webkit-input-placeholder {
+    color: $mainColor;
+  }
+
+  @media (max-width: $breakpointL) {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.button {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: $spacesM;
+  padding: $spacesXS $spacesM;
+
+  font-size: $fonstSizeM;
+  font-weight: $fontWeightL;
+
+  color: $mainColor;
+  background-color: $accentColor;
+
+  cursor: pointer;
+}
+
+.message {
+  margin-bottom: $spacesXXS;
+
+  color: $linkColor;
+  font-size: $fonstSizeS;
+  font-weight: $fontWeightS;
+  line-height: $lineHeightL;
+}
