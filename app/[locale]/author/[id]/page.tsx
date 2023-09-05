@@ -6,6 +6,7 @@ import React from 'react';
 import { CategoryPostsBlock } from '@/components/blocks/CategoryPostsBlock';
 import { Networks } from '@/components/Networks';
 import { TEXT } from '@/constants';
+import commonStyles from '@/styles/common.module.scss';
 
 import styles from './styled.module.scss';
 import { AuthorProps } from './types';
@@ -20,7 +21,7 @@ const Author = ({ params: { id } }: AuthorProps) => {
   const authorPosts = posts.filter(({ author }) => author === Number(id));
 
   if (!currentAuthor) {
-    return <p className={styles.notFound}>{translateNotFound(NOT_FOUND)}</p>;
+    return <p className={commonStyles.notFound}>{translateNotFound(NOT_FOUND)}</p>;
   }
 
   const { photo, name, lastName, description } = currentAuthor;

@@ -93,6 +93,7 @@ export const TEXT = {
   NOT_FOUND: 'Not found',
   HELLO: 'Hello',
   WELCOM: 'Welcom',
+  BLOG: 'Blog',
 
   CONTACT_US: 'Contact us',
   LET_START: 'let start',

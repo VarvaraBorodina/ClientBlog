@@ -1,0 +1,50 @@
+@import '@/styles/global.scss';
+
+.header {
+  width: 100%;
+  padding-top: $spacesL;
+  padding-bottom: $spacesL;
+  text-align: center;
+  background-color: $lightLinkColor;
+}
+
+.title {
+  margin-bottom: $spacesS;
+  color: $mainColor;
+  font-size: $fonstSizeXXL;
+  font-weight: $fontWeightXL;
+  letter-spacing: $letterSpacing;
+
+  @media (max-width: $breakpointM) {
+    margin-bottom: $spacesXS;
+    font-size: $fonstSizeXL;
+  }
+}
+
+.description {
+  margin-bottom: $spacesS;
+  color: $mediumTextColor;
+  font-size: $fonstSizeS;
+  font-weight: $fontWeightS;
+  line-height: $lineHeightL;
+
+  @media (max-width: $breakpointM) {
+    margin-bottom: $spacesXS;
+    line-height: normal;
+    font-size: $fonstSizeXS;
+  }
+}
+
+.subtitle {
+  margin-bottom: $spacesS;
+  color: $mainColor;
+  font-size: $fonstSizeM;
+  font-weight: $fontWeightM;
+  letter-spacing: $letterSpacing;
+  text-transform: uppercase;
+
+  @media (max-width: $breakpointM) {
+    margin-bottom: $spacesXS;
+    font-size: $fonstSizeS;
+  }
+}

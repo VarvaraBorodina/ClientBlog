@@ -118,7 +118,9 @@
     "Business description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
     "Economy description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
     "Technology description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-    "Startup description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+    "Startup description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+
+    "Blog": "Blog"
   },
 
   "Monthes": {
