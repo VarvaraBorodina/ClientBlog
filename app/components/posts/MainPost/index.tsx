@@ -40,7 +40,7 @@ export const MainPost = () => {
           {`${translate(READ_MORE)}`}
         </Link>
       </div>
-      <img src={post.image} alt="post" className={styles.image} />
+      <img src={post.image} alt={title} className={styles.image} />
     </div>
   );
 };

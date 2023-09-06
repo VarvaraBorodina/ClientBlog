@@ -63,8 +63,11 @@ export const TEXT = {
   TESTIMONIAL_TITLE: 'TESTIMONIAL title',
 
   BLOG_PUBLISHED: 'Blog Published',
+  BLOG_PUBLISHED_NUMBER: '12+',
   VIEW_FIN: 'Views on Finsweet',
+  VIEW_FIN_NUMBER: '18K+',
   ACTIVE_USER: 'Total active Users',
+  ACTIVE_USER_NUMBER: '30K+',
 
   ALL_CATEGORIES: 'All Categories',
   ALL_POST: 'All posts',
@@ -77,6 +80,9 @@ export const TEXT = {
   ABOUT_CONTENT: 'About text',
 
   POST_ALT: 'Post alt',
+  AUTHOR_ALT: 'Author alt',
+  PEOPLE_ALT: 'People alt',
+  USER_ALT: 'User alt',
 
   PRIVACY_POLICY: 'Privacy Policy',
   LAST_UPDATED: 'Last Updated',

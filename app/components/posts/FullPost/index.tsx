@@ -10,7 +10,7 @@ import { Author, Category, Post } from '@/types';
 
 import styles from './styled.module.scss';
 
-const { POSTED_ON } = TEXT;
+const { POSTED_ON, AUTHOR_ALT } = TEXT;
 
 export const FullPost = ({ post }: { post: Post }) => {
   const translate = useTranslations('Blog');
@@ -27,7 +27,7 @@ export const FullPost = ({ post }: { post: Post }) => {
     <article className={styles.container}>
       <div className={styles.postInfo}>
         <div className={styles.info}>
-          <img className={styles.authorImage} alt="author" src={authorImage} />
+          <img className={styles.authorImage} alt={translate(AUTHOR_ALT)} src={authorImage} />
           <div className={styles.authorInfo}>
             <p className={styles.author}>{`${name} ${lastName}`}</p>
             <p className={styles.date}>

@@ -7,6 +7,7 @@ import { Mulish } from 'next/font/google';
 import { useTranslations } from 'next-intl';
 import React, { useState } from 'react';
 
+import { PageProps } from '@/[locale]/types';
 import { CategoriesBlock } from '@/components/blocks/CategoriesBlock';
 import { CategoryPostsBlock } from '@/components/blocks/CategoryPostsBlock';
 import { TEXT } from '@/constants';
@@ -20,7 +21,7 @@ const mulish = Mulish({ subsets: ['latin'] });
 const { NOT_FOUND, BLOG, NO_TAGS, ALL_TAGS, CATEGORIES, SEARCH_TAGS } = TEXT;
 const MAX_TAGS_AMOUNT = 7;
 
-const Category = ({ params: { id } }: { params: { id: number } }) => {
+const Category = ({ params: { id } }: PageProps) => {
   const translateNotFound = useTranslations(NOT_FOUND);
   const translate = useTranslations('Categories');
 

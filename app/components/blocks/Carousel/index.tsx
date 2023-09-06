@@ -11,7 +11,7 @@ import styles from './styled.module.scss';
 const { NEXT_ARROW, BACK_ARROW } = ICONS;
 const ITEM_WIDTH = 100;
 
-const { TESTIMONIAL, TESTIMONIAL_TEXT, TESTIMONIAL_TITLE } = TEXT;
+const { TESTIMONIAL, TESTIMONIAL_TEXT, TESTIMONIAL_TITLE, USER_ALT } = TEXT;
 
 export const Carousel = () => {
   const [offset, setOffset] = useState(0);
@@ -51,7 +51,7 @@ export const Carousel = () => {
               <p className={styles.text}>{review}</p>
               <div className={styles.footer}>
                 <div className={styles.user}>
-                  <img src={photo} alt="user" />
+                  <img src={photo} alt={translate(USER_ALT)} />
                   <div className={styles.userInfo}>
                     <p className={styles.name}>{user}</p>
                     <p className={styles.city}>{city}</p>

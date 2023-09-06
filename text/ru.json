@@ -52,7 +52,9 @@
     "Vision title": "Платформа помогает понять свою индивидуальность",
     "Blog Published": "Опубликовано блогов",
     "Views on Finsweet": "Просмотров на Finsweet",
-    "Total active Users": "Активных пользователей"
+    "Total active Users": "Активных пользователей",
+    "People alt": "Люди",
+    "User alt": "Пользователь"
   },
 
   "Blog": {
@@ -64,7 +66,8 @@
     "Hello": "Привет, меня зовут ",
     "Welcom": ". Добро пожаловать в мой блог",
     "Posted on": "Опубликовано: ",
-    "What to read next": "Читать дальше"
+    "What to read next": "Читать дальше",
+    "Author alt": "Автор"
   },
 
   "About": {

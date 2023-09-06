@@ -15,8 +15,12 @@ const {
   VISION,
   VISION_TITLE,
   VIEW_FIN,
+  VIEW_FIN_NUMBER,
+  ACTIVE_USER_NUMBER,
+  BLOG_PUBLISHED_NUMBER,
   ACTIVE_USER,
   BLOG_PUBLISHED,
+  PEOPLE_ALT,
 } = TEXT;
 
 export const AboutFullBlock = () => {
@@ -24,7 +28,7 @@ export const AboutFullBlock = () => {
 
   return (
     <section className={styles.container}>
-      <img src={WHY_WE_STARTED} alt="people" className={styles.image} />
+      <img src={WHY_WE_STARTED} alt={translate(PEOPLE_ALT)} className={styles.image} />
       <div className={styles.imageText}>
         <div className={styles.imageContent}>
           <div className={styles.imageHeaders}>
@@ -33,15 +37,15 @@ export const AboutFullBlock = () => {
           </div>
           <ul className={styles.numberList}>
             <li className={styles.numberListItem}>
-              <h3 className={styles.number}>12+</h3>
+              <h3 className={styles.number}>{BLOG_PUBLISHED_NUMBER}</h3>
               <p className={styles.description}>{translate(BLOG_PUBLISHED)}</p>
             </li>
             <li className={styles.numberListItem}>
-              <h3 className={styles.number}>18K+</h3>
+              <h3 className={styles.number}>{VIEW_FIN_NUMBER}</h3>
               <p className={styles.description}>{translate(VIEW_FIN)}</p>
             </li>
             <li className={styles.numberListItem}>
-              <h3 className={styles.number}>30K+</h3>
+              <h3 className={styles.number}>{ACTIVE_USER_NUMBER}</h3>
               <p className={styles.description}>{translate(ACTIVE_USER)}</p>
             </li>
           </ul>
@@ -69,11 +73,3 @@ export const AboutFullBlock = () => {
     </section>
   );
 };
-
-/*
-<img src={WHY_WE_STARTED} alt="people" className={styles.image} />
- <div className={styles.lines}>
-        <div className={styles.lightLine} />
-        <div className={styles.darckLine} />
-      </div>
-*/
