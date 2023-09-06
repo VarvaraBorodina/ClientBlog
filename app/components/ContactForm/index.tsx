@@ -1,6 +1,7 @@
 'use client';
 
 import { yupResolver } from '@hookform/resolvers/yup';
+import { Dropdown } from 'client-blog-library';
 import { useTranslations } from 'next-intl';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -8,7 +9,6 @@ import { useForm } from 'react-hook-form';
 import { TEXT } from '@/constants';
 import { sendEmail } from '@/service/email';
 
-import { Dropdown } from '../Dropdown';
 import { ContactsHeader } from '../headers/ContactsHeader';
 import { schema } from './schema';
 import styles from './styled.module.scss';

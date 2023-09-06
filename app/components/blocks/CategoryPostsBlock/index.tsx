@@ -1,11 +1,11 @@
 'use client';
 
 import categories from '@data/categories.json';
+import { CategoryPost } from 'client-blog-library';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import React, { useState } from 'react';
 
-import { CategoryPost } from '@/components/posts/CategoryPost';
 import { DINAMIC_ROUTES, TEXT } from '@/constants';
 
 import styles from './styled.module.scss';
