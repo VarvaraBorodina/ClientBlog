@@ -3,6 +3,7 @@ import { Mulish } from 'next/font/google';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
+import { PageProps } from '@/[locale]/types';
 import { JoinBlock } from '@/components/blocks/JoinBlock';
 import { FullPost } from '@/components/posts/FullPost';
 import { ShortcutPost } from '@/components/posts/ShortcutPost';
@@ -15,7 +16,7 @@ const mulish = Mulish({ subsets: ['latin'] });
 const NEXT_POSTS_AMOUNT = 3;
 const { READ_NEXT, NOT_FOUND } = TEXT;
 
-const Post = ({ params: { id } }: { params: { id: number } }) => {
+const Post = ({ params: { id } }: PageProps) => {
   const translateNotFound = useTranslations(NOT_FOUND);
   const translate = useTranslations('Blog');
 

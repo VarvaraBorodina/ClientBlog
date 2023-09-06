@@ -37,34 +37,6 @@ $postsWidth: 80%;
   }
 }
 
-.description {
-  margin-bottom: $spacesS;
-  color: $mediumTextColor;
-  font-size: $fonstSizeS;
-  font-weight: $fontWeightS;
-  line-height: $lineHeightL;
-
-  @media (max-width: $breakpointM) {
-    margin-bottom: $spacesXS;
-    line-height: normal;
-    font-size: $fonstSizeXS;
-  }
-}
-
-.subtitle {
-  margin-bottom: $spacesS;
-  color: $mainColor;
-  font-size: $fonstSizeM;
-  font-weight: $fontWeightM;
-  letter-spacing: $letterSpacing;
-  text-transform: uppercase;
-
-  @media (max-width: $breakpointM) {
-    margin-bottom: $spacesXS;
-    font-size: $fonstSizeS;
-  }
-}
-
 .posts {
   width: $postsWidth;
   margin: 0 auto;
@@ -76,6 +48,7 @@ $postsWidth: 80%;
 
 .input {
   margin-top: $spacesL;
+  margin-bottom: $spacesS;
 
   width: $formInput;
   padding: $spacesXS;
@@ -86,7 +59,7 @@ $postsWidth: 80%;
   background-color: inherit;
   color: $mainColor;
 
-  border: solid 1px $postBorderColor;
+  border: solid $borderWidth $postBorderColor;
   outline: none;
 
   &::-webkit-input-placeholder {
@@ -134,10 +107,10 @@ $postsWidth: 80%;
   margin-right: $spacesXXS;
   padding: $spacesXXS $spacesS;
   color: $mainColor;
-  border: solid 1px $mainColor;
+  border: solid $borderWidth $mainColor;
   border-radius: $spacesXS;
 
-  font-size: $fonstSizeXS;
+  font-size: $fonstSizeS;
   font-weight: $fontWeightS;
 
   cursor: pointer;

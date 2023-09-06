@@ -19,7 +19,8 @@
     ],
     "paths": {
       "@/*": ["app/*"],
-      "@data/*": ["data/*"]
+      "@data/*": ["data/*"],
+      "@text/*": ["text/*"]
     },
     "resolveJsonModule": true,
     "baseUrl": "."

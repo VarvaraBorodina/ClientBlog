@@ -38,35 +38,8 @@
   cursor: pointer;
 }
 
-.title {
-  margin-bottom: $spacesS;
-
-  color: $mainColor;
-  font-size: $fonstSizeXL;
-  font-weight: $fontWeightL;
-
-  @media (max-width: $breakpointXL) {
-    width: 100%;
-  }
-
-  @media (max-width: $breakpointL) {
-    margin-bottom: $spacesXXS;
-    font-size: $fonstSizeM;
-  }
-}
-
 .infoContainer {
   display: flex;
-}
-
-.header {
-  text-transform: uppercase;
-  margin-bottom: $spacesS;
-  color: $mainColor;
-  font-size: $fonstSizeS;
-  @media (max-width: $breakpointM) {
-    font-size: $fonstSizeXS;
-  }
 }
 
 .info {
@@ -77,24 +50,6 @@
     margin-bottom: $spacesXXS;
   }
   @media (max-width: $breakpointM) {
-    font-size: $fonstSizeXS;
-  }
-}
-
-.description {
-  margin-bottom: $spacesS;
-
-  color: $lightTextColor;
-  font-size: $fonstSizeS;
-  line-height: $lineHeightL;
-
-  @media (max-width: $breakpointL) {
-    width: 100%;
-    margin-bottom: $spacesXXS;
-  }
-
-  @media (max-width: $breakpointM) {
-    line-height: $lineHeightS;
     font-size: $fonstSizeXS;
   }
 }

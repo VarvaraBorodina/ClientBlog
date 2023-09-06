@@ -1,5 +1,8 @@
 @import '@/styles/global.scss';
 
+$lineLignPart: 75%;
+$lineDarckPart: 25%;
+
 .container {
   margin: 0 $spacesXXL;
 
@@ -64,34 +67,6 @@
   }
 }
 
-.header {
-  margin-bottom: $spacesS;
-  color: $mainColor;
-  font-size: $fonstSizeXL;
-  font-weight: $fontWeightL;
-  line-height: $lineHeightXL;
-
-  @media (max-width: $breakpointL) {
-    margin-bottom: $spacesXXS;
-    font-size: $fonstSizeL;
-    line-height: normal;
-  }
-}
-
-.description {
-  margin-bottom: $spacesS;
-  color: $mediumTextColor;
-  font-size: $fonstSizeS;
-  font-weight: $fontWeightS;
-  line-height: $lineHeightL;
-
-  @media (max-width: $breakpointL) {
-    margin-bottom: 0;
-    font-size: $fonstSizeXS;
-    line-height: $lineHeightS;
-  }
-}
-
 .networks {
   width: $socialWidth;
   margin-left: 0;
@@ -103,13 +78,13 @@
 }
 
 .lightLine {
-  width: 75%;
+  width: $lineLignPart;
   height: $lineHeight;
   background-color: $accentColor;
 }
 
 .darckLine {
-  width: 25%;
+  width: $lineDarckPart;
   height: $lineHeight;
   background-color: $linkColor;
 }

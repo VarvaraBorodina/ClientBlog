@@ -5,13 +5,14 @@ import { useTranslations } from 'next-intl';
 import React, { useState } from 'react';
 
 import { ICONS, TEXT } from '@/constants';
+import commonStyles from '@/styles/common.module.scss';
 
 import styles from './styled.module.scss';
 
 const { NEXT_ARROW, BACK_ARROW } = ICONS;
 const ITEM_WIDTH = 100;
 
-const { TESTIMONIAL, TESTIMONIAL_TEXT, TESTIMONIAL_TITLE } = TEXT;
+const { TESTIMONIAL, TESTIMONIAL_TEXT, TESTIMONIAL_TITLE, USER_ALT } = TEXT;
 
 export const Carousel = () => {
   const [offset, setOffset] = useState(0);
@@ -39,9 +40,9 @@ export const Carousel = () => {
   return (
     <section className={styles.container}>
       <div className={styles.info}>
-        <h6 className={styles.title}>{translate(TESTIMONIAL)}</h6>
-        <h3 className={styles.header}>{translate(TESTIMONIAL_TITLE)}</h3>
-        <p className={styles.description}>{translate(TESTIMONIAL_TEXT)}</p>
+        <h6 className={commonStyles.subtitle}>{translate(TESTIMONIAL)}</h6>
+        <h3 className={commonStyles.header}>{translate(TESTIMONIAL_TITLE)}</h3>
+        <p className={commonStyles.description}>{translate(TESTIMONIAL_TEXT)}</p>
       </div>
       <div className={styles.line} />
       <div className={styles.window}>
@@ -51,7 +52,7 @@ export const Carousel = () => {
               <p className={styles.text}>{review}</p>
               <div className={styles.footer}>
                 <div className={styles.user}>
-                  <img src={photo} alt="user" />
+                  <img src={photo} alt={translate(USER_ALT)} />
                   <div className={styles.userInfo}>
                     <p className={styles.name}>{user}</p>
                     <p className={styles.city}>{city}</p>

@@ -5,4 +5,5 @@ export const ASSETS = {
   WHY_WE_STARTED: '/img/aboutUs.png',
   ABOUT_BLOG: '/img/aboutBlog.jpg',
   ABOUT_TEAM: '/img/aboutTeam.jpg',
+  LOCATION: '/img/location.svg',
 };

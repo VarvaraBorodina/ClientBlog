@@ -1,5 +1,8 @@
 @import '@/styles/global.scss';
 
+$lineLignPart: 55%;
+$lineDarckPart: 25%;
+
 .container {
   position: relative;
   margin: $spacesL;
@@ -27,13 +30,13 @@
 }
 
 .lightLine {
-  width: 55%;
+  width: $lineDarckPart;
   height: $lineHeight;
   background-color: $accentColor;
 }
 
 .darckLine {
-  width: 25%;
+  width: $lineDarckPart;
   height: $lineHeight;
   background-color: $linkColor;
 }
@@ -134,32 +137,6 @@
   margin-right: $spacesM;
   @media (max-width: $breakpointL) {
     width: 100%;
-  }
-}
-
-.title {
-  margin-top: $spacesS;
-  color: $mainColor;
-  text-transform: uppercase;
-  font-size: $fonstSizeS;
-  letter-spacing: $letterSpacing;
-  @media (max-width: $breakpointL) {
-    font-size: $fonstSizeXS;
-  }
-}
-
-.header {
-  margin-top: $spacesS;
-  margin-bottom: $spacesS;
-
-  color: $mainColor;
-  font-weight: $fontWeightM;
-  font-size: $fonstSizeXL;
-  line-height: $lineHeightXL;
-
-  @media (max-width: $breakpointL) {
-    line-height: normal;
-    font-size: $fonstSizeL;
   }
 }
 

@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl';
 import React from 'react';
 
 import { TEXT } from '@/constants';
+import commonStyles from '@/styles/common.module.scss';
 
 import styles from './styled.module.scss';
 
@@ -19,14 +20,14 @@ const Policy = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h3 className={styles.title}>{translate(PRIVACY_POLICY)}</h3>
-        <p className={styles.text}>{translate(LAST_UPDATED)}</p>
+        <h3 className={commonStyles.header}>{translate(PRIVACY_POLICY)}</h3>
+        <p className={commonStyles.description}>{translate(LAST_UPDATED)}</p>
       </div>
       <div className={styles.content}>
-        <h3 className={styles.title}>{translate(POLICY_TITLE_TOP)}</h3>
-        <p className={styles.text}>{translate(POLICY_TEXT_TOP)}</p>
-        <h3 className={styles.title}>{translate(POLICY_TITLE_BOTTOM)}</h3>
-        <p className={styles.text}>{translate(POLICY_TEXT_BOTTOM)}</p>
+        <h3 className={commonStyles.header}>{translate(POLICY_TITLE_TOP)}</h3>
+        <p className={commonStyles.description}>{translate(POLICY_TEXT_TOP)}</p>
+        <h3 className={commonStyles.header}>{translate(POLICY_TITLE_BOTTOM)}</h3>
+        <p className={commonStyles.description}>{translate(POLICY_TEXT_BOTTOM)}</p>
       </div>
     </div>
   );

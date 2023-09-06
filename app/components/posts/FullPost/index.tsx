@@ -6,11 +6,12 @@ import { useTranslations } from 'next-intl';
 import React from 'react';
 
 import { ICONS, TEXT } from '@/constants';
+import commonStyles from '@/styles/common.module.scss';
 import { Author, Category, Post } from '@/types';
 
 import styles from './styled.module.scss';
 
-const { POSTED_ON } = TEXT;
+const { POSTED_ON, AUTHOR_ALT } = TEXT;
 
 export const FullPost = ({ post }: { post: Post }) => {
   const translate = useTranslations('Blog');
@@ -27,7 +28,7 @@ export const FullPost = ({ post }: { post: Post }) => {
     <article className={styles.container}>
       <div className={styles.postInfo}>
         <div className={styles.info}>
-          <img className={styles.authorImage} alt="author" src={authorImage} />
+          <img className={styles.authorImage} alt={translate(AUTHOR_ALT)} src={authorImage} />
           <div className={styles.authorInfo}>
             <p className={styles.author}>{`${name} ${lastName}`}</p>
             <p className={styles.date}>
@@ -44,7 +45,7 @@ export const FullPost = ({ post }: { post: Post }) => {
       <img className={styles.postImage} src={image} alt="post" />
       <div className={styles.postInfo}>
         <h6 className={styles.description}>{description}</h6>
-        <p className={styles.text}>{content}</p>
+        <p className={commonStyles.description}>{content}</p>
       </div>
     </article>
   );

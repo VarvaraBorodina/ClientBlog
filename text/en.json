@@ -21,7 +21,7 @@
   },
 
   "Home": {
-    "Posted": "Posted on",
+    "Posted": "Posted on ",
     "Post alt": "Post picture",
     "By": "By ",
     "Read more": "Read more >",
@@ -52,7 +52,9 @@
     "Vision title": "A platform that empowers individuals to improve",
     "Blog Published": "Blogs Published",
     "Views on Finsweet": "Views on Finsweet",
-    "Total active Users": "Total active Users"
+    "Total active Users": "Total active Users",
+    "People alt": "People",
+    "User alt": "User"
   },
 
   "Blog": {
@@ -64,7 +66,8 @@
     "Hello": "Hey there, I’m ",
     "Welcom": " and welcome to my Blog",
     "Posted on": "Posted on ",
-    "What to read next": "What to read next"
+    "What to read next": "What to read next",
+    "Author alt": "Author"
   },
 
   "About": {
@@ -133,7 +136,7 @@
     "Startup": "Startup",
 
     "Business description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-    "Economy description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    "Economy description": "Ut enim ad minim veniam, quis nostrud exercitation",
     "Technology description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
     "Startup description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
 

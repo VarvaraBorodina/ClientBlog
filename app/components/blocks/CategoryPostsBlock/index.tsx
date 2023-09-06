@@ -1,19 +1,26 @@
 'use client';
 
+import categories from '@data/categories.json';
+import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import React, { useState } from 'react';
 
 import { CategoryPost } from '@/components/posts/CategoryPost';
-import { TEXT } from '@/constants';
+import { DINAMIC_ROUTES, TEXT } from '@/constants';
 
 import styles from './styled.module.scss';
 import { CategoryPostBlockType } from './types';
 
 const POST_PER_PAGE = 5;
 const { PREV, NEXT, NO_POST } = TEXT;
+const { POST } = DINAMIC_ROUTES;
+
+const getCategory = (postCategory: number) =>
+  categories.find(({ id }) => postCategory === id)?.name;
 
 export const CategoryPostsBlock = ({ title, posts }: CategoryPostBlockType) => {
   const translate = useTranslations('Blog');
+  const translateCategory = useTranslations('Categories');
 
   const [firstPost, setFirstPost] = useState(0);
 
@@ -44,7 +51,9 @@ export const CategoryPostsBlock = ({ title, posts }: CategoryPostBlockType) => {
       ) : (
         <div className={styles.posts}>
           {pagePosts.map((post) => (
-            <CategoryPost post={post} key={post.id} />
+            <Link href={`${POST}/${post.id}`} key={post.id}>
+              <CategoryPost post={post} category={translateCategory(getCategory(post.category))} />
+            </Link>
           ))}
         </div>
       )}

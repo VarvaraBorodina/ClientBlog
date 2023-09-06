@@ -11,23 +11,3 @@
     width: 100%;
   }
 }
-
-.header {
-  margin-bottom: $spacesS;
-  font-weight: $fontWeightL;
-  font-size: $fonstSizeXL;
-
-  @media (max-width: $breakpointM) {
-    font-size: $fonstSizeL;
-  }
-}
-
-.text {
-  margin-bottom: $spacesS;
-
-  font-weight: $fontWeightS;
-  font-size: $fonstSizeS;
-  line-height: $lineHeightL;
-
-  color: $lightTextColor;
-}

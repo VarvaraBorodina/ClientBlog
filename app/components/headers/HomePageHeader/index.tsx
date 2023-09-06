@@ -19,6 +19,7 @@ export const HomePageHeader = () => {
 
   const translate = useTranslations('Home');
   const translateMonth = useTranslations('Monthes');
+  const translateCategory = useTranslations('Categories');
 
   const postCategory = (categories as Category[]).find(
     (category: Category) => category.id === post.category
@@ -35,7 +36,7 @@ export const HomePageHeader = () => {
         <div className={styles.content}>
           <h6 className={styles.category}>
             {translate(POSTED)}
-            <strong className={styles.bold}>{postCategory?.name}</strong>
+            <strong className={styles.bold}>{translateCategory(postCategory?.name)}</strong>
           </h6>
           <h3 className={styles.title}>{post.title}</h3>
           <div className={styles.infoContainer}>

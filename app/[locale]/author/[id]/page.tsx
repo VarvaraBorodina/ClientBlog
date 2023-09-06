@@ -3,17 +3,17 @@ import posts from '@data/posts.json';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
+import { PageProps } from '@/[locale]/types';
 import { CategoryPostsBlock } from '@/components/blocks/CategoryPostsBlock';
 import { Networks } from '@/components/Networks';
 import { TEXT } from '@/constants';
 import commonStyles from '@/styles/common.module.scss';
 
 import styles from './styled.module.scss';
-import { AuthorProps } from './types';
 
-const { MY_POSTS, NOT_FOUND, WELCOM, HELLO } = TEXT;
+const { MY_POSTS, NOT_FOUND, WELCOM, HELLO, AUTHOR_ALT } = TEXT;
 
-const Author = ({ params: { id } }: AuthorProps) => {
+const Author = ({ params: { id } }: PageProps) => {
   const translateNotFound = useTranslations(NOT_FOUND);
   const translate = useTranslations('Blog');
 
@@ -30,12 +30,12 @@ const Author = ({ params: { id } }: AuthorProps) => {
     <>
       <div className={styles.background}>
         <div className={styles.content}>
-          <img src={photo} alt="author" className={styles.image} />
+          <img src={photo} alt={translate(AUTHOR_ALT)} className={styles.image} />
           <div className={styles.authorInfo}>
-            <h3 className={styles.header}>
+            <h3 className={commonStyles.header}>
               {`${translate(HELLO)}${name} ${lastName}${translate(WELCOM)}`}
             </h3>
-            <p className={styles.description}>{description}</p>
+            <p className={commonStyles.description}>{description}</p>
             <div className={styles.networks}>
               <Networks />
             </div>

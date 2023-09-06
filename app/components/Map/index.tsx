@@ -6,11 +6,15 @@ import L, { LatLngExpression } from 'leaflet';
 import React from 'react';
 import { MapContainer, Marker, TileLayer } from 'react-leaflet';
 
+import { ASSETS } from '@/constants';
+
 import styles from './styled.module.scss';
 
+const { LOCATION } = ASSETS;
+
 const iconPerson = new L.Icon({
-  iconUrl: '/img/location.svg',
-  iconRetinaUrl: '/img/location.svg',
+  iconUrl: LOCATION,
+  iconRetinaUrl: LOCATION,
   iconSize: new L.Point(30, 30),
 });
 

@@ -7,6 +7,7 @@ import { Mulish } from 'next/font/google';
 import { useTranslations } from 'next-intl';
 import React, { useState } from 'react';
 
+import { PageProps } from '@/[locale]/types';
 import { CategoriesBlock } from '@/components/blocks/CategoriesBlock';
 import { CategoryPostsBlock } from '@/components/blocks/CategoryPostsBlock';
 import { TEXT } from '@/constants';
@@ -20,7 +21,7 @@ const mulish = Mulish({ subsets: ['latin'] });
 const { NOT_FOUND, BLOG, NO_TAGS, ALL_TAGS, CATEGORIES, SEARCH_TAGS } = TEXT;
 const MAX_TAGS_AMOUNT = 7;
 
-const Category = ({ params: { id } }: { params: { id: number } }) => {
+const Category = ({ params: { id } }: PageProps) => {
   const translateNotFound = useTranslations(NOT_FOUND);
   const translate = useTranslations('Categories');
 
@@ -70,9 +71,9 @@ const Category = ({ params: { id } }: { params: { id: number } }) => {
   return (
     <div>
       <div className={styles.header}>
-        <h3 className={`${styles.title} ${mulish.className}`}>{translate(name)}</h3>
-        <p className={styles.description}>{translate(description)}</p>
-        <h6 className={styles.subtitle}>{`${translate(BLOG)} > ${translate(name)}`}</h6>
+        <h3 className={`${styles.title}  ${mulish.className}`}>{translate(name)}</h3>
+        <p className={commonStyles.description}>{translate(description)}</p>
+        <h6 className={commonStyles.subtitle}>{`${translate(BLOG)} > ${translate(name)}`}</h6>
       </div>
       <div className={styles.container}>
         <div className={styles.posts}>
@@ -85,7 +86,7 @@ const Category = ({ params: { id } }: { params: { id: number } }) => {
             value={inputValue}
             onChange={handleInputChange}
           />
-          <h3 className={styles.tagsTitle}>{translate(ALL_TAGS)}</h3>
+          <h3 className={commonStyles.header}>{translate(ALL_TAGS)}</h3>
           <div className={styles.tags}>
             {!currentTags.length && <p className={styles.description}>{translate(NO_TAGS)}</p>}
             {currentTags.map((tag) => (

@@ -1,5 +1,7 @@
 import '@/styles/reset.scss';
 
+import en from '@text/en.json';
+import ru from '@text/ru.json';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { notFound } from 'next/navigation';
@@ -9,6 +11,8 @@ import React from 'react';
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/headers/Header';
 import { ASSETS, TEXT } from '@/constants';
+
+import { RootProps } from './types';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -20,19 +24,16 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({
-  children,
-  params: { locale },
-}: {
-  children: React.ReactNode;
-  params: {
-    locale: string;
-  };
-}) {
+const { RUSSIAN, ENGLISH } = TEXT;
+
+export default async function RootLayout({ children, params: { locale } }: RootProps) {
   let messages;
-  try {
-    messages = (await import(`../../messages/${locale}.json`)).default;
-  } catch (error) {
+
+  if (locale === RUSSIAN) {
+    messages = ru;
+  } else if (locale === ENGLISH) {
+    messages = en;
+  } else {
     notFound();
   }
 
