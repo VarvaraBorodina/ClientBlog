@@ -1,9 +1,11 @@
+'use client';
+
 import authors from '@data/authors.json';
+import { Author } from 'client-blog-library';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
-import { Author } from '@/components/Author';
 import { DINAMIC_ROUTES, TEXT } from '@/constants';
 import { Author as AuthorType } from '@/types';
 

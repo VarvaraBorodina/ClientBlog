@@ -3,11 +3,10 @@
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
-import { ICONS, TEXT } from '@/constants';
+import { PARTNERS, TEXT } from '@/constants';
 
 import styles from './styled.module.scss';
 
-const { PARTNERS } = ICONS;
 const { WE, FEATURED_IN } = TEXT;
 
 export const WeAre = () => {

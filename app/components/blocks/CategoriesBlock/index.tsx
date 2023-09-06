@@ -1,12 +1,12 @@
 'use client';
 
 import categories from '@data/categories.json';
+import { Category } from 'client-blog-library';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
-import { Category } from '@/components/Category';
-import { DINAMIC_ROUTES } from '@/constants';
+import { DINAMIC_ROUTES, ICONS } from '@/constants';
 import { Category as CategoryType } from '@/types';
 
 import styles from './styled.module.scss';
@@ -27,6 +27,7 @@ export const CategoriesBlock = ({ title, titleAlign, column }: CategoriesBlockPr
             <Category
               category={{ id, icon, description: translate(description), name: translate(name) }}
               full={!column}
+              icon={ICONS[icon]}
             />
           </Link>
         ))}
