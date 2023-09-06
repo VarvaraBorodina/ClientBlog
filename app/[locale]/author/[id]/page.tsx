@@ -1,11 +1,11 @@
 import authors from '@data/authors.json';
 import posts from '@data/posts.json';
+import { Networks } from 'client-blog-library';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
 import { PageProps } from '@/[locale]/types';
 import { CategoryPostsBlock } from '@/components/blocks/CategoryPostsBlock';
-import { Networks } from '@/components/Networks';
 import { TEXT } from '@/constants';
 import commonStyles from '@/styles/common.module.scss';
 
