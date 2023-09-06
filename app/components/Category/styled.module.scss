@@ -22,12 +22,16 @@
   height: $iconHeight;
   width: $iconHeight;
   margin-right: $spacesS;
+  margin-top: $spacesXS;
+  margin-bottom: $spacesXS;
 
   border-radius: $spacesXXS;
   background-color: $lightAccentColor;
 }
 
 .title {
+  margin-top: $spacesXS;
+  margin-bottom: $spacesXS;
   color: $mainColor;
 
   font-size: $fonstSizeL;

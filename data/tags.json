@@ -1,6 +1,6 @@
 [
   {
-    "id": 0,
+    "id": 16,
     "name": "Business"
   },
   {
@@ -37,10 +37,22 @@
   },
   {
     "id": 9,
-    "name": "Marketplace"
+    "name": "Work"
   },
   {
     "id": 11,
     "name": "Logistics"
+  },
+  {
+    "id": 12,
+    "name": "Programming"
+  },
+  {
+    "id": 14,
+    "name": "Languages"
+  },
+  {
+    "id": 15,
+    "name": "Partnership"
   }
 ]
