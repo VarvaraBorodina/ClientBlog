@@ -1,3 +1,5 @@
+'use client';
+
 import authors from '@data/authors.json';
 import posts from '@data/posts.json';
 import { Networks } from 'client-blog-library';
