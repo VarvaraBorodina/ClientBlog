@@ -107,4 +107,6 @@ export const TEXT = {
   NO_TAGS: 'No tags',
   SEARCH_TAGS: 'Search tags',
   CATEGORIES: 'Categories',
+
+  ERROR: 'Error',
 };
