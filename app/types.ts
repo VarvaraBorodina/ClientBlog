@@ -35,4 +35,5 @@ export interface Post {
   description: string;
   content: string;
   image: string;
+  tags: number[];
 }

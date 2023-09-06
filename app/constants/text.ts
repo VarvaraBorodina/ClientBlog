@@ -102,4 +102,9 @@ export const TEXT = {
   WORKING_DAYS: 'Working days',
   WORKING_TIME: 'Working time',
   SUPPORT: 'Support',
+
+  ALL_TAGS: 'All tags',
+  NO_TAGS: 'No tags',
+  SEARCH_TAGS: 'Search tags',
+  CATEGORIES: 'Categories',
 };

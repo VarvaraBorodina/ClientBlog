@@ -109,6 +109,23 @@
   "Categories": {
     "All Categories": "Все категории",
     "Choose A Catagory": "Выберети категорию",
+    "Categories": "Категории",
+    "All tags": "Все теги",
+    "No tags": "Нет тегов",
+    "Search tags": "Поиск тега",
+
+    "Experience": "Опыт",
+    "Screen": "Экран",
+    "Marketing": "Маркетинг",
+    "Life": "Жизнь",
+    "Design": "Дизайн",
+    "Marketplace": "Торговая площадка",
+    "IT": "IT",
+    "Work": "Работа",
+    "Logistics": "Логистика",
+    "Programming": "Программирование",
+    "Languages": "Языки",
+    "Partnership": "Сотрудничество",
 
     "Business": "Бизнес",
     "Economy": "Экономика",

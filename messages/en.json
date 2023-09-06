@@ -109,6 +109,23 @@
   "Categories": {
     "All Categories": "All Categories",
     "Choose A Catagory": "Choose A Catagory",
+    "Categories": "Categories",
+    "All tags": "All tags",
+    "No tags": "No tags",
+    "Search tags": "Search tags",
+
+    "Experience": "Experience",
+    "Screen": "Screen",
+    "Marketing": "Marketing",
+    "Life": "Life",
+    "Design": "Design",
+    "Marketplace": "Marketplace",
+    "IT": "IT",
+    "Work": "Work",
+    "Logistics": "Logistics",
+    "Programming": "Programming",
+    "Languages": "Languages",
+    "Partnership": "Partnership",
 
     "Business": "Business",
     "Economy": "Economy",
