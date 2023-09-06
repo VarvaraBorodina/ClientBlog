@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl';
 import React from 'react';
 
 import { TEXT } from '@/constants';
+import commonStyles from '@/styles/common.module.scss';
 
 import styles from './styled.module.scss';
 
@@ -22,9 +23,9 @@ export const ContactsHeader = () => {
   return (
     <>
       <div className={styles.formHeader}>
-        <h6 className={styles.subtitle}>{translate(CONTACT_US)}</h6>
-        <h3 className={`${styles.title}`}>{translate(LET_START)}</h3>
-        <p className={styles.description}>{translate(CONTACTS_TEXT)}</p>
+        <h6 className={commonStyles.subtitle}>{translate(CONTACT_US)}</h6>
+        <h3 className={styles.title}>{translate(LET_START)}</h3>
+        <p className={commonStyles.description}>{translate(CONTACTS_TEXT)}</p>
       </div>
       <div className={styles.contacts}>
         <div className={styles.contactsBlock}>

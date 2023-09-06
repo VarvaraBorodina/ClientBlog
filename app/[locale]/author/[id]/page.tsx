@@ -32,10 +32,10 @@ const Author = ({ params: { id } }: PageProps) => {
         <div className={styles.content}>
           <img src={photo} alt={translate(AUTHOR_ALT)} className={styles.image} />
           <div className={styles.authorInfo}>
-            <h3 className={styles.header}>
+            <h3 className={commonStyles.header}>
               {`${translate(HELLO)}${name} ${lastName}${translate(WELCOM)}`}
             </h3>
-            <p className={styles.description}>{description}</p>
+            <p className={commonStyles.description}>{description}</p>
             <div className={styles.networks}>
               <Networks />
             </div>

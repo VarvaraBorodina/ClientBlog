@@ -71,9 +71,9 @@ const Category = ({ params: { id } }: PageProps) => {
   return (
     <div>
       <div className={styles.header}>
-        <h3 className={`${styles.title} ${mulish.className}`}>{translate(name)}</h3>
-        <p className={styles.description}>{translate(description)}</p>
-        <h6 className={styles.subtitle}>{`${translate(BLOG)} > ${translate(name)}`}</h6>
+        <h3 className={`${styles.title}  ${mulish.className}`}>{translate(name)}</h3>
+        <p className={commonStyles.description}>{translate(description)}</p>
+        <h6 className={commonStyles.subtitle}>{`${translate(BLOG)} > ${translate(name)}`}</h6>
       </div>
       <div className={styles.container}>
         <div className={styles.posts}>
@@ -86,7 +86,7 @@ const Category = ({ params: { id } }: PageProps) => {
             value={inputValue}
             onChange={handleInputChange}
           />
-          <h3 className={styles.tagsTitle}>{translate(ALL_TAGS)}</h3>
+          <h3 className={commonStyles.header}>{translate(ALL_TAGS)}</h3>
           <div className={styles.tags}>
             {!currentTags.length && <p className={styles.description}>{translate(NO_TAGS)}</p>}
             {currentTags.map((tag) => (

@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import React, { useState } from 'react';
 
 import { ICONS, TEXT } from '@/constants';
+import commonStyles from '@/styles/common.module.scss';
 
 import styles from './styled.module.scss';
 
@@ -39,9 +40,9 @@ export const Carousel = () => {
   return (
     <section className={styles.container}>
       <div className={styles.info}>
-        <h6 className={styles.title}>{translate(TESTIMONIAL)}</h6>
-        <h3 className={styles.header}>{translate(TESTIMONIAL_TITLE)}</h3>
-        <p className={styles.description}>{translate(TESTIMONIAL_TEXT)}</p>
+        <h6 className={commonStyles.subtitle}>{translate(TESTIMONIAL)}</h6>
+        <h3 className={commonStyles.header}>{translate(TESTIMONIAL_TITLE)}</h3>
+        <p className={commonStyles.description}>{translate(TESTIMONIAL_TEXT)}</p>
       </div>
       <div className={styles.line} />
       <div className={styles.window}>

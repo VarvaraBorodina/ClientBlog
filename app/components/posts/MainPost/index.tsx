@@ -28,14 +28,14 @@ export const MainPost = () => {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <h6 className={styles.header}>{translate(FEATURE_POST)}</h6>
-        <h3 className={styles.title}>{title}</h3>
+        <h6 className={commonStyles.subtitle}>{translate(FEATURE_POST)}</h6>
+        <h3 className={commonStyles.header}>{title}</h3>
         <p className={styles.info}>
           {translate(BY)}
           <strong className={styles.accent}>{`${postAuthor?.name} ${postAuthor?.lastName}`}</strong>
           {` | ${translateMonth(String(month))} ${day}, ${year}`}
         </p>
-        <p className={styles.description}>{description}</p>
+        <p className={commonStyles.description}>{description}</p>
         <Link href={`${POST}/${post.id}`} className={commonStyles.button}>
           {`${translate(READ_MORE)}`}
         </Link>

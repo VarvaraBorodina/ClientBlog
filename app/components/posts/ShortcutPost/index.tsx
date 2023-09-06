@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import React from 'react';
 
 import { DINAMIC_ROUTES, TEXT } from '@/constants';
+import commonStyles from '@/styles/common.module.scss';
 import { Author, Post } from '@/types';
 
 import styles from './styled.module.scss';
@@ -27,8 +28,8 @@ export const ShortcutPost = ({ post, full }: { post: Post; full: boolean }) => {
         <strong className={styles.accent}>{`${postAuthor?.name} ${postAuthor?.lastName}`}</strong>
         {` | ${translateMonth(String(month))} ${day}, ${year}`}
       </p>
-      <h6 className={styles.title}>{post.title}</h6>
-      {full && <p className={styles.description}>{post.description}</p>}
+      <h6 className={commonStyles.header}>{post.title}</h6>
+      {full && <p className={commonStyles.description}>{post.description}</p>}
     </Link>
   );
 };

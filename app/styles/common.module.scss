@@ -26,3 +26,45 @@
 
   font-size: $fonstSizeXL;
 }
+
+.description {
+  margin-bottom: $spacesS;
+  color: $mediumTextColor;
+  font-size: $fonstSizeS;
+  font-weight: $fontWeightS;
+  line-height: $lineHeightL;
+
+  @media (max-width: $breakpointL) {
+    margin-bottom: 0;
+    font-size: $fonstSizeXS;
+    line-height: $lineHeightS;
+  }
+}
+
+.header {
+  margin-bottom: $spacesS;
+  color: $mainColor;
+  font-size: $fonstSizeXL;
+  font-weight: $fontWeightL;
+  line-height: $lineHeightXL;
+
+  @media (max-width: $breakpointL) {
+    margin-bottom: $spacesXXS;
+    font-size: $fonstSizeL;
+    line-height: normal;
+  }
+}
+
+.subtitle {
+  margin-bottom: $spacesS;
+  color: $mainColor;
+  font-size: $fonstSizeS;
+  font-weight: $fontWeightS;
+  letter-spacing: $letterSpacing;
+  text-transform: uppercase;
+
+  @media (max-width: $breakpointM) {
+    margin-bottom: $spacesXS;
+    font-size: $fonstSizeS;
+  }
+}

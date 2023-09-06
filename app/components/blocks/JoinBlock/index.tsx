@@ -16,8 +16,8 @@ export const JoinBlock = () => {
   const translate = useTranslations('Home');
   return (
     <div className={styles.container}>
-      <h3 className={styles.header}>{translate(JOIN_HEADER)}</h3>
-      <p className={styles.text}>{translate(JOIN_TEXT)}</p>
+      <h3 className={commonStyles.header}>{translate(JOIN_HEADER)}</h3>
+      <p className={commonStyles.description}>{translate(JOIN_TEXT)}</p>
       <Link href={CONTACT.path} className={commonStyles.button}>
         {translate(JOUN_BUTTON)}
       </Link>
