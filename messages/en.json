@@ -157,5 +157,9 @@
 
   "Not found": {
     "Not found": "Not found"
+  },
+
+  "Error": {
+    "Error": "Something went wrong..."
   }
 }

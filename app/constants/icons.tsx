@@ -12,6 +12,7 @@ import Close from '@/assets/close.svg';
 import Facebook from '@/assets/facebook.svg';
 import Instagram from '@/assets/instagram.svg';
 import LinkedIn from '@/assets/linkedIn.svg';
+import Loader from '@/assets/loader.svg';
 import Menu from '@/assets/menu.svg';
 import NextArrow from '@/assets/nextArrow.svg';
 import LogoBall from '@/assets/partners/logoBall.svg';
@@ -39,4 +40,6 @@ export const ICONS = {
   NEXT_ARROW: <NextArrow />,
   BACK_ARROW: <BackArrow />,
   DROPDOWN_ARROW: <Arrow />,
+
+  LOADER: <Loader />,
 };
