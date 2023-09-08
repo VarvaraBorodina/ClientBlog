@@ -1,0 +1,25 @@
+name: Check Client Blog
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get repository code
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Test with Jest
+        run: yarn run jest
+
+      - name: Check eslint rules
+        run: yarn run lint
+
+      - name: Format with prettier
+        run: yarn run prettier
+
+      - name: Build library
+        run: yarn run build
