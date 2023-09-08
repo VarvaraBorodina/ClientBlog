@@ -5,7 +5,7 @@ import posts from '@data/posts.json';
 import tags from '@data/tags.json';
 import { Mulish } from 'next/font/google';
 import { useTranslations } from 'next-intl';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { PageProps } from '@/[locale]/types';
 import { CategoriesBlock } from '@/components/blocks/CategoriesBlock';
@@ -31,9 +31,21 @@ const Category = ({ params: { id } }: PageProps) => {
   }));
 
   const [inputValue, setInputValue] = useState('');
-  const [currentTag, setCurrentTag] = useState(0);
+  const [chosenTags, setChosenTags] = useState<number[]>([]);
   const [currentTags, setCurrentTags] = useState<Tag[]>(translatedTags.slice(0, MAX_TAGS_AMOUNT));
   const [currentPosts, setCurrentPosts] = useState<Post[]>(posts);
+
+  useEffect(() => {
+    setCurrentPosts(() => {
+      if (chosenTags.length === 0) {
+        return posts;
+      }
+      console.log(chosenTags);
+      return posts.filter(({ tags: postTags }) => {
+        return chosenTags.reduce((isChoosen, tag) => isChoosen && postTags.includes(tag), true);
+      });
+    });
+  }, [chosenTags]);
 
   const handleInputChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = target;
@@ -50,12 +62,10 @@ const Category = ({ params: { id } }: PageProps) => {
   };
 
   const toggleTag = (tagId: number) => () => {
-    if (tagId === currentTag) {
-      setCurrentTag(0);
-      setCurrentPosts(posts);
+    if (chosenTags.includes(tagId)) {
+      setChosenTags((prevTags) => prevTags.filter((prevTag) => prevTag !== tagId));
     } else {
-      setCurrentTag(tagId);
-      setCurrentPosts(posts.filter((post) => post.tags.includes(Number(tagId))));
+      setChosenTags((prevTags) => [...prevTags, tagId]);
     }
   };
 
@@ -86,12 +96,12 @@ const Category = ({ params: { id } }: PageProps) => {
             value={inputValue}
             onChange={handleInputChange}
           />
-          <h3 className={commonStyles.header}>{translate(ALL_TAGS)}</h3>
+          <h3 className={`${commonStyles.header} ${styles.tagsTitle}`}>{translate(ALL_TAGS)}</h3>
           <div className={styles.tags}>
             {!currentTags.length && <p className={styles.description}>{translate(NO_TAGS)}</p>}
             {currentTags.map((tag) => (
               <p
-                className={`${styles.tag} ${tag.id === currentTag && styles.active}`}
+                className={`${styles.tag} ${chosenTags.includes(tag.id) && styles.active}`}
                 key={tag.id}
                 onClick={toggleTag(tag.id)}
               >

@@ -76,6 +76,7 @@ $postsWidth: 80%;
   }
   @media (max-width: $breakpointXL) {
     font-size: $fonstSizeS;
+    margin-top: $spacesS;
   }
 
   @media (max-width: $breakpointL) {
@@ -85,10 +86,9 @@ $postsWidth: 80%;
 }
 
 .tagsTitle {
-  margin: $spacesS 0;
-  font-size: $fonstSizeXL;
-  font-weight: $fontWeightL;
-  color: $mainColor;
+  @media (max-width: $breakpointL) {
+    margin-left: $spacesM;
+  }
 }
 
 .tags {
@@ -97,6 +97,8 @@ $postsWidth: 80%;
   flex-wrap: wrap;
 
   @media (max-width: $breakpointL) {
+    margin: 0 $spacesS;
+    margin-bottom: $spacesS;
     box-sizing: border-box;
     width: 100%;
   }
