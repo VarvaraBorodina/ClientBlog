@@ -31,7 +31,6 @@ jest.mock('@/constants', () => ({
 const {
   MISION,
   MISION_TITLE,
-  MISION_TEXT,
   ABOUT_US,
   ABOUT_US_TITLE,
   VISION,
@@ -42,7 +41,6 @@ const {
   BLOG_PUBLISHED_NUMBER,
   ACTIVE_USER,
   BLOG_PUBLISHED,
-  PEOPLE_ALT,
 } = TEXT;
 const texts = [
   MISION,

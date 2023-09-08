@@ -1,6 +1,6 @@
 import cypress from 'cypress';
 
-import { DINAMIC_ROUTES, ROUTE } from '/routes';
+import { DINAMIC_ROUTES, ROUTE } from '@/constants/routes';
 
 const baseUrlL: string = Cypress.config().baseUrl!.toString();
 const { ABOUT } = ROUTE;

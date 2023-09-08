@@ -3,7 +3,7 @@ import React from 'react';
 
 import { TEXT } from '@/constants';
 
-import { Footer } from './';
+import { Footer } from '.';
 
 jest.mock('next-intl', () => ({
   useTranslations: jest.fn().mockReturnValue((text: string) => text),
