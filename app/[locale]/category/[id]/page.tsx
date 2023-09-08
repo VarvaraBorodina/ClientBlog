@@ -40,7 +40,6 @@ const Category = ({ params: { id } }: PageProps) => {
       if (chosenTags.length === 0) {
         return posts;
       }
-      console.log(chosenTags);
       return posts.filter(({ tags: postTags }) => {
         return chosenTags.reduce((isChoosen, tag) => isChoosen && postTags.includes(tag), true);
       });
