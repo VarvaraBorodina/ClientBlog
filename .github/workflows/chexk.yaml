@@ -19,7 +19,7 @@ jobs:
         run: yarn run lint
 
       - name: Format with prettier
-        run: yarn run prettier
+        run: yarn run format
 
       - name: Build library
         run: yarn run build
