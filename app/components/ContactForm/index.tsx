@@ -6,10 +6,10 @@ import { useTranslations } from 'next-intl';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
+import { ContactsHeader } from '@/components/headers/ContactsHeader';
 import { TEXT } from '@/constants';
 import { sendEmail } from '@/service/email';
 
-import { ContactsHeader } from '../headers/ContactsHeader';
 import { schema } from './schema';
 import styles from './styled.module.scss';
 import { ContactFormType } from './types';
