@@ -3,7 +3,7 @@
 import authors from '@data/authors.json';
 import categories from '@data/categories.json';
 import { useTranslations } from 'next-intl';
-import React from 'react';
+import React, { useMemo } from 'react';
 
 import { ICONS, TEXT } from '@/constants';
 import commonStyles from '@/styles/common.module.scss';
@@ -21,8 +21,15 @@ export const FullPost = ({ post }: { post: Post }) => {
   const { description, content, image, category, author, title } = post;
   const { day, month, year } = post.creationDate;
 
-  const { icon, name: categoryName } = categories.find(({ id }) => id === category) as Category;
-  const { name, lastName, photo: authorImage } = authors.find(({ id }) => id === author) as Author;
+  const { icon, name: categoryName } = useMemo(
+    () => categories.find(({ id }) => id === category) as Category,
+    [category]
+  );
+  const {
+    name,
+    lastName,
+    photo: authorImage,
+  } = useMemo(() => authors.find(({ id }) => id === author) as Author, [author]);
 
   return (
     <article className={styles.container}>

@@ -4,7 +4,7 @@ import authors from '@data/authors.json';
 import { Author } from 'client-blog-library';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import React from 'react';
+import React, { useMemo } from 'react';
 
 import { DINAMIC_ROUTES, TEXT } from '@/constants';
 import { Author as AuthorType } from '@/types';
@@ -14,9 +14,9 @@ import styles from './styled.module.scss';
 const { AUTHORS, WRITTER } = TEXT;
 const { AUTHOR } = DINAMIC_ROUTES;
 
-export const AuthorsBlock = ({ authorsAmount }: { authorsAmount: number }) => {
+export const AuthorsBlock = React.memo(({ authorsAmount }: { authorsAmount: number }) => {
   const translate = useTranslations('Home');
-  const mainAuthors: AuthorType[] = authors.slice(0, authorsAmount);
+  const mainAuthors: AuthorType[] = useMemo(() => authors.slice(0, authorsAmount), [authorsAmount]);
 
   return (
     <div className={styles.container}>
@@ -30,4 +30,4 @@ export const AuthorsBlock = ({ authorsAmount }: { authorsAmount: number }) => {
       </div>
     </div>
   );
-};
+});

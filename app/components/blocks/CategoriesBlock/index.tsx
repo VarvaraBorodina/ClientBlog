@@ -14,8 +14,9 @@ import { CategoriesBlockProps } from './types';
 
 const { CATEGORY } = DINAMIC_ROUTES;
 
-export const CategoriesBlock = ({ title, titleAlign, column }: CategoriesBlockProps) => {
+export const CategoriesBlock = React.memo(({ title, titleAlign, column }: CategoriesBlockProps) => {
   const translate = useTranslations('Categories');
+
   return (
     <div className={styles.container}>
       <h3 className={styles.header} style={{ textAlign: titleAlign }}>
@@ -34,4 +35,4 @@ export const CategoriesBlock = ({ title, titleAlign, column }: CategoriesBlockPr
       </div>
     </div>
   );
-};
+});

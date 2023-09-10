@@ -6,7 +6,7 @@ import commonStyles from '@/styles/common.module.scss';
 import styles from './styled.module.scss';
 import { ImageArticleProps } from './types';
 
-export const ImageArticle = (props: ImageArticleProps) => {
+export const ImageArticle = React.memo((props: ImageArticleProps) => {
   const { title, subtitle, text, image, type } = props;
 
   const translate = useTranslations('About');
@@ -26,4 +26,4 @@ export const ImageArticle = (props: ImageArticleProps) => {
       </div>
     </article>
   );
-};
+});

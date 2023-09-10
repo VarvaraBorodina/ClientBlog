@@ -4,7 +4,7 @@ import categories from '@data/categories.json';
 import { CategoryPost } from 'client-blog-library';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 
 import { DINAMIC_ROUTES, TEXT } from '@/constants';
 
@@ -36,7 +36,10 @@ export const CategoryPostsBlock = ({ title, posts }: CategoryPostBlockType) => {
     window.scrollTo(0, 0);
   };
 
-  const pagePosts = posts.slice(firstPost, firstPost + POST_PER_PAGE);
+  const pagePosts = useMemo(
+    () => posts.slice(firstPost, firstPost + POST_PER_PAGE),
+    [firstPost, posts]
+  );
 
   return (
     <div className={styles.container}>
