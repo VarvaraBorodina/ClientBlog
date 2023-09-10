@@ -24,14 +24,8 @@ export const CategoryPostsBlock = ({ title, posts }: CategoryPostBlockType) => {
 
   const [firstPost, setFirstPost] = useState(0);
 
-  const onNextClick = () => {
-    setFirstPost((prevFirstPost) => prevFirstPost + POST_PER_PAGE);
-
-    window.scrollTo(0, 0);
-  };
-
-  const onPrevClick = () => {
-    setFirstPost((prevFirstPost) => prevFirstPost - POST_PER_PAGE);
+  const onChangePageClick = (direction: 1 | -1) => () => {
+    setFirstPost((prevFirstPost) => prevFirstPost + direction * POST_PER_PAGE);
 
     window.scrollTo(0, 0);
   };
@@ -65,7 +59,7 @@ export const CategoryPostsBlock = ({ title, posts }: CategoryPostBlockType) => {
           <button
             className={styles.button}
             type="button"
-            onClick={onPrevClick}
+            onClick={onChangePageClick(-1)}
             disabled={firstPost === 0}
           >
             {translate(PREV)}
@@ -73,7 +67,7 @@ export const CategoryPostsBlock = ({ title, posts }: CategoryPostBlockType) => {
           <button
             className={styles.button}
             type="button"
-            onClick={onNextClick}
+            onClick={onChangePageClick(1)}
             disabled={firstPost + POST_PER_PAGE > posts.length}
           >
             {translate(NEXT)}

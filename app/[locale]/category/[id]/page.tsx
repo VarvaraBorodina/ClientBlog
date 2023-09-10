@@ -5,7 +5,7 @@ import posts from '@data/posts.json';
 import tags from '@data/tags.json';
 import { Mulish } from 'next/font/google';
 import { useTranslations } from 'next-intl';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 
 import { PageProps } from '@/[locale]/types';
 import { CategoriesBlock } from '@/components/blocks/CategoriesBlock';
@@ -68,14 +68,20 @@ const Category = ({ params: { id } }: PageProps) => {
     }
   };
 
-  const category = categories.find(({ id: categoryId }) => categoryId === Number(id));
+  const category = useMemo(
+    () => categories.find(({ id: categoryId }) => categoryId === Number(id)),
+    [id]
+  );
+  const categoryPosts = useMemo(
+    () => currentPosts.filter((post) => post.category === category?.id),
+    [category, currentPosts]
+  );
 
   if (!category) {
     return <p className={commonStyles.notFound}>{translateNotFound(NOT_FOUND)}</p>;
   }
 
   const { name, description } = category;
-  const categoryPosts = currentPosts.filter((post) => post.category === category.id);
 
   return (
     <>

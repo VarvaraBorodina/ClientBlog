@@ -4,7 +4,7 @@ import authors from '@data/authors.json';
 import posts from '@data/posts.json';
 import { Networks } from 'client-blog-library';
 import { useTranslations } from 'next-intl';
-import React from 'react';
+import React, { useMemo } from 'react';
 
 import { PageProps } from '@/[locale]/types';
 import { CategoryPostsBlock } from '@/components/blocks/CategoryPostsBlock';
@@ -19,8 +19,8 @@ const Author = ({ params: { id } }: PageProps) => {
   const translateNotFound = useTranslations(NOT_FOUND);
   const translate = useTranslations('Blog');
 
-  const currentAuthor = authors.find((author) => author.id === Number(id));
-  const authorPosts = posts.filter(({ author }) => author === Number(id));
+  const currentAuthor = useMemo(() => authors.find((author) => author.id === Number(id)), [id]);
+  const authorPosts = useMemo(() => posts.filter(({ author }) => author === Number(id)), [id]);
 
   if (!currentAuthor) {
     return <p className={commonStyles.notFound}>{translateNotFound(NOT_FOUND)}</p>;

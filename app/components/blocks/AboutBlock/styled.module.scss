@@ -52,14 +52,6 @@ $lineDarckPart: 25%;
   }
 }
 
-.info {
-  width: 50%;
-  margin-right: $spacesM;
-  @media (max-width: $breakpointL) {
-    width: 100%;
-  }
-}
-
 .link {
   color: $linkColor;
   font-weight: $fontWeightL;

@@ -46,11 +46,12 @@
 .buttons {
   display: flex;
   justify-content: center;
-  width: $categoryWidth;
+  width: $authorWidth;
   margin: 0 auto;
 }
 
 .button {
+  margin-right: $spacesS;
   font-size: $fonstSizeL;
   font-weight: $fontWeightL;
 

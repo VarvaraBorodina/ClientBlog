@@ -1,0 +1,11 @@
+@import '@/styles/global.scss';
+
+.info {
+  width: 50%;
+  margin-right: $spacesM;
+  @media (max-width: $breakpointL) {
+    margin-right: 0;
+    margin-top: $spacesS;
+    width: 100%;
+  }
+}
