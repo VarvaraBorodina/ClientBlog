@@ -41,6 +41,7 @@ export const Footer = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<{ email: string }>({
+    mode: 'onBlur',
     resolver: yupResolver(emailSchema),
   });
 

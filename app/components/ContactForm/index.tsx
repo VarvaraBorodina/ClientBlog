@@ -37,6 +37,7 @@ export const ContactForm = () => {
     formState: { errors },
   } = useForm<ContactFormType>({
     resolver: yupResolver(schema),
+    mode: 'onBlur',
   });
 
   const handleDropdownChange = (newValue: string) => {
