@@ -7,7 +7,12 @@
 
   background-color: $lightLinkColor;
 
+  @media (max-width: $breakpointXL) {
+    padding: $spacesL;
+  }
+
   @media (max-width: $breakpointL) {
+    padding: $spacesM $spacesS;
     flex-direction: column;
   }
 
@@ -19,10 +24,12 @@
 .image {
   width: $aside;
   object-fit: contain;
+  margin-left: $spacesXS;
 
   @media (max-width: $breakpointL) {
     width: 100%;
     margin-top: $spacesS;
+    margin-left: 0;
   }
 }
 

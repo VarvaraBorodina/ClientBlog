@@ -91,6 +91,7 @@
 .line {
   width: $borderWidth;
 
+  margin-right: $spacesS;
   background-color: $postBorderColor;
 
   @media (max-width: $breakpointXL) {
@@ -137,7 +138,7 @@
 .name {
   color: $mainColor;
   margin-bottom: $spacesXXS;
-  font-size: $fonstSizeM;
+  font-size: $fonstSizeXS;
   font-weight: $fontWeightL;
 
   @media (max-width: $breakpointM) {
@@ -147,6 +148,7 @@
 
 .city {
   color: $lightTextColor;
+  font-size: $fonstSizeXS;
   @media (max-width: $breakpointM) {
     font-size: $fonstSizeXS;
   }

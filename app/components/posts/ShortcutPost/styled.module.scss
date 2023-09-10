@@ -33,3 +33,11 @@
   color: $linkColor;
   cursor: pointer;
 }
+
+.title {
+  @media (max-width: $breakpointXL) {
+    font-size: $fonstSizeL;
+    font-weight: $fontWeightM;
+    line-height: normal;
+  }
+}

@@ -11,6 +11,9 @@
 
 .image {
   width: $startImage;
+  @media (max-width: $breakpointXL) {
+    width: $articleImageWidth;
+  }
   @media (max-width: $breakpointL) {
     width: 100%;
     display: block;
@@ -26,7 +29,7 @@
   background-color: $textColor;
 
   @media (max-width: $breakpointXL) {
-    padding: $spacesS;
+    padding: $spacesM;
   }
 
   @media (max-width: $breakpointL) {

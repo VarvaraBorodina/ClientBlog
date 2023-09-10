@@ -100,7 +100,8 @@
 
   @media (max-width: $breakpointXL) {
     width: 100%;
-    font-size: $fonstSizeL;
+    font-size: $fonstSizeM;
+    line-height: $lineHeightL;
   }
   @media (max-width: $breakpointL) {
     margin-bottom: $spacesXS;

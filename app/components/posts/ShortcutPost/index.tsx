@@ -28,7 +28,7 @@ export const ShortcutPost = ({ post, full }: { post: Post; full: boolean }) => {
         <strong className={styles.accent}>{`${postAuthor?.name} ${postAuthor?.lastName}`}</strong>
         {` | ${translateMonth(String(month))} ${day}, ${year}`}
       </p>
-      <h6 className={commonStyles.header}>{post.title}</h6>
+      <h6 className={`${commonStyles.header} ${styles.title}`}>{post.title}</h6>
       {full && <p className={commonStyles.description}>{post.description}</p>}
     </Link>
   );

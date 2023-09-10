@@ -28,6 +28,11 @@
   font-size: $fonstSizeXL;
   font-weight: $fontWeightL;
 
+  @media (max-width: $breakpointXL) {
+    font-size: $fonstSizeL;
+    font-weight: $fontWeightM;
+  }
+
   @media (max-width: $breakpointM) {
     margin-top: $spacesXS;
     font-size: $fonstSizeM;
