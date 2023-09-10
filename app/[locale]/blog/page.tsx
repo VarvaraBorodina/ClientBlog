@@ -13,14 +13,14 @@ const { ALL_CATEGORIES, ALL_POST } = TEXT;
 
 const Blog = () => {
   return (
-    <div>
+    <>
       <MainPost />
       <div className={styles.container}>
         <CategoriesBlock title={ALL_CATEGORIES} titleAlign="left" column={false} />
         <CategoryPostsBlock posts={posts} title={ALL_POST} />
       </div>
       <JoinBlock />
-    </div>
+    </>
   );
 };
 

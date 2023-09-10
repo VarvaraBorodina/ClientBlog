@@ -78,7 +78,7 @@ const Category = ({ params: { id } }: PageProps) => {
   const categoryPosts = currentPosts.filter((post) => post.category === category.id);
 
   return (
-    <div>
+    <>
       <div className={styles.header}>
         <h3 className={`${styles.title}  ${mulish.className}`}>{translate(name)}</h3>
         <p className={commonStyles.description}>{translate(description)}</p>
@@ -111,7 +111,7 @@ const Category = ({ params: { id } }: PageProps) => {
           <CategoriesBlock title={CATEGORIES} column titleAlign="left" />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

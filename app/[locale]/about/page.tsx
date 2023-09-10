@@ -12,7 +12,7 @@ const authorsAmount = 8;
 
 const About = () => {
   return (
-    <div>
+    <>
       <AboutFullBlock />
       <ImageArticle
         title={ABOUT_TEAM}
@@ -30,7 +30,7 @@ const About = () => {
       />
       <AuthorsBlock authorsAmount={authorsAmount} />
       <JoinBlock />
-    </div>
+    </>
   );
 };
 

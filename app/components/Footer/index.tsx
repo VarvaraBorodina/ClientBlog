@@ -86,7 +86,7 @@ export const Footer = () => {
       </div>
       <div className={styles.content}>
         <h3 className={styles.formTitle}>{translateFooter(FOOTER_TITLE)}</h3>
-        <div>
+        <div className={styles.info}>
           <form className={styles.form} onSubmit={handleSubmit(submit)}>
             <input
               className={styles.input}
@@ -103,7 +103,7 @@ export const Footer = () => {
         </div>
       </div>
       <div className={styles.contacts}>
-        <div>
+        <div className={styles.info}>
           <button className={styles.lang} onClick={onLanguageChange(RUSSIAN)} type="button">
             {RUSSIAN}
           </button>
