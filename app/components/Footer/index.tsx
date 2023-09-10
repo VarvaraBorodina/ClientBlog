@@ -5,7 +5,7 @@ import { Networks } from 'client-blog-library';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
-import IntlLink from 'next-intl/link';
+import { useRouter } from 'next-intl/client';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
@@ -30,6 +30,8 @@ const {
   SUBSCRIBE_OK,
   ADDRES,
   FOOTER_TITLE,
+  RUSSIAN,
+  ENGLISH,
 } = TEXT;
 
 export const Footer = () => {
@@ -42,8 +44,9 @@ export const Footer = () => {
     resolver: yupResolver(emailSchema),
   });
 
+  const router = useRouter();
   const pathName = usePathname();
-  const absolutePath = transformPath(pathName);
+
   const translateRoutes = useTranslations('Routes');
   const translateFooter = useTranslations('Footer');
 
@@ -60,6 +63,10 @@ export const Footer = () => {
         addTemporaryMessage(SUBSCRIBE_OK);
       })
       .catch(() => addTemporaryMessage(SUBSCRIBE_ERROR));
+  };
+
+  const onLanguageChange = (lang: string) => () => {
+    router.replace(transformPath(pathName), { locale: lang });
   };
 
   const { email } = errors;
@@ -96,12 +103,12 @@ export const Footer = () => {
       </div>
       <div className={styles.contacts}>
         <div>
-          <IntlLink locale={TEXT.RUSSIAN} href={absolutePath} className={styles.lang}>
-            {TEXT.RUSSIAN}
-          </IntlLink>
-          <IntlLink locale={TEXT.ENGLISH} href={absolutePath} className={styles.lang}>
-            {TEXT.ENGLISH}
-          </IntlLink>
+          <button className={styles.lang} onClick={onLanguageChange(RUSSIAN)} type="button">
+            {RUSSIAN}
+          </button>
+          <button className={styles.lang} onClick={onLanguageChange(ENGLISH)} type="button">
+            {ENGLISH}
+          </button>
           <p className={styles.contact}>{ADDRES}</p>
           <p className={styles.contact}>{EMAIL}</p>
         </div>
