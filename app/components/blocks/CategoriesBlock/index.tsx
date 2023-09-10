@@ -23,10 +23,14 @@ export const CategoriesBlock = React.memo(({ title, titleAlign, column }: Catego
         {translate(title)}
       </h3>
       <div className={`${styles.categories} ${column && styles.column}`}>
-        {(categories as CategoryType[]).map(({ name, id, description, icon }) => (
+        {(categories as CategoryType[]).map(({
+          name, id, description, icon,
+        }) => (
           <Link href={`${CATEGORY}/${id}`} key={id}>
             <Category
-              category={{ id, icon, description: translate(description), name: translate(name) }}
+              category={{
+                id, icon, description: translate(description), name: translate(name),
+              }}
               full={!column}
               icon={ICONS[icon]}
             />

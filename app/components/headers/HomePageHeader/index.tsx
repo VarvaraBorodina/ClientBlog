@@ -11,7 +11,9 @@ import { Author, Category, Post } from '@/types';
 
 import styles from './styled.module.scss';
 
-const { POST_ALT, POSTED, BY, READ_MORE } = TEXT;
+const {
+  POST_ALT, POSTED, BY, READ_MORE,
+} = TEXT;
 const { POST } = DINAMIC_ROUTES;
 
 export const HomePageHeader = () => {
@@ -22,7 +24,7 @@ export const HomePageHeader = () => {
   const translateCategory = useTranslations('Categories');
 
   const postCategory = (categories as Category[]).find(
-    (category: Category) => category.id === post.category
+    (category: Category) => category.id === post.category,
   );
   const postAuthor = authors.find((author: Author) => author.id === post.author);
 

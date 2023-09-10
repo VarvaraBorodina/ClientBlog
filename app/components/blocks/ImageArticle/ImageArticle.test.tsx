@@ -35,7 +35,7 @@ const type = 'left';
 describe('Check ImageArticle', () => {
   beforeEach(() => {
     RTLrender(
-      <ImageArticle title={title} subtitle={subtitle} text={text} image={image} type={type} />
+      <ImageArticle title={title} subtitle={subtitle} text={text} image={image} type={type} />,
     );
   });
 

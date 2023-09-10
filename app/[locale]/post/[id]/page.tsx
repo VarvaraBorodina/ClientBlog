@@ -23,7 +23,7 @@ const Post = ({ params: { id } }: PageProps) => {
   const currentPost = posts.find((post) => post.id === Number(id));
   const nextPosts = posts
     .filter(
-      ({ category, id: postId }) => category === currentPost?.category && postId !== Number(id)
+      ({ category, id: postId }) => category === currentPost?.category && postId !== Number(id),
     )
     .slice(0, NEXT_POSTS_AMOUNT);
 

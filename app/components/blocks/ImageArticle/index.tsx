@@ -7,7 +7,9 @@ import styles from './styled.module.scss';
 import { ImageArticleProps } from './types';
 
 export const ImageArticle = React.memo((props: ImageArticleProps) => {
-  const { title, subtitle, text, image, type } = props;
+  const {
+    title, subtitle, text, image, type,
+  } = props;
 
   const translate = useTranslations('About');
 

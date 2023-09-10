@@ -27,7 +27,9 @@ jest.mock('@constants', () => ({
   PARTNERS: ['<LogoBall />', '<LogoDrop />', '<LogoHalf />', '<LogoMap />', '<LogoSun />'],
 }));
 
-const { ABOUT_US, MISION, READ_MORE, ABOUT_US_TITLE, MISION_TITLE, ABOUT_TEXT, MISION_TEXT } = TEXT;
+const {
+  ABOUT_US, MISION, READ_MORE, ABOUT_US_TITLE, MISION_TITLE, ABOUT_TEXT, MISION_TEXT,
+} = TEXT;
 
 describe('Check AboutBlock', () => {
   beforeEach(() => {

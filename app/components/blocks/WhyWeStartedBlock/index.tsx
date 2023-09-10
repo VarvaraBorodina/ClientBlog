@@ -8,7 +8,9 @@ import commonStyles from '@/styles/common.module.scss';
 import styles from './styled.module.scss';
 
 const { WHY_WE_STARTED } = ASSETS;
-const { WE_STARTED, WE_STARTED_HEADER, WE_STARTED_TEXT, DISCOVER, PEOPLE_ALT } = TEXT;
+const {
+  WE_STARTED, WE_STARTED_HEADER, WE_STARTED_TEXT, DISCOVER, PEOPLE_ALT,
+} = TEXT;
 const { ABOUT } = ROUTE;
 
 export const WhyWeStarted = () => {

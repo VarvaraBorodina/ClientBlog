@@ -14,8 +14,7 @@ const POST_PER_PAGE = 5;
 const { PREV, NEXT, NO_POST } = TEXT;
 const { POST } = DINAMIC_ROUTES;
 
-const getCategory = (postCategory: number) =>
-  categories.find(({ id }) => postCategory === id)?.name;
+const getCategory = (postCategory: number) => categories.find(({ id }) => postCategory === id);
 
 export const CategoryPostsBlock = ({ title, posts }: CategoryPostBlockType) => {
   const translate = useTranslations('Blog');
@@ -31,7 +30,7 @@ export const CategoryPostsBlock = ({ title, posts }: CategoryPostBlockType) => {
 
   const pagePosts = useMemo(
     () => posts.slice(firstPost, firstPost + POST_PER_PAGE),
-    [firstPost, posts]
+    [firstPost, posts],
   );
 
   return (
@@ -48,7 +47,10 @@ export const CategoryPostsBlock = ({ title, posts }: CategoryPostBlockType) => {
         <div className={styles.posts}>
           {pagePosts.map((post) => (
             <Link href={`${POST}/${post.id}`} key={post.id}>
-              <CategoryPost post={post} category={translateCategory(getCategory(post.category))} />
+              <CategoryPost
+                post={post}
+                category={translateCategory(getCategory(post.category)?.name)}
+              />
             </Link>
           ))}
         </div>

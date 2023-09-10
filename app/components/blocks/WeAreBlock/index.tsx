@@ -16,9 +16,9 @@ export const WeAre = () => {
         <p className={styles.text}>{translate(WE)}</p>
         <p className={styles.bold}>{translate(FEATURED_IN)}</p>
       </div>
-      {PARTNERS.map((partner, index) => (
-        <span key={index} className={styles.logo}>
-          {partner}
+      {PARTNERS.map(({ logo, name }) => (
+        <span key={name} className={styles.logo}>
+          {logo}
         </span>
       ))}
     </div>

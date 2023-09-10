@@ -1,5 +1,7 @@
 import { TEXT } from '@constants';
-import { act, fireEvent, render as RTLrender, screen } from '@testing-library/react';
+import {
+  act, fireEvent, render as RTLrender, screen,
+} from '@testing-library/react';
 import React from 'react';
 
 import { Footer } from '.';
@@ -18,9 +20,7 @@ jest.mock('next/navigation', () => ({
   usePathname: jest.fn().mockReturnValue('/home'),
 }));
 
-jest.mock('next-intl/link', () => {
-  return 'Link';
-});
+jest.mock('next-intl/link', () => 'Link');
 
 jest.mock('@constants', () => ({
   ...jest.requireActual('@constants'),

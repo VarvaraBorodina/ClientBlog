@@ -18,12 +18,14 @@ export const FullPost = ({ post }: { post: Post }) => {
   const translateMonth = useTranslations('Monthes');
   const translateCategory = useTranslations('Categories');
 
-  const { description, content, image, category, author, title } = post;
+  const {
+    description, content, image, category, author, title,
+  } = post;
   const { day, month, year } = post.creationDate;
 
   const { icon, name: categoryName } = useMemo(
     () => categories.find(({ id }) => id === category) as Category,
-    [category]
+    [category],
   );
   const {
     name,

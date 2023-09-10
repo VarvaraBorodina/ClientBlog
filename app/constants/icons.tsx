@@ -32,4 +32,10 @@ export const ICONS = {
   LOADER: <Loader />,
 };
 
-export const PARTNERS = [<LogoBall />, <LogoDrop />, <LogoHalf />, <LogoMap />, <LogoSun />];
+export const PARTNERS = [
+  { logo: <LogoBall />, name: 'Ball' },
+  { logo: <LogoDrop />, name: 'Drop' },
+  { logo: <LogoHalf />, name: 'Half' },
+  { logo: <LogoMap />, name: 'Map' },
+  { logo: <LogoSun />, name: 'Sun' },
+];

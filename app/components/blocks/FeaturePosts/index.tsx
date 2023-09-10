@@ -9,7 +9,9 @@ import commonStyles from '@/styles/common.module.scss';
 
 import styles from './styled.module.scss';
 
-const { FEATURE_POST, READ_MORE, VIEW_ALL, ALL_POST } = TEXT;
+const {
+  FEATURE_POST, READ_MORE, VIEW_ALL, ALL_POST,
+} = TEXT;
 const { BLOG } = ROUTE;
 const { POST } = DINAMIC_ROUTES;
 

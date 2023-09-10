@@ -54,8 +54,8 @@ describe('Home Page Header', () => {
   it('Check decription', async () => {
     expect(
       screen.getByText(
-        'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.'
-      )
+        'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+      ),
     ).toBeInTheDocument();
   });
 });

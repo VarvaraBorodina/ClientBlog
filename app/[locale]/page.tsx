@@ -56,8 +56,8 @@ const App = () => {
 
   return (
     <>
-      {blocksOnPage.map((block, index) => (
-        <div key={index}>{block}</div>
+      {blocksOnPage.map((block) => (
+        <div key={block.type}>{block}</div>
       ))}
       <div ref={endOfPage} />
     </>

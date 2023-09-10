@@ -14,7 +14,7 @@ export const sendEmail = async (params: ContactFormType) => {
     NEXT_PUBLIC_EMAIL_SERVICE_ID,
     NEXT_PUBLIC_EMAIL_FULL_TEMPLATE_ID,
     params,
-    NEXT_PUBLIC_EMAIL_KEY
+    NEXT_PUBLIC_EMAIL_KEY,
   );
 };
 
@@ -23,6 +23,6 @@ export const subscribe = async (email: string) => {
     NEXT_PUBLIC_EMAIL_SERVICE_ID,
     NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
     { email },
-    NEXT_PUBLIC_EMAIL_KEY
+    NEXT_PUBLIC_EMAIL_KEY,
   );
 };
