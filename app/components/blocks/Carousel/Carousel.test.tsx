@@ -1,8 +1,7 @@
+import { TEXT } from '@constants';
 import reviews from '@data/review.json';
 import { render as RTLrender, screen } from '@testing-library/react';
 import React from 'react';
-
-import { TEXT } from '@/constants';
 
 import { Carousel } from '.';
 
@@ -10,8 +9,8 @@ jest.mock('next-intl', () => ({
   useTranslations: jest.fn().mockReturnValue((text: string) => text),
 }));
 
-jest.mock('@/constants', () => ({
-  ...jest.requireActual('@/constants'),
+jest.mock('@constants', () => ({
+  ...jest.requireActual('@constants'),
   ICONS: {
     CLOSE: '<Close />',
     MENU: '<Menu />',

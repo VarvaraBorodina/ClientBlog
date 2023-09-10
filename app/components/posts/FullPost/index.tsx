@@ -1,11 +1,11 @@
 'use client';
 
+import { ICONS, TEXT } from '@constants';
 import authors from '@data/authors.json';
 import categories from '@data/categories.json';
 import { useTranslations } from 'next-intl';
 import React, { useMemo } from 'react';
 
-import { ICONS, TEXT } from '@/constants';
 import commonStyles from '@/styles/common.module.scss';
 import { Author, Category, Post } from '@/types';
 

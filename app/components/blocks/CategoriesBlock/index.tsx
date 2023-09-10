@@ -1,12 +1,12 @@
 'use client';
 
+import { DINAMIC_ROUTES, ICONS } from '@constants';
 import categories from '@data/categories.json';
 import { Category } from 'client-blog-library';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
-import { DINAMIC_ROUTES, ICONS } from '@/constants';
 import { Category as CategoryType } from '@/types';
 
 import styles from './styled.module.scss';

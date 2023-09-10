@@ -1,4 +1,7 @@
-@import '@/styles/global.scss';
+@use './colors.scss' as *;
+@use './fonts.scss' as *;
+@use './sizes.scss' as *;
+@use './breakpoints.scss' as *;
 
 .button {
   display: inline-block;

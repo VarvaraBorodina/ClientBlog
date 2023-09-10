@@ -1,13 +1,13 @@
 'use client';
 
+import { Modal } from '@components/Modal';
+import { ASSETS, ICONS, ROUTE, TEXT } from '@constants';
 import { Mulish } from 'next/font/google';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import React, { useEffect, useMemo, useState } from 'react';
 
-import { Modal } from '@/components/Modal';
-import { ASSETS, ICONS, ROUTE, TEXT } from '@/constants';
 import { transformPath } from '@/utils';
 
 import styles from './styled.module.scss';

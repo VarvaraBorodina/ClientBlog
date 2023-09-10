@@ -1,17 +1,16 @@
 'use client';
 
+import { AboutBlock } from '@components/blocks/AboutBlock';
+import { AuthorsBlock } from '@components/blocks/AuthorsBlock';
+import { Carousel } from '@components/blocks/Carousel';
+import { CategoriesBlock } from '@components/blocks/CategoriesBlock';
+import { FeaturePosts } from '@components/blocks/FeaturePosts';
+import { JoinBlock } from '@components/blocks/JoinBlock';
+import { WeAre } from '@components/blocks/WeAreBlock';
+import { WhyWeStarted } from '@components/blocks/WhyWeStartedBlock';
+import { HomePageHeader } from '@components/headers/HomePageHeader';
+import { TEXT } from '@constants';
 import React, { useEffect, useRef, useState } from 'react';
-
-import { AboutBlock } from '@/components/blocks/AboutBlock';
-import { AuthorsBlock } from '@/components/blocks/AuthorsBlock';
-import { Carousel } from '@/components/blocks/Carousel';
-import { CategoriesBlock } from '@/components/blocks/CategoriesBlock';
-import { FeaturePosts } from '@/components/blocks/FeaturePosts';
-import { JoinBlock } from '@/components/blocks/JoinBlock';
-import { WeAre } from '@/components/blocks/WeAreBlock';
-import { WhyWeStarted } from '@/components/blocks/WhyWeStartedBlock';
-import { HomePageHeader } from '@/components/headers/HomePageHeader';
-import { TEXT } from '@/constants';
 
 import styles from './styled.module.scss';
 

@@ -1,10 +1,10 @@
 'use client';
 
+import { ICONS, TEXT } from '@constants';
 import reviews from '@data/review.json';
 import { useTranslations } from 'next-intl';
 import React, { useState } from 'react';
 
-import { ICONS, TEXT } from '@/constants';
 import commonStyles from '@/styles/common.module.scss';
 
 import styles from './styled.module.scss';

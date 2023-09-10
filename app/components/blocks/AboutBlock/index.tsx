@@ -1,8 +1,7 @@
+import { ROUTE, TEXT } from '@constants';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import React from 'react';
-
-import { ROUTE, TEXT } from '@/constants';
 
 import { AboutArticle } from '../AboutArticle';
 import styles from './styled.module.scss';

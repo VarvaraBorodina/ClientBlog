@@ -1,5 +1,6 @@
 'use client';
 
+import { ROUTE, TEXT } from '@constants';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Networks } from 'client-blog-library';
 import Link from 'next/link';
@@ -10,7 +11,6 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 
-import { ROUTE, TEXT } from '@/constants';
 import { subscribe } from '@/service/email';
 import commonStyles from '@/styles/common.module.scss';
 import { transformPath } from '@/utils';

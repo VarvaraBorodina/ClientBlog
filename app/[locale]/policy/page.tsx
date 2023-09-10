@@ -1,7 +1,7 @@
+import { TEXT } from '@constants';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
-import { TEXT } from '@/constants';
 import commonStyles from '@/styles/common.module.scss';
 
 import styles from './styled.module.scss';

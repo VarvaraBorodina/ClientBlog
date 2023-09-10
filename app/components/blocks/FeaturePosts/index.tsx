@@ -1,10 +1,10 @@
+import { ShortcutPost } from '@components/posts/ShortcutPost';
+import { DINAMIC_ROUTES, ROUTE, TEXT } from '@constants';
 import posts from '@data/posts.json';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import React, { useMemo } from 'react';
 
-import { ShortcutPost } from '@/components/posts/ShortcutPost';
-import { DINAMIC_ROUTES, ROUTE, TEXT } from '@/constants';
 import commonStyles from '@/styles/common.module.scss';
 
 import styles from './styled.module.scss';

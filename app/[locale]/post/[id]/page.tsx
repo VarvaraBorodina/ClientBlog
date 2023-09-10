@@ -1,13 +1,13 @@
+import { JoinBlock } from '@components/blocks/JoinBlock';
+import { FullPost } from '@components/posts/FullPost';
+import { ShortcutPost } from '@components/posts/ShortcutPost';
+import { TEXT } from '@constants';
 import posts from '@data/posts.json';
 import { Mulish } from 'next/font/google';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
 import { PageProps } from '@/[locale]/types';
-import { JoinBlock } from '@/components/blocks/JoinBlock';
-import { FullPost } from '@/components/posts/FullPost';
-import { ShortcutPost } from '@/components/posts/ShortcutPost';
-import { TEXT } from '@/constants';
 import commonStyles from '@/styles/common.module.scss';
 
 import styles from './styled.module.scss';

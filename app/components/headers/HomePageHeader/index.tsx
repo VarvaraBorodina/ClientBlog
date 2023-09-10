@@ -1,3 +1,4 @@
+import { DINAMIC_ROUTES, TEXT } from '@constants';
 import authors from '@data/authors.json';
 import categories from '@data/categories.json';
 import posts from '@data/posts.json';
@@ -5,7 +6,6 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
-import { DINAMIC_ROUTES, TEXT } from '@/constants';
 import commonStyles from '@/styles/common.module.scss';
 import { Author, Category, Post } from '@/types';
 

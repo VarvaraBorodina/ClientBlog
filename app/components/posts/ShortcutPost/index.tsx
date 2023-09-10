@@ -1,9 +1,9 @@
+import { DINAMIC_ROUTES, TEXT } from '@constants';
 import authors from '@data/authors.json';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
-import { DINAMIC_ROUTES, TEXT } from '@/constants';
 import commonStyles from '@/styles/common.module.scss';
 import { Author, Post } from '@/types';
 

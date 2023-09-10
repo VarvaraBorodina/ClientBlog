@@ -1,5 +1,7 @@
 'use client';
 
+// eslint-disable-next-line simple-import-sort/imports
+import { TEXT } from '@constants';
 import categories from '@data/categories.json';
 import posts from '@data/posts.json';
 import tags from '@data/tags.json';
@@ -8,9 +10,8 @@ import { useTranslations } from 'next-intl';
 import React, { useEffect, useMemo, useState } from 'react';
 
 import { PageProps } from '@/[locale]/types';
-import { CategoriesBlock } from '@/components/blocks/CategoriesBlock';
-import { CategoryPostsBlock } from '@/components/blocks/CategoryPostsBlock';
-import { TEXT } from '@/constants';
+import { CategoriesBlock } from '@components/blocks/CategoriesBlock';
+import { CategoryPostsBlock } from '@components/blocks/CategoryPostsBlock';
 import commonStyles from '@/styles/common.module.scss';
 import { Post, Tag } from '@/types';
 

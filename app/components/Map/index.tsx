@@ -2,11 +2,10 @@
 
 import 'leaflet/dist/leaflet.css';
 
+import { ASSETS } from '@constants';
 import L, { LatLngExpression } from 'leaflet';
 import React from 'react';
 import { MapContainer, Marker, TileLayer } from 'react-leaflet';
-
-import { ASSETS } from '@/constants';
 
 import styles from './styled.module.scss';
 

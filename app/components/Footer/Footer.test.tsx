@@ -1,7 +1,6 @@
+import { TEXT } from '@constants';
 import { act, fireEvent, render as RTLrender, screen } from '@testing-library/react';
 import React from 'react';
-
-import { TEXT } from '@/constants';
 
 import { Footer } from '.';
 
@@ -23,8 +22,8 @@ jest.mock('next-intl/link', () => {
   return 'Link';
 });
 
-jest.mock('@/constants', () => ({
-  ...jest.requireActual('@/constants'),
+jest.mock('@constants', () => ({
+  ...jest.requireActual('@constants'),
   ICONS: {
     CLOSE: '<Close />',
     MENU: '<Menu />',

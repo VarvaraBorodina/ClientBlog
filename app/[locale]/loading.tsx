@@ -1,6 +1,6 @@
 'use client';
 
-import { ICONS } from '@/constants';
+import { ICONS } from '@constants';
 
 const { LOADER } = ICONS;
 

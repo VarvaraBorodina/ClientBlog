@@ -1,7 +1,6 @@
+import { ContactFormType } from '@components/ContactForm/types';
+import { CONFIG } from '@constants';
 import emailjs from '@emailjs/browser';
-
-import { ContactFormType } from '@/components/ContactForm/types';
-import { CONFIG } from '@/constants';
 
 const {
   NEXT_PUBLIC_EMAIL_KEY,
