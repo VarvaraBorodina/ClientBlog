@@ -7,7 +7,7 @@ $lineDarckPart: 25%;
   margin: 0 $spacesXXL;
 
   @media (max-width: $breakpointL) {
-    margin: 0 $spacesXS;
+    margin: 0 $spacesS;
   }
 }
 
@@ -34,9 +34,8 @@ $lineDarckPart: 25%;
   }
 
   @media (max-width: $breakpointL) {
-    padding-right: $spacesS;
-    padding-left: $spacesS;
-    padding-top: $spacesS;
+    padding: $spacesS;
+    padding-bottom: 0;
   }
 }
 

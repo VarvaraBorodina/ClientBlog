@@ -3,12 +3,11 @@
 .container {
   margin: $spacesL 0;
   @media (max-width: $breakpointL) {
-    margin: $spacesXXS 0;
+    margin: $spacesS 0;
   }
 }
 
 .header {
-  margin-left: $spacesXXS;
   font-weight: $fontWeightL;
   font-size: $fonstSizeXL;
 
@@ -17,7 +16,6 @@
   }
   @media (max-width: $breakpointXXL) {
     width: $categoryWidth;
-    margin: 0 auto;
   }
 }
 

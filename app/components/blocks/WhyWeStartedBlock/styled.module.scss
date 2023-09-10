@@ -12,7 +12,7 @@
 .image {
   width: $startImage;
   @media (max-width: $breakpointL) {
-    margin: 0 auto;
+    width: 100%;
     display: block;
   }
 }
@@ -26,13 +26,13 @@
   background-color: $textColor;
 
   @media (max-width: $breakpointXL) {
-    padding: $spacesM;
+    padding: $spacesS;
   }
 
   @media (max-width: $breakpointL) {
     width: auto;
     position: static;
     margin: 0 auto;
-    padding: $spacesS;
+    padding: $spacesS 0;
   }
 }

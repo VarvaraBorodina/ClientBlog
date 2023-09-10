@@ -3,8 +3,7 @@
 .container {
   margin: $spacesL;
   @media (max-width: $breakpointXL) {
-    margin-left: 0;
-    margin-right: 0;
+    margin: $spacesS;
   }
 }
 
@@ -16,6 +15,7 @@
 
   @media (max-width: $breakpointM) {
     font-size: $fonstSizeL;
+    margin-bottom: 0;
   }
 }
 

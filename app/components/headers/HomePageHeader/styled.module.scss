@@ -34,7 +34,7 @@
   padding-left: $spacesL;
 
   @media (max-width: $breakpointL) {
-    padding-left: $spacesS;
+    padding: $spacesS;
   }
 }
 
@@ -73,7 +73,7 @@
   }
 
   @media (max-width: $breakpointL) {
-    margin-bottom: $spacesXXS;
+    margin-bottom: $spacesXS;
     font-size: $fonstSizeXL;
   }
 }

@@ -1,13 +1,14 @@
 @import '@/styles/global.scss';
 
 .container {
-  margin: 0 auto;
-  margin-top: $spacesL;
-  margin-bottom: $spacesL;
+  margin: $spacesL auto;
   width: $joinWidth;
   text-align: center;
 
   @media (max-width: $breakpointM) {
     width: 100%;
+    margin: 0;
+    padding: $spacesS;
+    box-sizing: border-box;
   }
 }

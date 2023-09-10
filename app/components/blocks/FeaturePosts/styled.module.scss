@@ -29,6 +29,7 @@
   font-weight: $fontWeightL;
 
   @media (max-width: $breakpointM) {
+    margin-top: $spacesXS;
     font-size: $fonstSizeM;
   }
 }
@@ -66,8 +67,6 @@
 }
 
 .shortPost {
-  padding: $spacesS;
-  padding-top: 0;
   &:hover {
     background-color: $lightAccentColor;
   }

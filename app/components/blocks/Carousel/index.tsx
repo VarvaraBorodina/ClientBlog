@@ -58,7 +58,7 @@ export const Carousel = () => {
                     <p className={styles.city}>{city}</p>
                   </div>
                 </div>
-                <div>
+                <div className={styles.buttons}>
                   <button className={styles.button} type="button" onClick={onBackClick}>
                     {BACK_ARROW}
                   </button>

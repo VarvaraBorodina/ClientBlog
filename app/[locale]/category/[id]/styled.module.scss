@@ -11,7 +11,7 @@ $postsWidth: 80%;
   }
 
   @media (max-width: $breakpointL) {
-    margin: $spacesXXS;
+    margin: $spacesS;
     flex-direction: column-reverse;
   }
 }
@@ -87,7 +87,8 @@ $postsWidth: 80%;
 
 .tagsTitle {
   @media (max-width: $breakpointL) {
-    margin-left: $spacesM;
+    text-align: center;
+    margin-bottom: $spacesXXS;
   }
 }
 
@@ -97,7 +98,6 @@ $postsWidth: 80%;
   flex-wrap: wrap;
 
   @media (max-width: $breakpointL) {
-    margin: 0 $spacesS;
     margin-bottom: $spacesS;
     box-sizing: border-box;
     width: 100%;
@@ -116,6 +116,10 @@ $postsWidth: 80%;
   font-weight: $fontWeightS;
 
   cursor: pointer;
+
+  @media (max-width: $breakpointL) {
+    padding: $spacesXXS $spacesXS;
+  }
 }
 
 .active {

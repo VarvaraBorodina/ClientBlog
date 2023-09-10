@@ -16,6 +16,10 @@
   margin-bottom: $spacesM;
 
   background-color: $postBorderColor;
+
+  @media (max-width: $breakpointL) {
+    margin: $spacesS 0;
+  }
 }
 
 .header {

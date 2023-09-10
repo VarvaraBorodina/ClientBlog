@@ -19,8 +19,7 @@
 
   @media (max-width: $breakpointM) {
     grid-template-columns: 1fr;
-    margin-left: 0;
-    margin-right: 0;
+    margin: $spacesM;
   }
 }
 
@@ -28,12 +27,21 @@
   @media (max-width: $breakpointXL) {
     text-align: center;
   }
+
+  @media (max-width: $breakpointXL) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .text {
   margin-bottom: $spacesXXS;
   font-size: $fonstSizeS;
   color: $lightTextColor;
+
+  @media (max-width: $breakpointXL) {
+    margin-right: $spacesXXS;
+  }
 }
 
 .bold {

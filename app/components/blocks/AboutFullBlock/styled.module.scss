@@ -91,7 +91,7 @@ $lineDarckPart: 25%;
   color: $mainColor;
 
   @media (max-width: $breakpointXL) {
-    padding: $spacesXS;
+    padding: $spacesXS 0;
   }
 }
 
