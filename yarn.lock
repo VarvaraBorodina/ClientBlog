@@ -2665,10 +2665,10 @@ cli-truncate@^2.1.0:
     slice-ansi "^3.0.0"
     string-width "^4.2.0"
 
-client-blog-library@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/client-blog-library/-/client-blog-library-1.0.5.tgz#3b093909986fcb9e30aef9540d721fc8bf56d552"
-  integrity sha512-Oz8hQb5FH7TdcxcponH0S+a6KD7Vy6oxEAu3DOtwDEw5uRQgQJzOblh9BssXVZIcGlBemS+6ojk3uL4NrUpgPQ==
+client-blog-library@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/client-blog-library/-/client-blog-library-1.2.1.tgz#ee4e90bda0085604d7bfd0d2716f32299c2ab104"
+  integrity sha512-CKKxJagDW4z9MiFW/UQrkAcLjNSDvNRpAjm1mCI1C2iBdQGRbBJVawqby4bK0nUJ6EKwtNlKC8NKaS3oabrlUg==
 
 client-only@0.0.1:
   version "0.0.1"

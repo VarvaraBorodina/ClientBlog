@@ -1,6 +1,7 @@
 'use client';
 
 import { ROUTE, TEXT } from '@constants';
+import networks from '@data/networks.json';
 import { Networks } from 'client-blog-library';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -29,6 +30,7 @@ const {
   RUSSIAN,
   ENGLISH,
 } = TEXT;
+const { facebook, instagram, linkedIn, twitter } = networks;
 
 export const Footer = () => {
   const [message, setMessage] = useState<string>('');
@@ -123,7 +125,12 @@ export const Footer = () => {
           <p className={styles.contact}>{EMAIL}</p>
         </div>
         <div className={styles.networks}>
-          <Networks />
+          <Networks
+            twitter={twitter}
+            instagram={instagram}
+            facebook={facebook}
+            linkedIn={linkedIn}
+          />
         </div>
       </div>
     </footer>

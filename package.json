@@ -16,7 +16,7 @@
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@hookform/resolvers": "^3.3.1",
-    "client-blog-library": "^1.0.5",
+    "client-blog-library": "^1.2.1",
     "leaflet": "^1.9.4",
     "negotiator": "^0.6.3",
     "next": "13.4.19",
