@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
+import { Typography } from '@/components/Typography';
 import commonStyles from '@/styles/common.module.scss';
 import { Author, Post } from '@/types';
 
@@ -28,14 +29,14 @@ export const MainPost = () => {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <h6 className={commonStyles.subtitle}>{translate(FEATURE_POST)}</h6>
-        <h3 className={commonStyles.header}>{title}</h3>
+        <Typography as="h6">{translate(FEATURE_POST)}</Typography>
+        <Typography as="h3">{title}</Typography>
         <p className={styles.info}>
           {translate(BY)}
           <strong className={styles.accent}>{`${postAuthor?.name} ${postAuthor?.lastName}`}</strong>
           {` | ${translateMonth(String(month))} ${day}, ${year}`}
         </p>
-        <p className={commonStyles.description}>{description}</p>
+        <Typography as="p">{description}</Typography>
         <Link href={`${POST}/${post.id}`} className={commonStyles.button}>
           {`${translate(READ_MORE)}`}
         </Link>

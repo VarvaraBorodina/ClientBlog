@@ -1,12 +1,12 @@
 'use client';
 
+import { Typography } from '@components/Typography';
 import { ICONS, TEXT } from '@constants';
 import authors from '@data/authors.json';
 import categories from '@data/categories.json';
 import { useTranslations } from 'next-intl';
 import React, { useMemo } from 'react';
 
-import commonStyles from '@/styles/common.module.scss';
 import { Author, Category, Post } from '@/types';
 
 import styles from './styled.module.scss';
@@ -52,7 +52,7 @@ export const FullPost = ({ post }: { post: Post }) => {
       <img className={styles.postImage} src={image} alt="post" />
       <div className={styles.postInfo}>
         <h6 className={styles.description}>{description}</h6>
-        <p className={commonStyles.description}>{content}</p>
+        <Typography as="p">{content}</Typography>
       </div>
     </article>
   );

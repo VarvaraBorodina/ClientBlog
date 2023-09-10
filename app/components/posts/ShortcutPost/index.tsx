@@ -1,3 +1,4 @@
+import { Typography } from '@components/Typography';
 import { DINAMIC_ROUTES, TEXT } from '@constants';
 import authors from '@data/authors.json';
 import Link from 'next/link';
@@ -29,7 +30,7 @@ export const ShortcutPost = ({ post, full }: { post: Post; full: boolean }) => {
         {` | ${translateMonth(String(month))} ${day}, ${year}`}
       </p>
       <h6 className={`${commonStyles.header} ${styles.title}`}>{post.title}</h6>
-      {full && <p className={commonStyles.description}>{post.description}</p>}
+      {full && <Typography as="p">{post.description}</Typography>}
     </Link>
   );
 };

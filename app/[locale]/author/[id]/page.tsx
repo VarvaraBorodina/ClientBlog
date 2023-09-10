@@ -9,6 +9,7 @@ import { useTranslations } from 'next-intl';
 import React, { useMemo } from 'react';
 
 import { PageProps } from '@/[locale]/types';
+import { Typography } from '@/components/Typography';
 import commonStyles from '@/styles/common.module.scss';
 
 import styles from './styled.module.scss';
@@ -34,10 +35,10 @@ const Author = ({ params: { id } }: PageProps) => {
         <div className={styles.content}>
           <img src={photo} alt={translate(AUTHOR_ALT)} className={styles.image} />
           <div className={styles.authorInfo}>
-            <h3 className={commonStyles.header}>
+            <Typography as="h3">
               {`${translate(HELLO)}${name} ${lastName}${translate(WELCOM)}`}
-            </h3>
-            <p className={commonStyles.description}>{description}</p>
+            </Typography>
+            <Typography as="p">{description}</Typography>
             <div className={styles.networks}>
               <Networks />
             </div>

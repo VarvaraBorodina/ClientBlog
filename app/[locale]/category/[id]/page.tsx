@@ -1,6 +1,8 @@
 'use client';
 
 import { CategoryPostsBlock } from '@components/blocks/CategoryPostsBlock';
+import { SearchTags } from '@components/SearchTags';
+import { Typography } from '@components/Typography';
 import { TEXT } from '@constants';
 import categories from '@data/categories.json';
 import posts from '@data/posts.json';
@@ -9,7 +11,6 @@ import { useTranslations } from 'next-intl';
 import React, { useMemo, useState } from 'react';
 
 import { PageProps } from '@/[locale]/types';
-import { SearchTags } from '@/components/SearchTags';
 import commonStyles from '@/styles/common.module.scss';
 import { Post } from '@/types';
 
@@ -63,8 +64,8 @@ const Category = ({ params: { id } }: PageProps) => {
     <>
       <div className={styles.header}>
         <h3 className={`${styles.title}  ${mulish.className}`}>{translate(name)}</h3>
-        <p className={commonStyles.description}>{translate(description)}</p>
-        <h6 className={commonStyles.subtitle}>{`${translate(BLOG)} > ${translate(name)}`}</h6>
+        <Typography as="p">{translate(description)}</Typography>
+        <Typography as="h6">{`${translate(BLOG)} > ${translate(name)}`}</Typography>
       </div>
       <div className={styles.container}>
         <div className={styles.posts}>

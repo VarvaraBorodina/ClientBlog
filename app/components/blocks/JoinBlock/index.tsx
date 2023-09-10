@@ -1,5 +1,6 @@
 'use client';
 
+import { Typography } from '@components/Typography';
 import { ROUTE, TEXT } from '@constants';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
@@ -16,8 +17,8 @@ export const JoinBlock = () => {
   const translate = useTranslations('Home');
   return (
     <div className={styles.container}>
-      <h3 className={commonStyles.header}>{translate(JOIN_HEADER)}</h3>
-      <p className={commonStyles.description}>{translate(JOIN_TEXT)}</p>
+      <Typography as="h3">{translate(JOIN_HEADER)}</Typography>
+      <Typography as="p">{translate(JOIN_TEXT)}</Typography>
       <Link href={CONTACT.path} className={commonStyles.button}>
         {translate(JOUN_BUTTON)}
       </Link>

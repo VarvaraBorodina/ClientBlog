@@ -94,7 +94,7 @@
 .line {
   width: $borderWidth;
 
-  margin-right: $spacesS;
+  margin: 0 $spacesXS;
   background-color: $postBorderColor;
 
   @media (max-width: $breakpointXL) {

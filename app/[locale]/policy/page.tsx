@@ -2,7 +2,7 @@ import { TEXT } from '@constants';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
-import commonStyles from '@/styles/common.module.scss';
+import { Typography } from '@/components/Typography';
 
 import styles from './styled.module.scss';
 
@@ -20,14 +20,14 @@ const Policy = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h3 className={commonStyles.header}>{translate(PRIVACY_POLICY)}</h3>
-        <p className={commonStyles.description}>{translate(LAST_UPDATED)}</p>
+        <Typography as="h3">{translate(PRIVACY_POLICY)}</Typography>
+        <Typography as="p">{translate(LAST_UPDATED)}</Typography>
       </div>
       <div className={styles.content}>
-        <h3 className={commonStyles.header}>{translate(POLICY_TITLE_TOP)}</h3>
-        <p className={commonStyles.description}>{translate(POLICY_TEXT_TOP)}</p>
-        <h3 className={commonStyles.header}>{translate(POLICY_TITLE_BOTTOM)}</h3>
-        <p className={commonStyles.description}>{translate(POLICY_TEXT_BOTTOM)}</p>
+        <Typography as="h3">{translate(POLICY_TITLE_TOP)}</Typography>
+        <Typography as="p">{translate(POLICY_TEXT_TOP)}</Typography>
+        <Typography as="h3">{translate(POLICY_TITLE_BOTTOM)}</Typography>
+        <Typography as="p">{translate(POLICY_TEXT_BOTTOM)}</Typography>
       </div>
     </div>
   );
