@@ -30,7 +30,7 @@ export const CategoryPostsBlock = ({ title, posts }: CategoryPostBlockType) => {
 
   const pagePosts = useMemo(
     () => posts.slice(firstPost, firstPost + POST_PER_PAGE),
-    [firstPost, posts],
+    [firstPost, posts]
   );
 
   return (

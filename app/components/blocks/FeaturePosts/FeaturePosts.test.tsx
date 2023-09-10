@@ -27,9 +27,7 @@ jest.mock('@constants', () => ({
   PARTNERS: ['<LogoBall />', '<LogoDrop />', '<LogoHalf />', '<LogoMap />', '<LogoSun />'],
 }));
 
-const {
-  FEATURE_POST, READ_MORE, VIEW_ALL, ALL_POST,
-} = TEXT;
+const { FEATURE_POST, READ_MORE, VIEW_ALL, ALL_POST } = TEXT;
 const texts = [FEATURE_POST, READ_MORE, VIEW_ALL, ALL_POST];
 
 describe('Check FeaturePosts ', () => {

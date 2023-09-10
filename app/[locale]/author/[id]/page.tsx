@@ -13,9 +13,7 @@ import commonStyles from '@/styles/common.module.scss';
 
 import styles from './styled.module.scss';
 
-const {
-  MY_POSTS, NOT_FOUND, WELCOM, HELLO, AUTHOR_ALT,
-} = TEXT;
+const { MY_POSTS, NOT_FOUND, WELCOM, HELLO, AUTHOR_ALT } = TEXT;
 
 const Author = ({ params: { id } }: PageProps) => {
   const translateNotFound = useTranslations(NOT_FOUND);
@@ -28,9 +26,7 @@ const Author = ({ params: { id } }: PageProps) => {
     return <p className={commonStyles.notFound}>{translateNotFound(NOT_FOUND)}</p>;
   }
 
-  const {
-    photo, name, lastName, description,
-  } = currentAuthor;
+  const { photo, name, lastName, description } = currentAuthor;
 
   return (
     <>

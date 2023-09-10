@@ -57,9 +57,7 @@ export const ContactForm = () => {
       });
   };
 
-  const {
-    name, email, query, message,
-  } = errors;
+  const { name, email, query, message } = errors;
 
   return (
     <div className={styles.container}>

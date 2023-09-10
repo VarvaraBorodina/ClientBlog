@@ -4,9 +4,7 @@ import React from 'react';
 
 import { WhyWeStarted } from '.';
 
-const {
-  WE_STARTED, WE_STARTED_HEADER, WE_STARTED_TEXT, DISCOVER,
-} = TEXT;
+const { WE_STARTED, WE_STARTED_HEADER, WE_STARTED_TEXT, DISCOVER } = TEXT;
 const texts = [WE_STARTED, WE_STARTED_HEADER, WE_STARTED_TEXT, DISCOVER];
 
 jest.mock('next-intl', () => ({

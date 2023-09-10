@@ -11,9 +11,7 @@ import styles from './styled.module.scss';
 
 const MAX_TAGS_AMOUNT = 7;
 
-const {
-  NO_TAGS, ALL_TAGS, CATEGORIES, SEARCH_TAGS,
-} = TEXT;
+const { NO_TAGS, ALL_TAGS, CATEGORIES, SEARCH_TAGS } = TEXT;
 
 export const SearchTags = ({ onTagsChange }: { onTagsChange: (tags: number[]) => void }) => {
   const translate = useTranslations('Categories');
@@ -39,7 +37,7 @@ export const SearchTags = ({ onTagsChange }: { onTagsChange: (tags: number[]) =>
       setCurrentTags(translatedTags.slice(0, MAX_TAGS_AMOUNT));
     } else {
       setCurrentTags(
-        translatedTags.filter((tag) => tag.name.toLowerCase().includes(value.toLowerCase())),
+        translatedTags.filter((tag) => tag.name.toLowerCase().includes(value.toLowerCase()))
       );
     }
   };

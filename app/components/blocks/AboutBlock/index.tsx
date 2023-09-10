@@ -6,9 +6,7 @@ import React from 'react';
 import { AboutArticle } from '../AboutArticle';
 import styles from './styled.module.scss';
 
-const {
-  ABOUT_US, MISION, READ_MORE, ABOUT_US_TITLE, MISION_TITLE, ABOUT_TEXT, MISION_TEXT,
-} = TEXT;
+const { ABOUT_US, MISION, READ_MORE, ABOUT_US_TITLE, MISION_TITLE, ABOUT_TEXT, MISION_TEXT } = TEXT;
 const { ABOUT } = ROUTE;
 
 export const AboutBlock = () => {

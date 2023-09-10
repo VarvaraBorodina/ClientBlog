@@ -26,24 +26,30 @@ const Category = ({ params: { id } }: PageProps) => {
   const [currentPosts, setCurrentPosts] = useState<Post[]>(posts);
 
   const category = useMemo(
-    () => categories.find(({ id: categoryId }) => {
-      const numberId = Number(id);
-      return categoryId === numberId;
-    }),
-    [id],
+    () =>
+      categories.find(({ id: categoryId }) => {
+        const numberId = Number(id);
+        return categoryId === numberId;
+      }),
+    [id]
   );
   const categoryPosts = useMemo(
     () => currentPosts.filter((post) => post.category === category?.id),
-    [category, currentPosts],
+    [category, currentPosts]
   );
   const filterPosts = (tags: number[]) => {
     if (tags.length === 0) {
       setCurrentPosts(posts);
     } else {
-      setCurrentPosts(() => posts.filter(({ tags: postTags }) => {
-        const hasTags = tags.reduce((isChoosen, tag) => isChoosen && postTags.includes(tag), true);
-        return hasTags;
-      }));
+      setCurrentPosts(() =>
+        posts.filter(({ tags: postTags }) => {
+          const hasTags = tags.reduce(
+            (isChoosen, tag) => isChoosen && postTags.includes(tag),
+            true
+          );
+          return hasTags;
+        })
+      );
     }
   };
 
