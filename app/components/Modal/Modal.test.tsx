@@ -1,5 +1,6 @@
-import { act, fireEvent, render as RTLrender, screen } from '@testing-library/react';
 import React from 'react';
+
+import { act, fireEvent, render as RTLrender, screen } from '@testing-library/react';
 
 import { Modal } from '.';
 

@@ -1,9 +1,11 @@
+import React from 'react';
+import { useTranslations } from 'next-intl';
+
 import { Typography } from '@components/Typography';
 import { ASSETS, TEXT } from '@constants';
-import { useTranslations } from 'next-intl';
-import React from 'react';
 
 import { AboutArticle } from '../AboutArticle';
+
 import styles from './styled.module.scss';
 
 const { WHY_WE_STARTED } = ASSETS;

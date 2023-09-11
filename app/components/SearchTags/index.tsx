@@ -1,13 +1,13 @@
+import React, { useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
+
+import { Tag } from '@/types';
 import { CategoriesBlock } from '@components/blocks/CategoriesBlock';
 import { TEXT } from '@constants';
 import tags from '@data/tags.json';
-import { useTranslations } from 'next-intl';
-import React, { useEffect, useState } from 'react';
-
-import commonStyles from '@/styles/common.module.scss';
-import { Tag } from '@/types';
 
 import styles from './styled.module.scss';
+import commonStyles from '@/styles/common.module.scss';
 
 const MAX_TAGS_AMOUNT = 7;
 

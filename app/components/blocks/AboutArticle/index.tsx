@@ -1,8 +1,10 @@
-import { Typography } from '@components/Typography';
 import React from 'react';
 
-import styles from './styled.module.scss';
+import { Typography } from '@components/Typography';
+
 import { AboutArticleType } from './types';
+
+import styles from './styled.module.scss';
 
 export const AboutArticle = ({ title, subtitle, text }: AboutArticleType) => (
   <div className={styles.info}>

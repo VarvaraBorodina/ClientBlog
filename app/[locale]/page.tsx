@@ -1,5 +1,7 @@
 'use client';
 
+import React, { useEffect, useRef, useState } from 'react';
+
 import { AboutBlock } from '@components/blocks/AboutBlock';
 import { AuthorsBlock } from '@components/blocks/AuthorsBlock';
 import { Carousel } from '@components/blocks/Carousel';
@@ -10,7 +12,6 @@ import { WeAre } from '@components/blocks/WeAreBlock';
 import { WhyWeStarted } from '@components/blocks/WhyWeStartedBlock';
 import { HomePageHeader } from '@components/headers/HomePageHeader';
 import { TEXT } from '@constants';
-import React, { useEffect, useRef, useState } from 'react';
 
 import styles from './styled.module.scss';
 

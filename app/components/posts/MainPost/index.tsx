@@ -1,15 +1,15 @@
+import React from 'react';
+import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+
+import { Typography } from '@/components/Typography';
+import { Author, Post } from '@/types';
 import { DINAMIC_ROUTES, TEXT } from '@constants';
 import authors from '@data/authors.json';
 import posts from '@data/posts.json';
-import Link from 'next/link';
-import { useTranslations } from 'next-intl';
-import React from 'react';
-
-import { Typography } from '@/components/Typography';
-import commonStyles from '@/styles/common.module.scss';
-import { Author, Post } from '@/types';
 
 import styles from './styled.module.scss';
+import commonStyles from '@/styles/common.module.scss';
 
 const FEATURE_POST_INDEX = 2;
 

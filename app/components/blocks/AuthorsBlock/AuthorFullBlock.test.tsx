@@ -1,9 +1,9 @@
-import { TEXT } from '@constants';
-import authors from '@data/authors.json';
-import { render as RTLrender, screen } from '@testing-library/react';
 import React from 'react';
 
 import { Author } from '@/types';
+import { TEXT } from '@constants';
+import authors from '@data/authors.json';
+import { render as RTLrender, screen } from '@testing-library/react';
 
 import { AuthorsBlock } from '.';
 

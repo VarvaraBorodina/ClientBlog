@@ -1,12 +1,12 @@
 'use client';
 
-import 'leaflet/dist/leaflet.css';
-
-import { ASSETS } from '@constants';
-import L, { LatLngExpression } from 'leaflet';
 import React from 'react';
+import L, { LatLngExpression } from 'leaflet';
 import { MapContainer, Marker, TileLayer } from 'react-leaflet';
 
+import { ASSETS } from '@constants';
+
+import 'leaflet/dist/leaflet.css';
 import styles from './styled.module.scss';
 
 const { LOCATION } = ASSETS;

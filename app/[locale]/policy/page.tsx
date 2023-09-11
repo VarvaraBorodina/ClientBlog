@@ -1,8 +1,8 @@
-import { TEXT } from '@constants';
-import { useTranslations } from 'next-intl';
 import React from 'react';
+import { useTranslations } from 'next-intl';
 
 import { Typography } from '@/components/Typography';
+import { TEXT } from '@constants';
 
 import styles from './styled.module.scss';
 

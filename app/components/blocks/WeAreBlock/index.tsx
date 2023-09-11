@@ -1,8 +1,9 @@
 'use client';
 
-import { PARTNERS, TEXT } from '@constants';
-import { useTranslations } from 'next-intl';
 import React from 'react';
+import { useTranslations } from 'next-intl';
+
+import { PARTNERS, TEXT } from '@constants';
 
 import styles from './styled.module.scss';
 

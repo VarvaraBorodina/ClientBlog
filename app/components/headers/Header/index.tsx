@@ -1,16 +1,16 @@
 'use client';
 
-import { Modal } from '@components/Modal';
-import { ASSETS, ICONS, ROUTE, TEXT } from '@constants';
-import Cookies from 'js-cookie';
+import React, { useEffect, useLayoutEffect, useMemo, useState } from 'react';
 import { Mulish } from 'next/font/google';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next-intl/client';
-import React, { useEffect, useLayoutEffect, useMemo, useState } from 'react';
+import Cookies from 'js-cookie';
 
 import { transformPath } from '@/utils';
+import { Modal } from '@components/Modal';
+import { ASSETS, ICONS, ROUTE, TEXT } from '@constants';
 
 import styles from './styled.module.scss';
 

@@ -1,8 +1,8 @@
-import categories from '@data/categories.json';
-import { render as RTLrender, screen } from '@testing-library/react';
 import React from 'react';
 
 import { Category } from '@/types';
+import categories from '@data/categories.json';
+import { render as RTLrender, screen } from '@testing-library/react';
 
 import { CategoriesBlock } from '.';
 

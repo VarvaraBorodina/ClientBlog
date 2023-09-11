@@ -1,8 +1,8 @@
 import React, { memo } from 'react';
 
-import commonStyles from '@/styles/common.module.scss';
-
 import { TypographyType } from './types';
+
+import commonStyles from '@/styles/common.module.scss';
 
 export const Typography = memo(({ as, children }: TypographyType) => {
   if (as === 'p') {

@@ -1,15 +1,15 @@
+import React from 'react';
+import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+
+import { Author, Category, Post } from '@/types';
 import { DINAMIC_ROUTES, TEXT } from '@constants';
 import authors from '@data/authors.json';
 import categories from '@data/categories.json';
 import posts from '@data/posts.json';
-import Link from 'next/link';
-import { useTranslations } from 'next-intl';
-import React from 'react';
-
-import commonStyles from '@/styles/common.module.scss';
-import { Author, Category, Post } from '@/types';
 
 import styles from './styled.module.scss';
+import commonStyles from '@/styles/common.module.scss';
 
 const { POST_ALT, POSTED, BY, READ_MORE } = TEXT;
 const { POST } = DINAMIC_ROUTES;

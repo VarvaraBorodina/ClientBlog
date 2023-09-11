@@ -1,7 +1,8 @@
 import React from 'react';
 
-import styles from './styled.module.scss';
 import { ModalTypes } from './types';
+
+import styles from './styled.module.scss';
 
 export const Modal = ({ closeModal, children }: ModalTypes) => {
   const handleOnModalClick = (event: React.MouseEvent<HTMLElement>) => event.stopPropagation();

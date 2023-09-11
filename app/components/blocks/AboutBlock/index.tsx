@@ -1,9 +1,11 @@
-import { ROUTE, TEXT } from '@constants';
+import React from 'react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import React from 'react';
+
+import { ROUTE, TEXT } from '@constants';
 
 import { AboutArticle } from '../AboutArticle';
+
 import styles from './styled.module.scss';
 
 const { ABOUT_US, MISION, READ_MORE, ABOUT_US_TITLE, MISION_TITLE, ABOUT_TEXT, MISION_TEXT } = TEXT;

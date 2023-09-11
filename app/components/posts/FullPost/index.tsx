@@ -1,13 +1,13 @@
 'use client';
 
+import React, { useMemo } from 'react';
+import { useTranslations } from 'next-intl';
+
+import { Author, Category, Post } from '@/types';
 import { Typography } from '@components/Typography';
 import { ICONS, TEXT } from '@constants';
 import authors from '@data/authors.json';
 import categories from '@data/categories.json';
-import { useTranslations } from 'next-intl';
-import React, { useMemo } from 'react';
-
-import { Author, Category, Post } from '@/types';
 
 import styles from './styled.module.scss';
 

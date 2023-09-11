@@ -1,21 +1,21 @@
 'use client';
 
-import { ROUTE, TEXT } from '@constants';
-import networks from '@data/networks.json';
-import { Networks } from 'client-blog-library';
-import Cookies from 'js-cookie';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next-intl/client';
-import React, { useState } from 'react';
+import { Networks } from 'client-blog-library';
+import Cookies from 'js-cookie';
 import * as yup from 'yup';
 
 import { subscribe } from '@/service/email';
-import commonStyles from '@/styles/common.module.scss';
 import { transformPath } from '@/utils';
+import { ROUTE, TEXT } from '@constants';
+import networks from '@data/networks.json';
 
 import styles from './styled.module.scss';
+import commonStyles from '@/styles/common.module.scss';
 
 const emailSchema = yup.string().email().required();
 

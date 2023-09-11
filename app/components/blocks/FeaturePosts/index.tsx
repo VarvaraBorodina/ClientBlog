@@ -1,13 +1,13 @@
+import React, { useMemo } from 'react';
+import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+
 import { ShortcutPost } from '@components/posts/ShortcutPost';
 import { DINAMIC_ROUTES, ROUTE, TEXT } from '@constants';
 import posts from '@data/posts.json';
-import Link from 'next/link';
-import { useTranslations } from 'next-intl';
-import React, { useMemo } from 'react';
-
-import commonStyles from '@/styles/common.module.scss';
 
 import styles from './styled.module.scss';
+import commonStyles from '@/styles/common.module.scss';
 
 const { FEATURE_POST, READ_MORE, VIEW_ALL, ALL_POST } = TEXT;
 const { BLOG } = ROUTE;

@@ -1,18 +1,19 @@
 'use client';
 
-import { ContactsHeader } from '@components/headers/ContactsHeader';
-import { TEXT } from '@constants';
-import { yupResolver } from '@hookform/resolvers/yup';
-import { Dropdown } from 'client-blog-library';
-import { useTranslations } from 'next-intl';
 import React, { useState } from 'react';
+import { useTranslations } from 'next-intl';
+import { Dropdown } from 'client-blog-library';
 import { useForm } from 'react-hook-form';
 
 import { sendEmail } from '@/service/email';
+import { ContactsHeader } from '@components/headers/ContactsHeader';
+import { TEXT } from '@constants';
+import { yupResolver } from '@hookform/resolvers/yup';
 
 import { schema } from './schema';
-import styles from './styled.module.scss';
 import { ContactFormType } from './types';
+
+import styles from './styled.module.scss';
 
 const QUERY_RELATED = ['1', '2', '3'];
 const {

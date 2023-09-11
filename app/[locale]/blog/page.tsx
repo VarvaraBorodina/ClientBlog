@@ -1,9 +1,10 @@
+import React, { lazy } from 'react';
+
 import { CategoriesBlock } from '@components/blocks/CategoriesBlock';
 import { CategoryPostsBlock } from '@components/blocks/CategoryPostsBlock';
 import { MainPost } from '@components/posts/MainPost';
 import { TEXT } from '@constants';
 import posts from '@data/posts.json';
-import React, { lazy } from 'react';
 
 import styles from './styled.module.scss';
 

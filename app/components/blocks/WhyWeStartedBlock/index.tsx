@@ -1,12 +1,12 @@
-import { Typography } from '@components/Typography';
-import { ASSETS, ROUTE, TEXT } from '@constants';
+import React from 'react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import React from 'react';
 
-import commonStyles from '@/styles/common.module.scss';
+import { Typography } from '@components/Typography';
+import { ASSETS, ROUTE, TEXT } from '@constants';
 
 import styles from './styled.module.scss';
+import commonStyles from '@/styles/common.module.scss';
 
 const { WHY_WE_STARTED } = ASSETS;
 const { WE_STARTED, WE_STARTED_HEADER, WE_STARTED_TEXT, DISCOVER, PEOPLE_ALT } = TEXT;

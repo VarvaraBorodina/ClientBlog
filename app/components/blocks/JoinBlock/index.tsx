@@ -1,14 +1,14 @@
 'use client';
 
-import { Typography } from '@components/Typography';
-import { ROUTE, TEXT } from '@constants';
+import React from 'react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import React from 'react';
 
-import commonStyles from '@/styles/common.module.scss';
+import { Typography } from '@components/Typography';
+import { ROUTE, TEXT } from '@constants';
 
 import styles from './styled.module.scss';
+import commonStyles from '@/styles/common.module.scss';
 
 const { JOIN_HEADER, JOIN_TEXT, JOUN_BUTTON } = TEXT;
 const { CONTACT } = ROUTE;

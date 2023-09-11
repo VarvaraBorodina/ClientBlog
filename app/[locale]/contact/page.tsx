@@ -1,5 +1,6 @@
-import { LOCATIONS } from '@constants';
 import React, { lazy } from 'react';
+
+import { LOCATIONS } from '@constants';
 
 const ContactForm = lazy(() =>
   import('@components/ContactForm').then((module) => ({ default: module.ContactForm }))

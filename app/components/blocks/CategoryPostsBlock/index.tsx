@@ -1,14 +1,16 @@
 'use client';
 
-import { DINAMIC_ROUTES, TEXT } from '@constants';
-import categories from '@data/categories.json';
-import { CategoryPost } from 'client-blog-library';
+import React, { useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import React, { useMemo, useState } from 'react';
+import { CategoryPost } from 'client-blog-library';
+
+import { DINAMIC_ROUTES, TEXT } from '@constants';
+import categories from '@data/categories.json';
+
+import { CategoryPostBlockType } from './types';
 
 import styles from './styled.module.scss';
-import { CategoryPostBlockType } from './types';
 
 const POST_PER_PAGE = 5;
 const { PREV, NEXT, NO_POST } = TEXT;

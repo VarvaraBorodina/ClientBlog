@@ -1,13 +1,13 @@
 'use client';
 
-import { DINAMIC_ROUTES, TEXT } from '@constants';
-import authors from '@data/authors.json';
-import { Author } from 'client-blog-library';
+import React, { memo, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
-import React, { memo, useMemo } from 'react';
+import { Author } from 'client-blog-library';
 
 import { Author as AuthorType } from '@/types';
+import { DINAMIC_ROUTES, TEXT } from '@constants';
+import authors from '@data/authors.json';
 
 import styles from './styled.module.scss';
 

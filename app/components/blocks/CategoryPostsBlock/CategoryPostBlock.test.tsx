@@ -1,9 +1,9 @@
-import posts from '@data/posts.json';
-import { fireEvent, render as RTLrender, screen } from '@testing-library/react';
 import React from 'react';
 import { act } from 'react-dom/test-utils';
 
 import { Post } from '@/types';
+import posts from '@data/posts.json';
+import { fireEvent, render as RTLrender, screen } from '@testing-library/react';
 
 import { CategoryPostsBlock } from '.';
 

@@ -1,7 +1,8 @@
+import React, { lazy } from 'react';
+
 import { AboutFullBlock } from '@components/blocks/AboutFullBlock';
 import { AuthorsBlock } from '@components/blocks/AuthorsBlock';
 import { ASSETS, TEXT } from '@constants';
-import React, { lazy } from 'react';
 
 const { ABOUT_BLOG, ABOUT_SUBTITLE, ABOUT_TEAM, ABOUT_CONTENT } = TEXT;
 const { ABOUT_BLOG: ABOUT_BLOG_IMAGE, ABOUT_TEAM: ABOUT_TEAM_IMAGE } = ASSETS;

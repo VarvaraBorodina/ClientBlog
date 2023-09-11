@@ -1,10 +1,11 @@
 'use client';
 
+import React, { useState } from 'react';
+import { useTranslations } from 'next-intl';
+
 import { Typography } from '@components/Typography';
 import { ICONS, TEXT } from '@constants';
 import reviews from '@data/review.json';
-import { useTranslations } from 'next-intl';
-import React, { useState } from 'react';
 
 import styles from './styled.module.scss';
 

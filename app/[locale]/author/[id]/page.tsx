@@ -1,18 +1,18 @@
 'use client';
 
+import React, { useEffect, useMemo } from 'react';
+import { useTranslations } from 'next-intl';
+import { Networks } from 'client-blog-library';
+
+import { PageProps } from '@/[locale]/types';
+import { Typography } from '@/components/Typography';
 import { CategoryPostsBlock } from '@components/blocks/CategoryPostsBlock';
 import { TEXT } from '@constants';
 import authors from '@data/authors.json';
 import posts from '@data/posts.json';
-import { Networks } from 'client-blog-library';
-import { useTranslations } from 'next-intl';
-import React, { useEffect, useMemo } from 'react';
-
-import { PageProps } from '@/[locale]/types';
-import { Typography } from '@/components/Typography';
-import commonStyles from '@/styles/common.module.scss';
 
 import styles from './styled.module.scss';
+import commonStyles from '@/styles/common.module.scss';
 
 const { MY_POSTS, NOT_FOUND, WELCOM, HELLO, AUTHOR_ALT } = TEXT;
 

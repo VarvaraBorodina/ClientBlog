@@ -1,14 +1,14 @@
+import React, { lazy, useMemo } from 'react';
+import { Mulish } from 'next/font/google';
+import { useTranslations } from 'next-intl';
+
+import { PageProps } from '@/[locale]/types';
 import { FullPost } from '@components/posts/FullPost';
 import { TEXT } from '@constants';
 import posts from '@data/posts.json';
-import { Mulish } from 'next/font/google';
-import { useTranslations } from 'next-intl';
-import React, { lazy, useMemo } from 'react';
-
-import { PageProps } from '@/[locale]/types';
-import commonStyles from '@/styles/common.module.scss';
 
 import styles from './styled.module.scss';
+import commonStyles from '@/styles/common.module.scss';
 
 const mulish = Mulish({ subsets: ['latin'] });
 const NEXT_POSTS_AMOUNT = 3;
