@@ -28,7 +28,13 @@ jest.mock('@constants', () => ({
 
     LOADER: '<Loader />',
   },
-  PARTNERS: ['<LogoBall />', '<LogoDrop />', '<LogoHalf />', '<LogoMap />', '<LogoSun />'],
+  PARTNERS: [
+    { logo: '<LogoBall />' },
+    { logo: '<LogoDrop />' },
+    { logo: '<LogoHalf />' },
+    { logo: '<LogoMap />' },
+    { logo: '<LogoSun />' },
+  ],
 }));
 
 describe('Check We Are', () => {

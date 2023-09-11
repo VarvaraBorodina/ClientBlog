@@ -7,25 +7,6 @@ jest.mock('next-intl', () => ({
   useTranslations: jest.fn().mockReturnValue((text: string) => text),
 }));
 
-jest.mock('@constants', () => ({
-  ...jest.requireActual('@constants'),
-  ICONS: {
-    CLOSE: '<Close />',
-    MENU: '<Menu />',
-
-    BUSINESS: '<Business />',
-    ECONOMY: '<Economy />',
-    STARTUP: '<StartUp />',
-    TECHNOLOGY: '<Technology />',
-
-    NEXT_ARROW: ' <NextArrow />',
-    BACK_ARROW: '<BackArrow />',
-
-    LOADER: '<Loader />',
-  },
-  PARTNERS: ['<LogoBall />', '<LogoDrop />', '<LogoHalf />', '<LogoMap />', '<LogoSun />'],
-}));
-
 const title = 'title';
 const subtitle = 'subtitle';
 const text = 'text';
