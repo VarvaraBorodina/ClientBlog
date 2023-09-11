@@ -72,6 +72,7 @@ export const Footer = () => {
       emailSchema.validateSync(email);
       subscribe(email)
         .then(() => {
+          setEmail('');
           addTemporaryMessage(SUBSCRIBE_OK);
         })
         .catch(() => addTemporaryMessage(SUBSCRIBE_ERROR));
@@ -117,10 +118,18 @@ export const Footer = () => {
       </div>
       <div className={styles.contacts}>
         <div className={styles.info}>
-          <button className={styles.lang} onClick={onLanguageChange(RUSSIAN)} type="button">
+          <button
+            className={`${styles.lang} ${pathName.includes(RUSSIAN) && styles.currentLang}`}
+            onClick={onLanguageChange(RUSSIAN)}
+            type="button"
+          >
             {RUSSIAN}
           </button>
-          <button className={styles.lang} onClick={onLanguageChange(ENGLISH)} type="button">
+          <button
+            className={`${styles.lang} ${!pathName.includes(RUSSIAN) && styles.currentLang}`}
+            onClick={onLanguageChange(ENGLISH)}
+            type="button"
+          >
             {ENGLISH}
           </button>
           <p className={styles.contact}>{ADDRES}</p>

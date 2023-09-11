@@ -1,11 +1,11 @@
 import { Typography } from '@components/Typography';
 import { useTranslations } from 'next-intl';
-import React from 'react';
+import React, { memo } from 'react';
 
 import styles from './styled.module.scss';
 import { ImageArticleProps } from './types';
 
-export const ImageArticle = React.memo((props: ImageArticleProps) => {
+export const ImageArticle = memo((props: ImageArticleProps) => {
   const { title, subtitle, text, image, type } = props;
 
   const translate = useTranslations('About');

@@ -5,7 +5,7 @@ import categories from '@data/categories.json';
 import { Category } from 'client-blog-library';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import React from 'react';
+import React, { memo } from 'react';
 
 import { Category as CategoryType } from '@/types';
 
@@ -14,7 +14,7 @@ import { CategoriesBlockProps } from './types';
 
 const { CATEGORY } = DINAMIC_ROUTES;
 
-export const CategoriesBlock = React.memo(({ title, titleAlign, column }: CategoriesBlockProps) => {
+export const CategoriesBlock = memo(({ title, titleAlign, column }: CategoriesBlockProps) => {
   const translate = useTranslations('Categories');
 
   return (

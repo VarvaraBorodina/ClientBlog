@@ -34,6 +34,7 @@ export const ContactForm = () => {
     handleSubmit,
     setValue,
     clearErrors,
+    reset,
     formState: { errors },
   } = useForm<ContactFormType>({
     resolver: yupResolver(schema),
@@ -51,6 +52,7 @@ export const ContactForm = () => {
     sendEmail(formFields)
       .then(() => {
         setServiceMessage(SENDING_OK);
+        reset();
       })
       .catch(() => {
         setServiceMessage(CONTACT_ERROR);

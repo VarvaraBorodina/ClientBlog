@@ -1,11 +1,9 @@
-import { JoinBlock } from '@components/blocks/JoinBlock';
 import { FullPost } from '@components/posts/FullPost';
-import { ShortcutPost } from '@components/posts/ShortcutPost';
 import { TEXT } from '@constants';
 import posts from '@data/posts.json';
 import { Mulish } from 'next/font/google';
 import { useTranslations } from 'next-intl';
-import React from 'react';
+import React, { lazy, useMemo } from 'react';
 
 import { PageProps } from '@/[locale]/types';
 import commonStyles from '@/styles/common.module.scss';
@@ -16,16 +14,28 @@ const mulish = Mulish({ subsets: ['latin'] });
 const NEXT_POSTS_AMOUNT = 3;
 const { READ_NEXT, NOT_FOUND } = TEXT;
 
+const JoinBlock = lazy(() =>
+  import('@components/blocks/JoinBlock').then((module) => ({ default: module.JoinBlock }))
+);
+
+const ShortcutPost = lazy(() =>
+  import('@components/posts/ShortcutPost').then((module) => ({ default: module.ShortcutPost }))
+);
+
 const Post = ({ params: { id } }: PageProps) => {
   const translateNotFound = useTranslations(NOT_FOUND);
   const translate = useTranslations('Blog');
 
-  const currentPost = posts.find((post) => post.id === Number(id));
-  const nextPosts = posts
-    .filter(
-      ({ category, id: postId }) => category === currentPost?.category && postId !== Number(id)
-    )
-    .slice(0, NEXT_POSTS_AMOUNT);
+  const currentPost = useMemo(() => posts.find((post) => post.id === Number(id)), [id]);
+  const nextPosts = useMemo(
+    () =>
+      posts
+        .filter(
+          ({ category, id: postId }) => category === currentPost?.category && postId !== Number(id)
+        )
+        .slice(0, NEXT_POSTS_AMOUNT),
+    [id, currentPost]
+  );
 
   if (!currentPost) {
     return <p className={commonStyles.notFound}>{translateNotFound(NOT_FOUND)}</p>;

@@ -175,8 +175,13 @@
 .lang {
   margin-bottom: $spacesXXS;
   padding-right: $spacesXXS;
-  color: $accentColor;
+  color: $textColor;
   background-color: $mainColor;
+  cursor: pointer;
+}
+
+.currentLang {
+  color: $accentColor;
 }
 
 .networks {

@@ -5,7 +5,7 @@ import authors from '@data/authors.json';
 import { Author } from 'client-blog-library';
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
-import React, { useMemo } from 'react';
+import React, { memo, useMemo } from 'react';
 
 import { Author as AuthorType } from '@/types';
 
@@ -14,7 +14,7 @@ import styles from './styled.module.scss';
 const { AUTHORS, WRITTER } = TEXT;
 const { AUTHOR } = DINAMIC_ROUTES;
 
-export const AuthorsBlock = React.memo(({ authorsAmount }: { authorsAmount: number }) => {
+export const AuthorsBlock = memo(({ authorsAmount }: { authorsAmount: number }) => {
   const translate = useTranslations('Home');
   const mainAuthors: AuthorType[] = useMemo(() => authors.slice(0, authorsAmount), [authorsAmount]);
 

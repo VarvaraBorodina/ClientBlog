@@ -33,7 +33,7 @@ export const SearchTags = ({ onTagsChange }: { onTagsChange: (tags: number[]) =>
 
     setInputValue(value);
 
-    if (value === '') {
+    if (!value) {
       setCurrentTags(translatedTags.slice(0, MAX_TAGS_AMOUNT));
     } else {
       setCurrentTags(

@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import commonStyles from '@/styles/common.module.scss';
 
 import { TypographyType } from './types';
 
-export const Typography = ({ as, children }: TypographyType) => {
+export const Typography = memo(({ as, children }: TypographyType) => {
   if (as === 'p') {
     return <p className={commonStyles.description}>{children}</p>;
   }
@@ -14,4 +14,4 @@ export const Typography = ({ as, children }: TypographyType) => {
   }
 
   return <h3 className={commonStyles.header}>{children}</h3>;
-};
+});
