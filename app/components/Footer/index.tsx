@@ -3,6 +3,7 @@
 import { ROUTE, TEXT } from '@constants';
 import networks from '@data/networks.json';
 import { Networks } from 'client-blog-library';
+import Cookies from 'js-cookie';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
@@ -79,8 +80,9 @@ export const Footer = () => {
     }
   };
 
-  const onLanguageChange = (lang: string) => () => {
-    router.replace(transformPath(pathName), { locale: lang });
+  const onLanguageChange = (lang: string) => async () => {
+    Cookies.set('NEXT_LOCALE', lang);
+    router.push(transformPath(pathName), { locale: lang });
   };
 
   return (
@@ -136,3 +138,13 @@ export const Footer = () => {
     </footer>
   );
 };
+
+/**
+ * 
+  <IntlLink locale="ru" href={transformPath(pathName)}>
+            {RUSSIAN}
+          </IntlLink>
+          <IntlLink locale="en" href={transformPath(pathName)}>
+            {ENGLISH}
+          </IntlLink>
+ */

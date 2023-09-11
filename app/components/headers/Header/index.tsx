@@ -2,11 +2,13 @@
 
 import { Modal } from '@components/Modal';
 import { ASSETS, ICONS, ROUTE, TEXT } from '@constants';
+import Cookies from 'js-cookie';
 import { Mulish } from 'next/font/google';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
-import React, { useEffect, useMemo, useState } from 'react';
+import { useRouter } from 'next-intl/client';
+import React, { useEffect, useLayoutEffect, useMemo, useState } from 'react';
 
 import { transformPath } from '@/utils';
 
@@ -14,13 +16,15 @@ import styles from './styled.module.scss';
 
 const mulish = Mulish({ subsets: ['latin'] });
 
-const { HEADER, VIDEO_BUTTON } = TEXT;
+const { HEADER, VIDEO_BUTTON, RUSSIAN, ENGLISH } = TEXT;
 const { ABOUT_VEDEO } = ASSETS;
 const { MENU, CLOSE } = ICONS;
 
 export const Header = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
   const [showLeftSideBar, setShowLeftSideBar] = useState<boolean>(false);
+  const router = useRouter();
+
   const pathName = usePathname();
   const absolutePath = useMemo(() => transformPath(pathName), [pathName]);
 
@@ -29,6 +33,19 @@ export const Header = () => {
 
   useEffect(() => {
     setShowLeftSideBar(false);
+  }, [pathName]);
+
+  useLayoutEffect(() => {
+    const locale = Cookies.get('NEXT_LOCALE');
+    if (locale === RUSSIAN && !pathName.includes(RUSSIAN)) {
+      Cookies.set('NEXT_LOCALE', RUSSIAN);
+      router.replace(transformPath(pathName), { locale: RUSSIAN });
+    }
+
+    if (locale === ENGLISH && pathName.includes(RUSSIAN)) {
+      Cookies.set('NEXT_LOCALE', ENGLISH);
+      router.replace(transformPath(pathName), { locale: ENGLISH });
+    }
   }, [pathName]);
 
   const toggleModal = () => {
