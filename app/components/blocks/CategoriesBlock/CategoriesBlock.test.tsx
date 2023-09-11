@@ -10,8 +10,8 @@ jest.mock('next-intl', () => ({
   useTranslations: jest.fn().mockReturnValue((text: string) => text),
 }));
 
-jest.mock('@/constants', () => ({
-  ...jest.requireActual('@/constants'),
+jest.mock('@constants', () => ({
+  ...jest.requireActual('@constants'),
   ICONS: {
     CLOSE: '<Close />',
     MENU: '<Menu />',

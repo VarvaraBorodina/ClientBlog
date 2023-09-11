@@ -1,4 +1,4 @@
-import { TEXT } from '@/constants';
+import { TEXT } from '@constants';
 
 export const transformPath = (path: string) => {
   const absolutePath = path.replace(`/${TEXT.RUSSIAN}`, '');

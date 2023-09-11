@@ -1,25 +1,22 @@
 'use client';
 
-import { yupResolver } from '@hookform/resolvers/yup';
+import { ROUTE, TEXT } from '@constants';
+import networks from '@data/networks.json';
 import { Networks } from 'client-blog-library';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
-import IntlLink from 'next-intl/link';
+import { useRouter } from 'next-intl/client';
 import React, { useState } from 'react';
-import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 
-import { ROUTE, TEXT } from '@/constants';
 import { subscribe } from '@/service/email';
 import commonStyles from '@/styles/common.module.scss';
 import { transformPath } from '@/utils';
 
 import styles from './styled.module.scss';
 
-const emailSchema = yup.object().shape({
-  email: yup.string().email().required(),
-});
+const emailSchema = yup.string().email().required();
 
 const {
   EMAIL,
@@ -30,20 +27,18 @@ const {
   SUBSCRIBE_OK,
   ADDRES,
   FOOTER_TITLE,
+  RUSSIAN,
+  ENGLISH,
 } = TEXT;
+const { facebook, instagram, linkedIn, twitter } = networks;
 
 export const Footer = () => {
   const [message, setMessage] = useState<string>('');
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<{ email: string }>({
-    resolver: yupResolver(emailSchema),
-  });
+  const [email, setEmail] = useState<string>('');
 
+  const router = useRouter();
   const pathName = usePathname();
-  const absolutePath = transformPath(pathName);
+
   const translateRoutes = useTranslations('Routes');
   const translateFooter = useTranslations('Footer');
 
@@ -54,15 +49,39 @@ export const Footer = () => {
     }, 3000);
   };
 
-  const submit = ({ email }: { email: string }) => {
-    subscribe(email)
-      .then(() => {
-        addTemporaryMessage(SUBSCRIBE_OK);
-      })
-      .catch(() => addTemporaryMessage(SUBSCRIBE_ERROR));
+  const handleEmailChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = target;
+    setEmail(value);
+    setMessage('');
   };
 
-  const { email } = errors;
+  const handleOnBlur = () => {
+    if (email) {
+      try {
+        emailSchema.validateSync(email);
+      } catch (err) {
+        addTemporaryMessage(EMAIL_ERROR);
+      }
+    }
+  };
+
+  const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
+    e.preventDefault();
+    try {
+      emailSchema.validateSync(email);
+      subscribe(email)
+        .then(() => {
+          addTemporaryMessage(SUBSCRIBE_OK);
+        })
+        .catch(() => addTemporaryMessage(SUBSCRIBE_ERROR));
+    } catch (err) {
+      addTemporaryMessage(EMAIL_ERROR);
+    }
+  };
+
+  const onLanguageChange = (lang: string) => () => {
+    router.replace(transformPath(pathName), { locale: lang });
+  };
 
   return (
     <footer className={styles.container}>
@@ -78,35 +97,40 @@ export const Footer = () => {
       </div>
       <div className={styles.content}>
         <h3 className={styles.formTitle}>{translateFooter(FOOTER_TITLE)}</h3>
-        <div>
-          <form className={styles.form} onSubmit={handleSubmit(submit)}>
+        <div className={styles.info}>
+          <form className={styles.form} onSubmit={handleSubmit}>
             <input
               className={styles.input}
               placeholder={translateFooter(EMAIL_PLACEHOLDER)}
-              {...register('email')}
+              onChange={handleEmailChange}
+              onBlur={handleOnBlur}
+              value={email}
             />
             <button type="submit" className={commonStyles.button}>
               {translateFooter(SUBSCRIBE)}
             </button>
           </form>
-          <p className={styles.error}>
-            {(message && translateFooter(message)) || (email && translateFooter(EMAIL_ERROR))}
-          </p>
+          <p className={styles.error}>{message && translateFooter(message)}</p>
         </div>
       </div>
       <div className={styles.contacts}>
-        <div>
-          <IntlLink locale={TEXT.RUSSIAN} href={absolutePath} className={styles.lang}>
-            {TEXT.RUSSIAN}
-          </IntlLink>
-          <IntlLink locale={TEXT.ENGLISH} href={absolutePath} className={styles.lang}>
-            {TEXT.ENGLISH}
-          </IntlLink>
+        <div className={styles.info}>
+          <button className={styles.lang} onClick={onLanguageChange(RUSSIAN)} type="button">
+            {RUSSIAN}
+          </button>
+          <button className={styles.lang} onClick={onLanguageChange(ENGLISH)} type="button">
+            {ENGLISH}
+          </button>
           <p className={styles.contact}>{ADDRES}</p>
           <p className={styles.contact}>{EMAIL}</p>
         </div>
         <div className={styles.networks}>
-          <Networks />
+          <Networks
+            twitter={twitter}
+            instagram={instagram}
+            facebook={facebook}
+            linkedIn={linkedIn}
+          />
         </div>
       </div>
     </footer>

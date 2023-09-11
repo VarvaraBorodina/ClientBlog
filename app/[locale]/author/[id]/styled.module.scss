@@ -1,4 +1,7 @@
-@import '@/styles/global.scss';
+@use '@/styles/colors.scss' as *;
+@use '@/styles/fonts.scss' as *;
+@use '@/styles/sizes.scss' as *;
+@use '@/styles/breakpoints.scss' as *;
 
 $lineLignPart: 75%;
 $lineDarckPart: 25%;
@@ -7,7 +10,7 @@ $lineDarckPart: 25%;
   margin: 0 $spacesXXL;
 
   @media (max-width: $breakpointL) {
-    margin: 0 $spacesXS;
+    margin: 0 $spacesS;
   }
 }
 
@@ -34,9 +37,8 @@ $lineDarckPart: 25%;
   }
 
   @media (max-width: $breakpointL) {
-    padding-right: $spacesS;
-    padding-left: $spacesS;
-    padding-top: $spacesS;
+    padding: $spacesS;
+    padding-bottom: 0;
   }
 }
 

@@ -1,10 +1,12 @@
-@import '@/styles/global.scss';
+@use '@/styles/colors.scss' as *;
+@use '@/styles/fonts.scss' as *;
+@use '@/styles/sizes.scss' as *;
+@use '@/styles/breakpoints.scss' as *;
 
 .container {
   margin: $spacesL;
   @media (max-width: $breakpointXL) {
-    margin-left: 0;
-    margin-right: 0;
+    margin: $spacesS;
   }
 }
 
@@ -16,6 +18,7 @@
 
   @media (max-width: $breakpointM) {
     font-size: $fonstSizeL;
+    margin-bottom: 0;
   }
 }
 
@@ -34,4 +37,8 @@
   @media (max-width: $breakpointL) {
     grid-template-columns: 1fr;
   }
+}
+
+.author {
+  background: $textColor;
 }

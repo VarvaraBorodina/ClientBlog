@@ -1,4 +1,7 @@
-@import '@/styles/global.scss';
+@use '@/styles/colors.scss' as *;
+@use '@/styles/fonts.scss' as *;
+@use '@/styles/sizes.scss' as *;
+@use '@/styles/breakpoints.scss' as *;
 
 .content {
   display: flex;
@@ -28,7 +31,13 @@
   font-size: $fonstSizeXL;
   font-weight: $fontWeightL;
 
+  @media (max-width: $breakpointXL) {
+    font-size: $fonstSizeL;
+    font-weight: $fontWeightM;
+  }
+
   @media (max-width: $breakpointM) {
+    margin-top: $spacesXS;
     font-size: $fonstSizeM;
   }
 }
@@ -46,7 +55,7 @@
 }
 
 .aside {
-  width: $aside;
+  width: $featurePostAside;
   margin-left: $spacesS;
 
   @media (max-width: $breakpointL) {
@@ -66,8 +75,6 @@
 }
 
 .shortPost {
-  padding: $spacesS;
-  padding-top: 0;
   &:hover {
     background-color: $lightAccentColor;
   }

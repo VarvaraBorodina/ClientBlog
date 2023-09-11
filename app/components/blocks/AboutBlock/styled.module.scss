@@ -1,4 +1,7 @@
-@import '@/styles/global.scss';
+@use '@/styles/colors.scss' as *;
+@use '@/styles/fonts.scss' as *;
+@use '@/styles/sizes.scss' as *;
+@use '@/styles/breakpoints.scss' as *;
 
 $lineLignPart: 55%;
 $lineDarckPart: 25%;
@@ -7,8 +10,7 @@ $lineDarckPart: 25%;
   margin: $spacesL;
 
   @media (max-width: $breakpointM) {
-    margin-left: $spacesXS;
-    margin-right: $spacesXS;
+    margin: $spacesXS;
   }
 }
 
@@ -35,13 +37,11 @@ $lineDarckPart: 25%;
   background-color: $lightLinkColor;
 
   @media (max-width: $breakpointL) {
-    padding-left: $spacesM;
-    padding-right: $spacesM;
+    padding: $spacesM;
   }
 
   @media (max-width: $breakpointM) {
-    padding-left: $spacesXS;
-    padding-right: $spacesXS;
+    padding: $spacesS;
   }
 }
 
@@ -51,14 +51,7 @@ $lineDarckPart: 25%;
 
   @media (max-width: $breakpointL) {
     flex-direction: column;
-  }
-}
-
-.info {
-  width: 50%;
-  margin-right: $spacesM;
-  @media (max-width: $breakpointL) {
-    width: 100%;
+    padding-bottom: $spacesS;
   }
 }
 

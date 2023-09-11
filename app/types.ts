@@ -1,4 +1,4 @@
-import { ICONS } from '@/constants';
+import { ICONS } from '@constants';
 
 export type CreationDate = {
   day: number;
@@ -12,6 +12,12 @@ export interface Author {
   lastName: string;
   description: string;
   photo: string;
+  networks: {
+    linkedIn: string;
+    facebook: string;
+    instagram: string;
+    twitter: string;
+  };
 }
 
 export interface Tag {

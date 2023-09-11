@@ -1,4 +1,7 @@
-@import '@/styles/global.scss';
+@use '@/styles/colors.scss' as *;
+@use '@/styles/fonts.scss' as *;
+@use '@/styles/sizes.scss' as *;
+@use '@/styles/breakpoints.scss' as *;
 
 .container {
   margin: $spacesL;
@@ -11,8 +14,11 @@
 
 .image {
   width: $startImage;
+  @media (max-width: $breakpointXL) {
+    width: $articleImageWidth;
+  }
   @media (max-width: $breakpointL) {
-    margin: 0 auto;
+    width: 100%;
     display: block;
   }
 }
@@ -33,6 +39,6 @@
     width: auto;
     position: static;
     margin: 0 auto;
-    padding: $spacesS;
+    padding: $spacesS 0;
   }
 }

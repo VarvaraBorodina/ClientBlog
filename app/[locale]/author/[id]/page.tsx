@@ -1,14 +1,15 @@
 'use client';
 
+import { CategoryPostsBlock } from '@components/blocks/CategoryPostsBlock';
+import { TEXT } from '@constants';
 import authors from '@data/authors.json';
 import posts from '@data/posts.json';
 import { Networks } from 'client-blog-library';
 import { useTranslations } from 'next-intl';
-import React from 'react';
+import React, { useEffect, useMemo } from 'react';
 
 import { PageProps } from '@/[locale]/types';
-import { CategoryPostsBlock } from '@/components/blocks/CategoryPostsBlock';
-import { TEXT } from '@/constants';
+import { Typography } from '@/components/Typography';
 import commonStyles from '@/styles/common.module.scss';
 
 import styles from './styled.module.scss';
@@ -19,14 +20,19 @@ const Author = ({ params: { id } }: PageProps) => {
   const translateNotFound = useTranslations(NOT_FOUND);
   const translate = useTranslations('Blog');
 
-  const currentAuthor = authors.find((author) => author.id === Number(id));
-  const authorPosts = posts.filter(({ author }) => author === Number(id));
+  const currentAuthor = useMemo(() => authors.find((author) => author.id === Number(id)), [id]);
+  const authorPosts = useMemo(() => posts.filter(({ author }) => author === Number(id)), [id]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (!currentAuthor) {
     return <p className={commonStyles.notFound}>{translateNotFound(NOT_FOUND)}</p>;
   }
 
-  const { photo, name, lastName, description } = currentAuthor;
+  const { photo, name, lastName, description, networks } = currentAuthor;
+  const { facebook, instagram, linkedIn, twitter } = networks;
 
   return (
     <>
@@ -34,12 +40,17 @@ const Author = ({ params: { id } }: PageProps) => {
         <div className={styles.content}>
           <img src={photo} alt={translate(AUTHOR_ALT)} className={styles.image} />
           <div className={styles.authorInfo}>
-            <h3 className={commonStyles.header}>
+            <Typography as="h3">
               {`${translate(HELLO)}${name} ${lastName}${translate(WELCOM)}`}
-            </h3>
-            <p className={commonStyles.description}>{description}</p>
+            </Typography>
+            <Typography as="p">{description}</Typography>
             <div className={styles.networks}>
-              <Networks />
+              <Networks
+                twitter={twitter}
+                instagram={instagram}
+                facebook={facebook}
+                linkedIn={linkedIn}
+              />
             </div>
           </div>
         </div>

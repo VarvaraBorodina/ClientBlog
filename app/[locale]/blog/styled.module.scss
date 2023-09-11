@@ -1,9 +1,12 @@
-@import '@/styles/global.scss';
+@use '@/styles/colors.scss' as *;
+@use '@/styles/fonts.scss' as *;
+@use '@/styles/sizes.scss' as *;
+@use '@/styles/breakpoints.scss' as *;
 
 .container {
   margin: 0 $spacesXL;
 
   @media (max-width: $breakpointL) {
-    margin: 0 $spacesXS;
+    margin: 0 $spacesS;
   }
 }

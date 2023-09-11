@@ -1,4 +1,7 @@
-@import '@/styles/global.scss';
+@use '@/styles/colors.scss' as *;
+@use '@/styles/fonts.scss' as *;
+@use '@/styles/sizes.scss' as *;
+@use '@/styles/breakpoints.scss' as *;
 
 .title {
   margin: $spacesM $spacesL;
@@ -9,7 +12,7 @@
 
   @media (max-width: $breakpointM) {
     font-size: $fonstSizeL;
-    margin: 0 auto;
+    margin: $spacesS;
   }
 }
 

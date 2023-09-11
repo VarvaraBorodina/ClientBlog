@@ -1,4 +1,7 @@
-@import '@/styles/global.scss';
+@use '@/styles/colors.scss' as *;
+@use '@/styles/fonts.scss' as *;
+@use '@/styles/sizes.scss' as *;
+@use '@/styles/breakpoints.scss' as *;
 
 .container {
   display: flex;
@@ -21,7 +24,7 @@
   }
 
   @media (max-width: $breakpointXL) {
-    width: $featuredPost;
+    width: $minImageHeight;
   }
 
   @media (max-width: $breakpointL) {

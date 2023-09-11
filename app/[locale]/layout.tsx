@@ -1,16 +1,15 @@
 import '@/styles/reset.scss';
 
-import en from '@text/en.json';
-import ru from '@text/ru.json';
+import { Footer } from '@components/Footer';
+import { Header } from '@components/headers/Header';
+import { ASSETS, TEXT } from '@constants';
+import en from '@translation/en.json';
+import ru from '@translation/ru.json';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import React from 'react';
-
-import { Footer } from '@/components/Footer';
-import { Header } from '@/components/headers/Header';
-import { ASSETS, TEXT } from '@/constants';
 
 import { RootProps } from './types';
 

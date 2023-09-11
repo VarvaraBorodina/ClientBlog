@@ -1,4 +1,7 @@
-@import '@/styles/global.scss';
+@use '@/styles/colors.scss' as *;
+@use '@/styles/fonts.scss' as *;
+@use '@/styles/sizes.scss' as *;
+@use '@/styles/breakpoints.scss' as *;
 
 .container {
   display: flex;
@@ -7,7 +10,12 @@
 
   background-color: $lightLinkColor;
 
+  @media (max-width: $breakpointXL) {
+    padding: $spacesL;
+  }
+
   @media (max-width: $breakpointL) {
+    padding: $spacesM $spacesS;
     flex-direction: column;
   }
 
@@ -19,10 +27,12 @@
 .image {
   width: $aside;
   object-fit: contain;
+  margin-left: $spacesXS;
 
   @media (max-width: $breakpointL) {
     width: 100%;
     margin-top: $spacesS;
+    margin-left: 0;
   }
 }
 

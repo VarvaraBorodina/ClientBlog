@@ -1,7 +1,6 @@
+import { TEXT } from '@constants';
 import { render as RTLrender, screen } from '@testing-library/react';
 import React from 'react';
-
-import { TEXT } from '@/constants';
 
 import { WeAre } from '.';
 
@@ -13,8 +12,8 @@ jest.mock('next-intl', () => ({
   useTranslations: jest.fn().mockReturnValue((text: string) => text),
 }));
 
-jest.mock('@/constants', () => ({
-  ...jest.requireActual('@/constants'),
+jest.mock('@constants', () => ({
+  ...jest.requireActual('@constants'),
   ICONS: {
     CLOSE: '<Close />',
     MENU: '<Menu />',
@@ -29,7 +28,13 @@ jest.mock('@/constants', () => ({
 
     LOADER: '<Loader />',
   },
-  PARTNERS: ['<LogoBall />', '<LogoDrop />', '<LogoHalf />', '<LogoMap />', '<LogoSun />'],
+  PARTNERS: [
+    { logo: '<LogoBall />' },
+    { logo: '<LogoDrop />' },
+    { logo: '<LogoHalf />' },
+    { logo: '<LogoMap />' },
+    { logo: '<LogoSun />' },
+  ],
 }));
 
 describe('Check We Are', () => {

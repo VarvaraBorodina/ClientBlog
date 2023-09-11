@@ -1,12 +1,11 @@
+import { Typography } from '@components/Typography';
 import { useTranslations } from 'next-intl';
 import React from 'react';
-
-import commonStyles from '@/styles/common.module.scss';
 
 import styles from './styled.module.scss';
 import { ImageArticleProps } from './types';
 
-export const ImageArticle = (props: ImageArticleProps) => {
+export const ImageArticle = React.memo((props: ImageArticleProps) => {
   const { title, subtitle, text, image, type } = props;
 
   const translate = useTranslations('About');
@@ -20,10 +19,10 @@ export const ImageArticle = (props: ImageArticleProps) => {
       {type === 'right' && <div className={styles.circle} />}
       <img src={image} alt="post" className={styles.image} />
       <div className={`${styles.content} ${type === 'right' && styles.marginLeft}`}>
-        <h3 className={commonStyles.subtitle}>{translate(title)}</h3>
-        <h6 className={commonStyles.header}>{translate(subtitle)}</h6>
-        <p className={commonStyles.description}>{translate(text)}</p>
+        <Typography as="h3">{translate(title)}</Typography>
+        <Typography as="h6">{translate(subtitle)}</Typography>
+        <Typography as="p">{translate(text)}</Typography>
       </div>
     </article>
   );
-};
+});

@@ -1,0 +1,14 @@
+@use '@/styles/colors.scss' as *;
+@use '@/styles/fonts.scss' as *;
+@use '@/styles/sizes.scss' as *;
+@use '@/styles/breakpoints.scss' as *;
+
+.info {
+  width: 50%;
+  margin-right: $spacesM;
+  @media (max-width: $breakpointL) {
+    margin-right: 0;
+    margin-top: $spacesS;
+    width: 100%;
+  }
+}

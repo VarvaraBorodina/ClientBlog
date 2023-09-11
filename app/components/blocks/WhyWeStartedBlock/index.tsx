@@ -1,8 +1,9 @@
+import { Typography } from '@components/Typography';
+import { ASSETS, ROUTE, TEXT } from '@constants';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
-import { ASSETS, ROUTE, TEXT } from '@/constants';
 import commonStyles from '@/styles/common.module.scss';
 
 import styles from './styled.module.scss';
@@ -17,9 +18,9 @@ export const WhyWeStarted = () => {
     <div className={styles.container}>
       <img src={WHY_WE_STARTED} alt={translate(PEOPLE_ALT)} className={styles.image} />
       <div className={styles.content}>
-        <h6 className={commonStyles.subtitle}>{translate(WE_STARTED)}</h6>
-        <h3 className={commonStyles.header}>{translate(WE_STARTED_HEADER)}</h3>
-        <p className={commonStyles.description}>{translate(WE_STARTED_TEXT)}</p>
+        <Typography as="h6">{translate(WE_STARTED)}</Typography>
+        <Typography as="h3">{translate(WE_STARTED_HEADER)}</Typography>
+        <Typography as="p">{translate(WE_STARTED_TEXT)}</Typography>
         <Link href={ABOUT.path} className={commonStyles.button}>
           {translate(DISCOVER)}
         </Link>

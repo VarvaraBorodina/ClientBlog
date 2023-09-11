@@ -1,4 +1,7 @@
-@import '@/styles/global.scss';
+@use '@/styles/colors.scss' as *;
+@use '@/styles/fonts.scss' as *;
+@use '@/styles/sizes.scss' as *;
+@use '@/styles/breakpoints.scss' as *;
 
 .container {
   padding: $spacesM;
@@ -7,7 +10,7 @@
   color: $textColor;
 
   @media (max-width: $breakpointL) {
-    padding: $spacesXS;
+    padding: $spacesS;
   }
 }
 
@@ -100,7 +103,8 @@
 
   @media (max-width: $breakpointXL) {
     width: 100%;
-    font-size: $fonstSizeL;
+    font-size: $fonstSizeM;
+    line-height: $lineHeightL;
   }
   @media (max-width: $breakpointL) {
     margin-bottom: $spacesXS;
@@ -170,8 +174,9 @@
 
 .lang {
   margin-bottom: $spacesXXS;
-  margin-right: $spacesXXS;
+  padding-right: $spacesXXS;
   color: $accentColor;
+  background-color: $mainColor;
 }
 
 .networks {

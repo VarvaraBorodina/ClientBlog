@@ -1,11 +1,10 @@
 'use client';
 
+import { Typography } from '@components/Typography';
+import { ICONS, TEXT } from '@constants';
 import reviews from '@data/review.json';
 import { useTranslations } from 'next-intl';
 import React, { useState } from 'react';
-
-import { ICONS, TEXT } from '@/constants';
-import commonStyles from '@/styles/common.module.scss';
 
 import styles from './styled.module.scss';
 
@@ -40,9 +39,9 @@ export const Carousel = () => {
   return (
     <section className={styles.container}>
       <div className={styles.info}>
-        <h6 className={commonStyles.subtitle}>{translate(TESTIMONIAL)}</h6>
-        <h3 className={commonStyles.header}>{translate(TESTIMONIAL_TITLE)}</h3>
-        <p className={commonStyles.description}>{translate(TESTIMONIAL_TEXT)}</p>
+        <Typography as="h6">{translate(TESTIMONIAL)}</Typography>
+        <Typography as="h3">{translate(TESTIMONIAL_TITLE)}</Typography>
+        <Typography as="p">{translate(TESTIMONIAL_TEXT)}</Typography>
       </div>
       <div className={styles.line} />
       <div className={styles.window}>
@@ -58,7 +57,7 @@ export const Carousel = () => {
                     <p className={styles.city}>{city}</p>
                   </div>
                 </div>
-                <div>
+                <div className={styles.buttons}>
                   <button className={styles.button} type="button" onClick={onBackClick}>
                     {BACK_ARROW}
                   </button>

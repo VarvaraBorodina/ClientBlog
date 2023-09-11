@@ -1,10 +1,10 @@
+import { ShortcutPost } from '@components/posts/ShortcutPost';
+import { DINAMIC_ROUTES, ROUTE, TEXT } from '@constants';
 import posts from '@data/posts.json';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import React from 'react';
+import React, { useMemo } from 'react';
 
-import { ShortcutPost } from '@/components/posts/ShortcutPost';
-import { DINAMIC_ROUTES, ROUTE, TEXT } from '@/constants';
 import commonStyles from '@/styles/common.module.scss';
 
 import styles from './styled.module.scss';
@@ -16,7 +16,7 @@ const { POST } = DINAMIC_ROUTES;
 export const FeaturePosts = () => {
   const translate = useTranslations('Home');
 
-  const recentPosts = posts.slice(2, 5);
+  const recentPosts = useMemo(() => posts.slice(2, 5), []);
   return (
     <section className={styles.content}>
       <div className={styles.singlePost}>

@@ -1,4 +1,7 @@
-@import '@/styles/global.scss';
+@use '@/styles/colors.scss' as *;
+@use '@/styles/fonts.scss' as *;
+@use '@/styles/sizes.scss' as *;
+@use '@/styles/breakpoints.scss' as *;
 
 .container {
   display: flex;
@@ -13,8 +16,8 @@
   }
 
   @media (max-width: $breakpointL) {
-    padding: $spacesL $spacesS;
-    margin: $spacesL $spacesS;
+    padding: $spacesS;
+    margin: $spacesS;
   }
 }
 
@@ -32,6 +35,10 @@
 
   min-width: 100%;
   height: 100%;
+
+  @media (max-width: $breakpointXL) {
+    margin-top: $spacesS;
+  }
 }
 
 .title {
@@ -87,6 +94,7 @@
 .line {
   width: $borderWidth;
 
+  margin: 0 $spacesXS;
   background-color: $postBorderColor;
 
   @media (max-width: $breakpointXL) {
@@ -133,7 +141,7 @@
 .name {
   color: $mainColor;
   margin-bottom: $spacesXXS;
-  font-size: $fonstSizeM;
+  font-size: $fonstSizeXS;
   font-weight: $fontWeightL;
 
   @media (max-width: $breakpointM) {
@@ -143,6 +151,7 @@
 
 .city {
   color: $lightTextColor;
+  font-size: $fonstSizeXS;
   @media (max-width: $breakpointM) {
     font-size: $fonstSizeXS;
   }
@@ -151,6 +160,10 @@
 .button {
   background-color: $lightAccentColor;
   cursor: pointer;
+}
+
+.button {
+  margin-top: $spacesS;
 }
 
 .slider {

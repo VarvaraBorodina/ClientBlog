@@ -1,4 +1,7 @@
-@import '@/styles/global.scss';
+@use '@/styles/colors.scss' as *;
+@use '@/styles/fonts.scss' as *;
+@use '@/styles/sizes.scss' as *;
+@use '@/styles/breakpoints.scss' as *;
 
 .container {
   position: relative;
@@ -19,7 +22,7 @@
   top: 0;
 
   width: 100%;
-  height: $shadowHeight;
+  height: 100%;
 
   background: $postShadow;
 }
@@ -34,7 +37,7 @@
   padding-left: $spacesL;
 
   @media (max-width: $breakpointL) {
-    padding-left: $spacesS;
+    padding: $spacesS;
   }
 }
 
@@ -73,7 +76,7 @@
   }
 
   @media (max-width: $breakpointL) {
-    margin-bottom: $spacesXXS;
+    margin-bottom: $spacesXS;
     font-size: $fonstSizeXL;
   }
 }

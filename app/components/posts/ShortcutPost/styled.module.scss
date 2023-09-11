@@ -1,4 +1,7 @@
-@import '@/styles/global.scss';
+@use '@/styles/colors.scss' as *;
+@use '@/styles/fonts.scss' as *;
+@use '@/styles/sizes.scss' as *;
+@use '@/styles/breakpoints.scss' as *;
 
 .container {
   &:hover {
@@ -32,4 +35,12 @@
 .accent {
   color: $linkColor;
   cursor: pointer;
+}
+
+.title {
+  @media (max-width: $breakpointXL) {
+    font-size: $fonstSizeL;
+    font-weight: $fontWeightM;
+    line-height: normal;
+  }
 }

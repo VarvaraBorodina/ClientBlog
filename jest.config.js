@@ -8,6 +8,7 @@ const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/app/$1',
+    '^@constants(.*)$': '<rootDir>/app/constants/$1',
   },
   testEnvironment: 'jest-environment-jsdom',
   preset: 'ts-jest',

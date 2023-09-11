@@ -1,4 +1,7 @@
-@import '@/styles/global.scss';
+@use './colors.scss' as *;
+@use './fonts.scss' as *;
+@use './sizes.scss' as *;
+@use './breakpoints.scss' as *;
 
 .button {
   display: inline-block;
@@ -11,6 +14,7 @@
   background-color: $accentColor;
 
   @media (max-width: $breakpointL) {
+    margin-top: $spacesS;
     padding: $spacesXS;
     font-size: $fonstSizeXS;
   }
@@ -64,6 +68,7 @@
   text-transform: uppercase;
 
   @media (max-width: $breakpointM) {
+    margin-top: $spacesXS;
     margin-bottom: $spacesXS;
     font-size: $fonstSizeS;
   }

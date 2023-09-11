@@ -1,4 +1,7 @@
-@import '@/styles/global.scss';
+@use '@/styles/colors.scss' as *;
+@use '@/styles/fonts.scss' as *;
+@use '@/styles/sizes.scss' as *;
+@use '@/styles/breakpoints.scss' as *;
 
 $postsWidth: 80%;
 
@@ -11,7 +14,7 @@ $postsWidth: 80%;
   }
 
   @media (max-width: $breakpointL) {
-    margin: $spacesXXS;
+    margin: $spacesS;
     flex-direction: column-reverse;
   }
 }
@@ -44,83 +47,4 @@ $postsWidth: 80%;
   @media (max-width: $breakpointL) {
     width: 100%;
   }
-}
-
-.input {
-  margin-top: $spacesL;
-  margin-bottom: $spacesS;
-
-  width: $formInput;
-  padding: $spacesXS;
-
-  font-size: $fonstSizeM;
-  font-weight: $fontWeightS;
-
-  background-color: inherit;
-  color: $mainColor;
-
-  border: solid $borderWidth $postBorderColor;
-  outline: none;
-
-  &::-webkit-input-placeholder {
-    color: $placeholderColor;
-  }
-  &:-moz-placeholder {
-    color: $placeholderColor;
-  }
-  &::-moz-placeholder {
-    color: $placeholderColor;
-  }
-  &:-ms-input-placeholder {
-    color: $placeholderColor;
-  }
-  @media (max-width: $breakpointXL) {
-    font-size: $fonstSizeS;
-    margin-top: $spacesS;
-  }
-
-  @media (max-width: $breakpointL) {
-    box-sizing: border-box;
-    width: 100%;
-  }
-}
-
-.tagsTitle {
-  @media (max-width: $breakpointL) {
-    margin-left: $spacesM;
-  }
-}
-
-.tags {
-  width: $formInput;
-  display: flex;
-  flex-wrap: wrap;
-
-  @media (max-width: $breakpointL) {
-    margin: 0 $spacesS;
-    margin-bottom: $spacesS;
-    box-sizing: border-box;
-    width: 100%;
-  }
-}
-
-.tag {
-  margin-top: $spacesXXS;
-  margin-right: $spacesXXS;
-  padding: $spacesXXS $spacesS;
-  color: $mainColor;
-  border: solid $borderWidth $mainColor;
-  border-radius: $spacesXS;
-
-  font-size: $fonstSizeS;
-  font-weight: $fontWeightS;
-
-  cursor: pointer;
-}
-
-.active {
-  background: $accentColor;
-  color: $textColor;
-  font-weight: $fontWeightM;
-  border: none;
 }

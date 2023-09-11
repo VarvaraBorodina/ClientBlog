@@ -1,13 +1,13 @@
 'use client';
 
+import { ContactsHeader } from '@components/headers/ContactsHeader';
+import { TEXT } from '@constants';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Dropdown } from 'client-blog-library';
 import { useTranslations } from 'next-intl';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-import { ContactsHeader } from '@/components/headers/ContactsHeader';
-import { TEXT } from '@/constants';
 import { sendEmail } from '@/service/email';
 
 import { schema } from './schema';
@@ -37,6 +37,7 @@ export const ContactForm = () => {
     formState: { errors },
   } = useForm<ContactFormType>({
     resolver: yupResolver(schema),
+    mode: 'onBlur',
   });
 
   const handleDropdownChange = (newValue: string) => {

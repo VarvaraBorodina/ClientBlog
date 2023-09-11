@@ -1,9 +1,8 @@
 'use client';
 
+import { PARTNERS, TEXT } from '@constants';
 import { useTranslations } from 'next-intl';
 import React from 'react';
-
-import { PARTNERS, TEXT } from '@/constants';
 
 import styles from './styled.module.scss';
 
@@ -17,9 +16,9 @@ export const WeAre = () => {
         <p className={styles.text}>{translate(WE)}</p>
         <p className={styles.bold}>{translate(FEATURED_IN)}</p>
       </div>
-      {PARTNERS.map((partner, index) => (
-        <span key={index} className={styles.logo}>
-          {partner}
+      {PARTNERS.map(({ logo, name }) => (
+        <span key={name} className={styles.logo}>
+          {logo}
         </span>
       ))}
     </div>
