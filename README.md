@@ -1,6 +1,6 @@
 # Modsen Client Blog
 
-[Watch](https://client-blog-opbzohiyb-varvaraborodina.vercel.app/ru)
+[Watch](https://client-blog-git-develop-varvaraborodina.vercel.app/)
 
 ## Technologies used
 
