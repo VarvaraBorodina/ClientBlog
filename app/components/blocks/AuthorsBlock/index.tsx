@@ -20,8 +20,11 @@ export const AuthorsBlock = memo(({ authorsAmount }: { authorsAmount: number }) 
 
   const router = useRouter();
 
-  const onAuthorClick = (id: number) => () => {
-    router.push(`${AUTHOR}/${id}`);
+  const onAuthorClick = (id: number) => (event: React.MouseEvent) => {
+    const element = event.target as HTMLElement;
+    if (element.tagName !== 'svg' && element.tagName !== 'path') {
+      router.push(`${AUTHOR}/${id}`);
+    }
   };
 
   return (

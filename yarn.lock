@@ -2728,10 +2728,10 @@ cli-truncate@^2.1.0:
     slice-ansi "^3.0.0"
     string-width "^4.2.0"
 
-client-blog-library@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/client-blog-library/-/client-blog-library-1.2.1.tgz#ee4e90bda0085604d7bfd0d2716f32299c2ab104"
-  integrity sha512-CKKxJagDW4z9MiFW/UQrkAcLjNSDvNRpAjm1mCI1C2iBdQGRbBJVawqby4bK0nUJ6EKwtNlKC8NKaS3oabrlUg==
+client-blog-library@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/client-blog-library/-/client-blog-library-1.3.0.tgz#3c93929326d95ba89d979b61dcb7e863d323e389"
+  integrity sha512-wCuQ5BxDW7Dvx+JvgysSGBoVU2MLNCv4oUOPvJR2Q2YvfFKmg2fGZopm6/f6asVC0YeD423r/hblW0KGg2jtVQ==
 
 client-only@0.0.1:
   version "0.0.1"
