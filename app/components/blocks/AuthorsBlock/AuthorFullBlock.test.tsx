@@ -15,6 +15,7 @@ jest.mock('next/navigation', () => ({
   useRouter: jest.fn().mockReturnValue({
     push: jest.fn(),
   }),
+  usePathname: jest.fn().mockReturnValue('/en/about'),
 }));
 
 jest.mock('@constants', () => ({

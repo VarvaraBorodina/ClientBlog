@@ -1,11 +1,12 @@
 'use client';
 
 import React, { memo, useMemo } from 'react';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { Author } from 'client-blog-library';
 
 import { Author as AuthorType } from '@/types';
+import { getLocation } from '@/utils';
 import { DINAMIC_ROUTES, TEXT } from '@constants';
 import authors from '@data/authors.json';
 
@@ -18,12 +19,15 @@ export const AuthorsBlock = memo(({ authorsAmount }: { authorsAmount: number }) 
   const translate = useTranslations('Home');
   const mainAuthors: AuthorType[] = useMemo(() => authors.slice(0, authorsAmount), [authorsAmount]);
 
+  const pathName = usePathname();
+  const location = useMemo(() => getLocation(pathName), [pathName]);
+
   const router = useRouter();
 
   const onAuthorClick = (id: number) => (event: React.MouseEvent) => {
     const element = event.target as HTMLElement;
     if (element.tagName !== 'svg' && element.tagName !== 'path') {
-      router.push(`${AUTHOR}/${id}`);
+      router.push(`/${location}/${AUTHOR}/${id}`);
     }
   };
 
