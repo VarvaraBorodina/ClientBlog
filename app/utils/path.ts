@@ -5,3 +5,5 @@ export const transformPath = (path: string) => {
 
   return absolutePath === '' ? '/' : absolutePath;
 };
+
+export const getLocation = (path: string) => path.split('/')[1];

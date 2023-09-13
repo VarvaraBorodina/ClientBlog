@@ -2,9 +2,11 @@
 
 import React, { useMemo, useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { CategoryPost } from 'client-blog-library';
 
+import { getLocation } from '@/utils';
 import { DINAMIC_ROUTES, TEXT } from '@constants';
 import categories from '@data/categories.json';
 
@@ -24,16 +26,19 @@ export const CategoryPostsBlock = ({ title, posts }: CategoryPostBlockType) => {
 
   const [firstPost, setFirstPost] = useState(0);
 
-  const onChangePageClick = (direction: 1 | -1) => () => {
-    setFirstPost((prevFirstPost) => prevFirstPost + direction * POST_PER_PAGE);
-
-    window.scrollTo(0, 0);
-  };
+  const pathName = usePathname();
+  const location = useMemo(() => getLocation(pathName), [pathName]);
 
   const pagePosts = useMemo(
     () => posts.slice(firstPost, firstPost + POST_PER_PAGE),
     [firstPost, posts]
   );
+
+  const onChangePageClick = (direction: 1 | -1) => () => {
+    setFirstPost((prevFirstPost) => prevFirstPost + direction * POST_PER_PAGE);
+
+    window.scrollTo(0, 0);
+  };
 
   return (
     <div className={styles.container}>
@@ -48,7 +53,7 @@ export const CategoryPostsBlock = ({ title, posts }: CategoryPostBlockType) => {
       ) : (
         <div className={styles.posts}>
           {pagePosts.map((post) => (
-            <Link href={`${POST}/${post.id}`} key={post.id}>
+            <Link href={`/${location}/${POST}/${post.id}`} key={post.id}>
               <CategoryPost
                 post={post}
                 category={translateCategory(getCategory(post.category)?.name)}

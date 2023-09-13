@@ -8,6 +8,8 @@ jest.mock('next-intl', () => ({
   useTranslations: jest.fn().mockReturnValue((text: string) => text),
 }));
 
+jest.mock('next-intl/link', () => 'Link');
+
 const post = {
   id: 6,
   category: 2,

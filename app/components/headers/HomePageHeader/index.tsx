@@ -1,6 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import Link from 'next-intl/link';
 
 import { Author, Category, Post } from '@/types';
 import { DINAMIC_ROUTES, TEXT } from '@constants';
@@ -49,7 +49,7 @@ export const HomePageHeader = () => {
             </p>
           </div>
           <p className={styles.description}>{post.description}</p>
-          <Link href={`${POST}/${post.id}`} className={commonStyles.button}>
+          <Link href={`/${POST}/${post.id}`} className={commonStyles.button}>
             {`${translate(READ_MORE)}`}
           </Link>
         </div>

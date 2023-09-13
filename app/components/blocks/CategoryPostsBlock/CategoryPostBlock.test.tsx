@@ -11,6 +11,13 @@ jest.mock('next-intl', () => ({
   useTranslations: jest.fn().mockReturnValue((text: string) => text),
 }));
 
+jest.mock('next/link', () => 'Link');
+
+jest.mock('next/navigation', () => ({
+  ...jest.requireActual('next/navigation'),
+  usePathname: jest.fn().mockReturnValue('/en/about'),
+}));
+
 jest.mock('@constants', () => ({
   ...jest.requireActual('@constants'),
   ICONS: {

@@ -1268,6 +1268,13 @@
   dependencies:
     tslib "^2.4.0"
 
+"@formatjs/intl-localematcher@^0.4.2":
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-localematcher/-/intl-localematcher-0.4.2.tgz#7e6e596dbaf2f0c5a7c22da5a01d5c55f4c37e9a"
+  integrity sha512-BGdtJFmaNJy5An/Zan4OId/yR9Ih1OojFjcduX/xOvq798OgWSyDtd6Qd5jqJXwJs1ipe4Fxu9+cshic5Ox2tA==
+  dependencies:
+    tslib "^2.4.0"
+
 "@hookform/resolvers@^3.3.1":
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/@hookform/resolvers/-/resolvers-3.3.1.tgz#b7cbfe767434f52cba6b99b0a9a0b73eb8895188"
@@ -2733,7 +2740,7 @@ client-blog-library@^1.3.0:
   resolved "https://registry.yarnpkg.com/client-blog-library/-/client-blog-library-1.3.0.tgz#3c93929326d95ba89d979b61dcb7e863d323e389"
   integrity sha512-wCuQ5BxDW7Dvx+JvgysSGBoVU2MLNCv4oUOPvJR2Q2YvfFKmg2fGZopm6/f6asVC0YeD423r/hblW0KGg2jtVQ==
 
-client-only@0.0.1:
+client-only@0.0.1, client-only@^0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/client-only/-/client-only-0.0.1.tgz#38bba5d403c41ab150bff64a95c85013cf73bca1"
   integrity sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==
@@ -4265,6 +4272,11 @@ internal-slot@^1.0.4, internal-slot@^1.0.5:
     has "^1.0.3"
     side-channel "^1.0.4"
 
+international-types@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/international-types/-/international-types-0.8.0.tgz#a3d027ad59d8de9b53fa8c448f8fe9b1bc558097"
+  integrity sha512-cJwagIBzMG0FTK81TABeSBU0eReIXWmvW18m/URn8ZA+GLoWIcdL43kfjArwHVmZJ1n+IFchsBj8tQLYUqmwnA==
+
 intl-messageformat@^9.3.18:
   version "9.13.0"
   resolved "https://registry.yarnpkg.com/intl-messageformat/-/intl-messageformat-9.13.0.tgz#97360b73bd82212e4f6005c712a4a16053165468"
@@ -5399,6 +5411,22 @@ negotiator@^0.6.3:
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.3.tgz#58e323a72fedc0d6f9cd4d31fe49f51479590ccd"
   integrity sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==
 
+next-client-cookies@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/next-client-cookies/-/next-client-cookies-1.0.3.tgz#d7200c602efa8f0daa136f4538efbc45cdb0fbc1"
+  integrity sha512-9XgdzgxuGkxiA9VTYoIgqkbudp2PH/tVbbj1+cgTASQkVg/QwFFvunexjG2FF41mR1dE8AMpmB0wG0Hq1cgI6A==
+  dependencies:
+    js-cookie "^3.0.5"
+
+next-international@^0.9.5:
+  version "0.9.5"
+  resolved "https://registry.yarnpkg.com/next-international/-/next-international-0.9.5.tgz#6127f1799fa41bbb9d17450458e4b04c77cb697e"
+  integrity sha512-yS6DnuNAK+2EO5KWLgw2FPGwBkQ8gylrG0vNSeJD0/BAHSyIpPCn6E+1KPzawQffB5r6wVP6vHjDoSlUOxWWew==
+  dependencies:
+    client-only "^0.0.1"
+    international-types "^0.8.0"
+    server-only "^0.0.1"
+
 next-intl@3.0.0-beta.13:
   version "3.0.0-beta.13"
   resolved "https://registry.yarnpkg.com/next-intl/-/next-intl-3.0.0-beta.13.tgz#800e4a87daec65b3283b57502fe4d87882f8bd64"
@@ -6174,7 +6202,7 @@ semver@^7.5.3, semver@^7.5.4:
   dependencies:
     lru-cache "^6.0.0"
 
-server-only@0.0.1:
+server-only@0.0.1, server-only@^0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/server-only/-/server-only-0.0.1.tgz#0f366bb6afb618c37c9255a314535dc412cd1c9e"
   integrity sha512-qepMx2JxAa5jjfzxG79yPPq+8BuFToHd1hm7kI+Z4zAq1ftQiP7HcxMhDDItrbtwVeLg/cY2JnKnrcFkmiswNA==

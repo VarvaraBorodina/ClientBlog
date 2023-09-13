@@ -1,16 +1,14 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
-import { useRouter } from 'next-intl/client';
 import { Networks } from 'client-blog-library';
-import Cookies from 'js-cookie';
 import * as yup from 'yup';
 
 import { subscribe } from '@/service/email';
-import { transformPath } from '@/utils';
+import { getLocation, transformPath } from '@/utils';
 import { ROUTE, TEXT } from '@constants';
 import networks from '@data/networks.json';
 
@@ -37,8 +35,9 @@ export const Footer = () => {
   const [message, setMessage] = useState<string>('');
   const [email, setEmail] = useState<string>('');
 
-  const router = useRouter();
   const pathName = usePathname();
+  const absoluePath = useMemo(() => transformPath(pathName), [pathName]);
+  const location = useMemo(() => getLocation(pathName), [pathName]);
 
   const translateRoutes = useTranslations('Routes');
   const translateFooter = useTranslations('Footer');
@@ -81,18 +80,13 @@ export const Footer = () => {
     }
   };
 
-  const onLanguageChange = (lang: string) => async () => {
-    Cookies.set('NEXT_LOCALE', lang);
-    router.push(transformPath(pathName), { locale: lang });
-  };
-
   return (
     <footer className={styles.container}>
       <div className={styles.header}>
         <h6 className={styles.title}>{TEXT.HEADER}</h6>
         <nav className={styles.navigation}>
           {Object.values(ROUTE).map(({ name, path }) => (
-            <Link href={path} key={name} className={styles.link}>
+            <Link href={`/${location}/${path}`} key={name} className={styles.link}>
               {translateRoutes(name)}
             </Link>
           ))}
@@ -118,20 +112,18 @@ export const Footer = () => {
       </div>
       <div className={styles.contacts}>
         <div className={styles.info}>
-          <button
+          <Link
             className={`${styles.lang} ${pathName.includes(RUSSIAN) && styles.currentLang}`}
-            onClick={onLanguageChange(RUSSIAN)}
-            type="button"
+            href={`/${RUSSIAN}/${absoluePath}`}
           >
             {RUSSIAN}
-          </button>
-          <button
-            className={`${styles.lang} ${!pathName.includes(RUSSIAN) && styles.currentLang}`}
-            onClick={onLanguageChange(ENGLISH)}
-            type="button"
+          </Link>
+          <Link
+            className={`${styles.lang} ${pathName.includes(ENGLISH) && styles.currentLang}`}
+            href={`/${ENGLISH}/${absoluePath}`}
           >
             {ENGLISH}
-          </button>
+          </Link>
           <p className={styles.contact}>{ADDRES}</p>
           <p className={styles.contact}>{EMAIL}</p>
         </div>
@@ -147,13 +139,3 @@ export const Footer = () => {
     </footer>
   );
 };
-
-/**
- * 
-  <IntlLink locale="ru" href={transformPath(pathName)}>
-            {RUSSIAN}
-          </IntlLink>
-          <IntlLink locale="en" href={transformPath(pathName)}>
-            {ENGLISH}
-          </IntlLink>
- */

@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
-import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import Link from 'next-intl/link';
 
 import { ShortcutPost } from '@components/posts/ShortcutPost';
 import { DINAMIC_ROUTES, ROUTE, TEXT } from '@constants';
@@ -17,13 +17,14 @@ export const FeaturePosts = () => {
   const translate = useTranslations('Home');
 
   const recentPosts = useMemo(() => posts.slice(2, 5), []);
+
   return (
     <section className={styles.content}>
       <div className={styles.singlePost}>
         <h3 className={styles.title}>{translate(FEATURE_POST)}</h3>
         <div className={styles.post}>
           <ShortcutPost post={posts[1]} full />
-          <Link href={`${POST}/${posts[1].id}`} className={commonStyles.button}>
+          <Link href={`/${POST}/${posts[1].id}`} className={commonStyles.button}>
             {`${translate(READ_MORE)}`}
           </Link>
         </div>
@@ -31,7 +32,7 @@ export const FeaturePosts = () => {
       <aside className={styles.aside}>
         <div className={styles.sideTitle}>
           <h3 className={styles.title}>{translate(ALL_POST)}</h3>
-          <Link href={BLOG.path} className={styles.accent}>
+          <Link href={`/${BLOG.path}`} className={styles.accent}>
             {translate(VIEW_ALL)}
           </Link>
         </div>

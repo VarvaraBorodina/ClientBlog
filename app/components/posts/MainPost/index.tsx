@@ -1,6 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import Link from 'next-intl/link';
 
 import { Typography } from '@/components/Typography';
 import { Author, Post } from '@/types';
@@ -37,7 +37,7 @@ export const MainPost = () => {
           {` | ${translateMonth(String(month))} ${day}, ${year}`}
         </p>
         <Typography as="p">{description}</Typography>
-        <Link href={`${POST}/${post.id}`} className={commonStyles.button}>
+        <Link href={`/${POST}/${post.id}`} className={commonStyles.button}>
           {`${translate(READ_MORE)}`}
         </Link>
       </div>

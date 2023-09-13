@@ -1,10 +1,9 @@
 import React from 'react';
-import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import Link from 'next-intl/link';
 
+import { AboutArticle } from '@/components/blocks/AboutArticle';
 import { ROUTE, TEXT } from '@constants';
-
-import { AboutArticle } from '../AboutArticle';
 
 import styles from './styled.module.scss';
 
@@ -33,7 +32,7 @@ export const AboutBlock = () => {
             text={translate(MISION_TEXT)}
           />
         </div>
-        <Link href={ABOUT.path} className={styles.link}>
+        <Link href={`/${ABOUT.path}`} className={styles.link}>
           {translate(READ_MORE)}
         </Link>
       </div>
