@@ -26,10 +26,6 @@ export const metadata: Metadata = {
 
 const { RUSSIAN, ENGLISH } = TEXT;
 
-export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'ru' }];
-}
-
 export default async function RootLayout({ children, params: { locale } }: RootProps) {
   let messages;
 
