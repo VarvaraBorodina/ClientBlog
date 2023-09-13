@@ -1,14 +1,12 @@
 'use client';
 
-import React, { useEffect, useLayoutEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Mulish } from 'next/font/google';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
-import { useRouter } from 'next-intl/client';
-import Cookies from 'js-cookie';
 
-import { transformPath } from '@/utils';
+import { getLocation, transformPath } from '@/utils';
 import { Modal } from '@components/Modal';
 import { ASSETS, ICONS, ROUTE, TEXT } from '@constants';
 
@@ -16,36 +14,24 @@ import styles from './styled.module.scss';
 
 const mulish = Mulish({ subsets: ['latin'] });
 
-const { HEADER, VIDEO_BUTTON, RUSSIAN, ENGLISH } = TEXT;
+const { HEADER, VIDEO_BUTTON } = TEXT;
 const { ABOUT_VEDEO } = ASSETS;
 const { MENU, CLOSE } = ICONS;
 
 export const Header = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
   const [showLeftSideBar, setShowLeftSideBar] = useState<boolean>(false);
-  const router = useRouter();
 
   const pathName = usePathname();
+
   const absolutePath = useMemo(() => transformPath(pathName), [pathName]);
+  const location = useMemo(() => getLocation(pathName), [pathName]);
 
   const translateRoutes = useTranslations('Routes');
   const translateHeader = useTranslations('Header');
 
   useEffect(() => {
     setShowLeftSideBar(false);
-  }, [pathName]);
-
-  useLayoutEffect(() => {
-    const locale = Cookies.get('NEXT_LOCALE');
-    if (locale === RUSSIAN && !pathName.includes(RUSSIAN)) {
-      Cookies.set('NEXT_LOCALE', RUSSIAN);
-      router.replace(transformPath(pathName), { locale: RUSSIAN });
-    }
-
-    if (locale === ENGLISH && pathName.includes(RUSSIAN)) {
-      Cookies.set('NEXT_LOCALE', ENGLISH);
-      router.replace(transformPath(pathName), { locale: ENGLISH });
-    }
   }, [pathName]);
 
   const toggleModal = () => {
@@ -67,6 +53,7 @@ export const Header = () => {
         </Modal>
       )}
       <h1 className={styles.header}>{HEADER}</h1>
+
       <div className={styles.content}>
         <nav className={styles.navigation}>
           {Object.values(ROUTE).map(({ name, path }, index) => {
@@ -74,7 +61,7 @@ export const Header = () => {
               return (
                 <Link
                   className={`${styles.link} ${absolutePath === path && styles.currentLink}`}
-                  href={path}
+                  href={`/${location}/${path}`}
                   key={name}
                 >
                   {translateRoutes(name)}
