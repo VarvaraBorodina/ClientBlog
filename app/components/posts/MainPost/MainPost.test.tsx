@@ -8,6 +8,8 @@ jest.mock('next-intl', () => ({
   useTranslations: jest.fn().mockReturnValue((text: string) => text),
 }));
 
+jest.mock('next-intl/link', () => 'Link');
+
 jest.mock('@constants', () => ({
   ...jest.requireActual('@constants'),
   ICONS: {
