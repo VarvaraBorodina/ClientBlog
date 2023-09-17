@@ -1,0 +1,65 @@
+@use '@/styles/colors.scss' as *;
+@use '@/styles/fonts.scss' as *;
+@use '@/styles/sizes.scss' as *;
+@use '@/styles/breakpoints.scss' as *;
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: $spacesXL;
+
+  background-color: $lightLinkColor;
+
+  @media (max-width: $breakpointXL) {
+    padding: $spacesL;
+  }
+
+  @media (max-width: $breakpointL) {
+    padding: $spacesM $spacesS;
+    flex-direction: column;
+  }
+
+  @media (max-width: $breakpointM) {
+    padding: $spacesS;
+  }
+}
+
+.image {
+  width: $aside;
+  object-fit: contain;
+  margin-left: $spacesXS;
+
+  @media (max-width: $breakpointL) {
+    width: 100%;
+    margin-top: $spacesS;
+    margin-left: 0;
+  }
+}
+
+.content {
+  width: $featuredPost;
+  @media (max-width: $breakpointL) {
+    width: 100%;
+  }
+}
+
+.accent {
+  color: $linkColor;
+  cursor: pointer;
+}
+
+.infoContainer {
+  display: flex;
+}
+
+.info {
+  margin-bottom: $spacesS;
+  color: $mainColor;
+  font-size: $fonstSizeS;
+  @media (max-width: $breakpointL) {
+    margin-bottom: $spacesXXS;
+  }
+  @media (max-width: $breakpointM) {
+    font-size: $fonstSizeXS;
+  }
+}

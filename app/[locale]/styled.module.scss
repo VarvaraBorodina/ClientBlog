@@ -1,0 +1,27 @@
+@use '@/styles/colors.scss' as *;
+@use '@/styles/fonts.scss' as *;
+@use '@/styles/sizes.scss' as *;
+@use '@/styles/breakpoints.scss' as *;
+
+.container {
+  margin: 0 $spacesM;
+
+  @media (max-width: $breakpointL) {
+    margin: 0 $spacesXS;
+  }
+}
+
+.loader {
+  width: 100%;
+  margin: $spacesM 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error {
+  height: 100vh;
+  margin-top: $spacesM;
+  text-align: center;
+  font-size: $fonstSizeL;
+}

@@ -1,0 +1,44 @@
+@use '@/styles/colors.scss' as *;
+@use '@/styles/fonts.scss' as *;
+@use '@/styles/sizes.scss' as *;
+@use '@/styles/breakpoints.scss' as *;
+
+.container {
+  margin: $spacesL;
+  @media (max-width: $breakpointXL) {
+    margin: $spacesS;
+  }
+}
+
+.header {
+  margin-bottom: $spacesM;
+  text-align: center;
+  font-weight: $fontWeightL;
+  font-size: $fonstSizeXL;
+
+  @media (max-width: $breakpointM) {
+    font-size: $fonstSizeL;
+    margin-bottom: 0;
+  }
+}
+
+.categories {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  @media (max-width: $breakpointXXL) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: $spacesXS;
+  }
+
+  @media (max-width: $breakpointL) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.author {
+  background: $textColor;
+}

@@ -1,0 +1,157 @@
+@use '@/styles/colors.scss' as *;
+@use '@/styles/fonts.scss' as *;
+@use '@/styles/sizes.scss' as *;
+@use '@/styles/breakpoints.scss' as *;
+
+$lineLignPart: 55%;
+$lineDarckPart: 25%;
+
+.container {
+  position: relative;
+  margin: $spacesL;
+
+  @media (max-width: $breakpointL) {
+    margin: $spacesXS;
+  }
+}
+
+.image {
+  position: absolute;
+  top: $spacesXXL;
+  z-index: -1;
+  height: $startContent;
+  width: 100%;
+  object-fit: cover;
+}
+
+.lines {
+  display: flex;
+  margin-left: $spacesL;
+  @media (max-width: $breakpointM) {
+    display: none;
+  }
+}
+
+.lightLine {
+  width: $lineDarckPart;
+  height: $lineHeight;
+  background-color: $accentColor;
+}
+
+.darckLine {
+  width: $lineDarckPart;
+  height: $lineHeight;
+  background-color: $linkColor;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  padding: $spacesL;
+  background-color: $lightLinkColor;
+
+  @media (max-width: $breakpointL) {
+    flex-direction: column;
+    padding-left: $spacesM;
+    padding-right: $spacesM;
+  }
+
+  @media (max-width: $breakpointM) {
+    padding: $spacesXS;
+  }
+}
+
+.imageText {
+  display: flex;
+  margin-right: $spacesL;
+
+  @media (max-width: $breakpointXXL) {
+    margin-right: $spacesS;
+  }
+  @media (max-width: $breakpointXL) {
+    flex-direction: column-reverse;
+  }
+
+  @media (max-width: $breakpointM) {
+    margin: 0;
+  }
+}
+
+.imageContent {
+  margin-left: $spacesL;
+  @media (max-width: $breakpointXXL) {
+    margin-left: $spacesS;
+  }
+  @media (max-width: $breakpointM) {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.imageHeaders {
+  padding: $spacesM;
+  background-color: $textColor;
+  color: $mainColor;
+
+  @media (max-width: $breakpointXL) {
+    padding: $spacesXS 0;
+  }
+}
+
+.imageDescription {
+  margin: $spacesM;
+  @media (max-width: $breakpointXXL) {
+    margin: $spacesS;
+  }
+  @media (max-width: $breakpointM) {
+    margin: 0;
+  }
+}
+
+.numberList {
+  display: flex;
+  justify-content: space-around;
+  margin-top: $spacesXXL;
+  background-color: $accentColor;
+}
+
+.numberListItem {
+  margin: $spacesS;
+  @media (max-width: $breakpointL) {
+    margin: $spacesXS;
+  }
+  @media (max-width: $breakpointM) {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.number {
+  color: $mainColor;
+  font-size: $fonstSizeXXL;
+  font-weight: $fontWeightL;
+  @media (max-width: $breakpointL) {
+    font-size: $fonstSizeL;
+  }
+}
+
+.info {
+  width: 50%;
+  margin-right: $spacesM;
+  @media (max-width: $breakpointL) {
+    width: 100%;
+  }
+}
+
+.description {
+  color: $mainColor;
+  font-weight: $fontWeightS;
+  font-size: $fonstSizeM;
+  line-height: $lineHeightL;
+
+  @media (max-width: $breakpointL) {
+    line-height: normal;
+    font-size: $fonstSizeXS;
+    line-height: auto;
+  }
+}

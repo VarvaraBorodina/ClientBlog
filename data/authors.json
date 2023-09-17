@@ -1,0 +1,107 @@
+[
+  {
+    "id": 0,
+    "name": "Floyd",
+    "lastName": "Miles",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
+    "photo": "/img/authors/7562313.jpg",
+    "networks": {
+      "linkedIn": "https://www.linkedin.com/",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "twitter": "https://twitter.com/"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Dianne",
+    "lastName": "Russell",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
+    "photo": "/img/authors/6874674.jpg",
+    "networks": {
+      "linkedIn": "https://www.linkedin.com/",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "twitter": "https://twitter.com/"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Jenny",
+    "lastName": "Wilson",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
+    "photo": "/img/authors/5704849.jpg",
+    "networks": {
+      "linkedIn": "https://www.linkedin.com/",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "twitter": "https://twitter.com/"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Leslie",
+    "lastName": "Alexander",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
+    "photo": "/img/authors/6205509.jpg",
+    "networks": {
+      "linkedIn": "https://www.linkedin.com/",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "twitter": "https://twitter.com/"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Guy",
+    "lastName": "Hawkins",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
+    "photo": "/img/authors/1212984.jpg",
+    "networks": {
+      "linkedIn": "https://www.linkedin.com/",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "twitter": "https://twitter.com/"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Eleanor",
+    "lastName": "Pena",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
+    "photo": "/img/authors/4946382.jpg",
+    "networks": {
+      "linkedIn": "https://www.linkedin.com/",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "twitter": "https://twitter.com/"
+    }
+  },
+
+  {
+    "id": 6,
+    "name": "Robert",
+    "lastName": "Fox",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
+    "photo": "/img/authors/5262459.jpg",
+    "networks": {
+      "linkedIn": "https://www.linkedin.com/",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "twitter": "https://twitter.com/"
+    }
+  },
+  {
+    "id": 1,
+    "name": "Jacob",
+    "lastName": "Jones",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
+    "photo": "/img/authors/6147118.jpg",
+    "networks": {
+      "linkedIn": "https://www.linkedin.com/",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "twitter": "https://twitter.com/"
+    }
+  }
+]

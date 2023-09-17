@@ -1,0 +1,98 @@
+@use '@/styles/colors.scss' as *;
+@use '@/styles/fonts.scss' as *;
+@use '@/styles/sizes.scss' as *;
+@use '@/styles/breakpoints.scss' as *;
+
+.container {
+  margin: $spacesL;
+  @media (max-width: $breakpointL) {
+    margin: $spacesM $spacesS;
+  }
+}
+
+.postInfo {
+  width: $policyWidth;
+  margin: 0 auto;
+
+  @media (max-width: $breakpointL) {
+    width: 100%;
+  }
+}
+
+.info {
+  display: flex;
+}
+
+.authorImage {
+  width: $authorSmallImage;
+  height: $authorSmallImage;
+  object-fit: cover;
+
+  border-radius: 50%;
+}
+
+.authorInfo {
+  align-self: center;
+  margin-left: $spacesXS;
+}
+
+.author {
+  margin-bottom: $spacesXXS;
+  color: $linkColor;
+  font-size: $fonstSizeM;
+  font-weight: $fontWeightL;
+}
+
+.date {
+  color: $lightTextColor;
+  font-size: $fonstSizeXS;
+}
+
+.postTitle {
+  margin-top: $spacesS;
+  color: $mainColor;
+  font-size: $fonstSizeXL;
+  font-weight: $fontWeightL;
+  line-height: $lineHeightXL;
+
+  @media (max-width: $breakpointL) {
+    font-size: $fonstSizeL;
+  }
+
+  @media (max-width: $breakpointM) {
+    font-size: $fonstSizeM;
+    line-height: $lineHeightL;
+  }
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  margin-top: $spacesS;
+  margin-bottom: $spacesM;
+}
+
+.categoryName {
+  margin-left: $spacesXS;
+  color: $mainColor;
+  font-size: $fonstSizeM;
+  font-weight: $fontWeightL;
+}
+
+.postImage {
+  width: 100%;
+  max-height: $articleImageWidth;
+  object-fit: cover;
+}
+
+.description {
+  margin-top: $spacesM;
+  margin-bottom: $spacesS;
+  color: $mainColor;
+  font-size: $fonstSizeL;
+  font-weight: $fontWeightL;
+  line-height: $lineHeightL;
+  @media (max-width: $breakpointL) {
+    font-size: $fonstSizeM;
+  }
+}

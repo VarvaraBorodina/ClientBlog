@@ -1,0 +1,10 @@
+@use '@/styles/colors.scss' as *;
+@use '@/styles/fonts.scss' as *;
+@use '@/styles/sizes.scss' as *;
+@use '@/styles/breakpoints.scss' as *;
+
+.mapBlock {
+  width: 100%;
+  height: $mapHeight;
+  z-index: 1;
+}

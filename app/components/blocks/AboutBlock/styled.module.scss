@@ -1,0 +1,61 @@
+@use '@/styles/colors.scss' as *;
+@use '@/styles/fonts.scss' as *;
+@use '@/styles/sizes.scss' as *;
+@use '@/styles/breakpoints.scss' as *;
+
+$lineLignPart: 55%;
+$lineDarckPart: 25%;
+
+.container {
+  margin: $spacesL;
+
+  @media (max-width: $breakpointM) {
+    margin: $spacesXS;
+  }
+}
+
+.lines {
+  display: flex;
+
+  justify-content: flex-end;
+}
+
+.lightLine {
+  width: $lineLignPart;
+  height: $lineHeight;
+  background-color: $accentColor;
+}
+
+.darckLine {
+  width: $lineDarckPart;
+  height: $lineHeight;
+  background-color: $linkColor;
+}
+
+.background {
+  padding: $spacesL;
+  background-color: $lightLinkColor;
+
+  @media (max-width: $breakpointL) {
+    padding: $spacesM;
+  }
+
+  @media (max-width: $breakpointM) {
+    padding: $spacesS;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $breakpointL) {
+    flex-direction: column;
+    padding-bottom: $spacesS;
+  }
+}
+
+.link {
+  color: $linkColor;
+  font-weight: $fontWeightL;
+}

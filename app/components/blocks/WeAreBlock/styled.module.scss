@@ -1,0 +1,58 @@
+@use '@/styles/colors.scss' as *;
+@use '@/styles/fonts.scss' as *;
+@use '@/styles/sizes.scss' as *;
+@use '@/styles/breakpoints.scss' as *;
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: $spacesXL;
+
+  @media (max-width: $breakpointXL) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: $spacesXS;
+    margin: $spacesL;
+  }
+
+  @media (max-width: $breakpointL) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: $breakpointM) {
+    grid-template-columns: 1fr;
+    margin: $spacesM;
+  }
+}
+
+.info {
+  @media (max-width: $breakpointXL) {
+    text-align: center;
+  }
+
+  @media (max-width: $breakpointXL) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.text {
+  margin-bottom: $spacesXXS;
+  font-size: $fonstSizeS;
+  color: $lightTextColor;
+
+  @media (max-width: $breakpointXL) {
+    margin-right: $spacesXXS;
+  }
+}
+
+.bold {
+  font-size: $fonstSizeS;
+  font-weight: $fontWeightL;
+  color: $lightTextColor;
+}
+
+.logo {
+  text-align: center;
+}

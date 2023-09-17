@@ -1,0 +1,82 @@
+@use '@/styles/colors.scss' as *;
+@use '@/styles/fonts.scss' as *;
+@use '@/styles/sizes.scss' as *;
+@use '@/styles/breakpoints.scss' as *;
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin: $spacesL;
+
+  @media (max-width: $breakpointL) {
+    flex-direction: column;
+  }
+
+  @media (max-width: $breakpointM) {
+    margin: $spacesXS;
+  }
+}
+
+.singlePost {
+  width: $featuredPost;
+
+  @media (max-width: $breakpointL) {
+    width: 100%;
+  }
+}
+
+.title {
+  color: $mainColor;
+
+  font-size: $fonstSizeXL;
+  font-weight: $fontWeightL;
+
+  @media (max-width: $breakpointXL) {
+    font-size: $fonstSizeL;
+    font-weight: $fontWeightM;
+  }
+
+  @media (max-width: $breakpointM) {
+    margin-top: $spacesXS;
+    font-size: $fonstSizeM;
+  }
+}
+
+.post {
+  margin-top: $spacesS;
+  padding: $spacesS;
+  border: solid $borderWidth $postBorderColor;
+}
+
+.sideTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.aside {
+  width: $featurePostAside;
+  margin-left: $spacesS;
+
+  @media (max-width: $breakpointL) {
+    width: 100%;
+    margin-left: 0;
+    margin-top: $spacesS;
+  }
+}
+
+.accent {
+  color: $linkColor;
+  cursor: pointer;
+}
+
+.posts {
+  margin-top: $spacesS;
+}
+
+.shortPost {
+  &:hover {
+    background-color: $lightAccentColor;
+  }
+  cursor: pointer;
+}

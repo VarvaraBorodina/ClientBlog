@@ -1,0 +1,29 @@
+@use '@/styles/colors.scss' as *;
+@use '@/styles/fonts.scss' as *;
+@use '@/styles/sizes.scss' as *;
+@use '@/styles/breakpoints.scss' as *;
+
+.header {
+  text-align: center;
+
+  padding-top: $spacesL;
+  padding-bottom: $spacesL;
+
+  background-color: $lightLinkColor;
+}
+
+.content {
+  width: $policyWidth;
+  margin: 0 auto;
+  margin-top: $spacesXL;
+  margin-bottom: $spacesXL;
+
+  @media (max-width: $breakpointL) {
+    width: auto;
+    margin: $spacesM;
+  }
+
+  @media (max-width: $breakpointM) {
+    margin: $spacesXS;
+  }
+}

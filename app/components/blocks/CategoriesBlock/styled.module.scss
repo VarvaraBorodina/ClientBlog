@@ -1,0 +1,46 @@
+@use '@/styles/colors.scss' as *;
+@use '@/styles/fonts.scss' as *;
+@use '@/styles/sizes.scss' as *;
+@use '@/styles/breakpoints.scss' as *;
+
+.container {
+  margin: $spacesL 0;
+  @media (max-width: $breakpointL) {
+    margin: $spacesS 0;
+  }
+}
+
+.header {
+  font-weight: $fontWeightL;
+  font-size: $fonstSizeXL;
+
+  @media (max-width: $breakpointM) {
+    font-size: $fonstSizeL;
+  }
+  @media (max-width: $breakpointXXL) {
+    width: $categoryWidth;
+  }
+}
+
+.categories {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: $spacesS;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  @media (max-width: $breakpointXXL) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: $spacesXS;
+  }
+
+  @media (max-width: $breakpointL) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.column {
+  grid-template-columns: 1fr;
+  grid-gap: $spacesXS;
+}

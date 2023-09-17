@@ -1,0 +1,26 @@
+[
+  {
+    "id": 4,
+    "name": "Business",
+    "icon": "BUSINESS",
+    "description": "Business description"
+  },
+  {
+    "id": 1,
+    "name": "Startup",
+    "icon": "STARTUP",
+    "description": "Economy description"
+  },
+  {
+    "id": 2,
+    "name": "Economy",
+    "icon": "ECONOMY",
+    "description": "Technology description"
+  },
+  {
+    "id": 3,
+    "name": "Technology",
+    "icon": "TECHNOLOGY",
+    "description": "Startup description"
+  }
+]

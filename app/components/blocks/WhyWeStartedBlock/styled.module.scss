@@ -1,0 +1,44 @@
+@use '@/styles/colors.scss' as *;
+@use '@/styles/fonts.scss' as *;
+@use '@/styles/sizes.scss' as *;
+@use '@/styles/breakpoints.scss' as *;
+
+.container {
+  margin: $spacesL;
+  position: relative;
+
+  @media (max-width: $breakpointL) {
+    margin: $spacesS;
+  }
+}
+
+.image {
+  width: $startImage;
+  @media (max-width: $breakpointXL) {
+    width: $articleImageWidth;
+  }
+  @media (max-width: $breakpointL) {
+    width: 100%;
+    display: block;
+  }
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: $startContent;
+  padding: $spacesL;
+  background-color: $textColor;
+
+  @media (max-width: $breakpointXL) {
+    padding: $spacesM;
+  }
+
+  @media (max-width: $breakpointL) {
+    width: auto;
+    position: static;
+    margin: 0 auto;
+    padding: $spacesS 0;
+  }
+}

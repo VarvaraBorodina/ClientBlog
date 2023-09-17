@@ -1,0 +1,36 @@
+@use '@/styles/colors.scss' as *;
+@use '@/styles/fonts.scss' as *;
+@use '@/styles/sizes.scss' as *;
+@use '@/styles/breakpoints.scss' as *;
+
+.title {
+  margin: $spacesM $spacesL;
+  color: $mainColor;
+  font-size: $fonstSizeXL;
+  font-weight: $fontWeightL;
+  line-height: $lineHeightL;
+
+  @media (max-width: $breakpointM) {
+    font-size: $fonstSizeL;
+    margin: $spacesS;
+  }
+}
+
+.container {
+  display: flex;
+  gap: $spacesS;
+  margin: $spacesM $spacesL;
+  @media (max-width: $breakpointL) {
+    flex-direction: column;
+    margin: $spacesS;
+  }
+}
+
+.line {
+  height: $borderWidth;
+  margin: $spacesM $spacesL;
+  background-color: $postBorderColor;
+  @media (max-width: $breakpointL) {
+    margin: $spacesXS;
+  }
+}

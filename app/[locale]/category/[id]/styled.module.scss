@@ -1,0 +1,50 @@
+@use '@/styles/colors.scss' as *;
+@use '@/styles/fonts.scss' as *;
+@use '@/styles/sizes.scss' as *;
+@use '@/styles/breakpoints.scss' as *;
+
+$postsWidth: 80%;
+
+.container {
+  display: flex;
+  margin: 0 $spacesL;
+
+  @media (max-width: $breakpointXL) {
+    margin: 0 $spacesS;
+  }
+
+  @media (max-width: $breakpointL) {
+    margin: $spacesS;
+    flex-direction: column-reverse;
+  }
+}
+
+.header {
+  width: 100%;
+  padding-top: $spacesL;
+  padding-bottom: $spacesL;
+  text-align: center;
+  background-color: $lightLinkColor;
+}
+
+.title {
+  margin-bottom: $spacesS;
+  color: $mainColor;
+  font-size: $fonstSizeXXL;
+  font-weight: $fontWeightXL;
+  letter-spacing: $letterSpacing;
+
+  @media (max-width: $breakpointM) {
+    margin-bottom: $spacesXS;
+    font-size: $fonstSizeXL;
+  }
+}
+
+.posts {
+  width: $postsWidth;
+  margin: 0 auto;
+
+  @media (max-width: $breakpointL) {
+    width: 100%;
+  }
+}

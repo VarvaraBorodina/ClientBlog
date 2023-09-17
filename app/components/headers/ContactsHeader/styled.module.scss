@@ -1,0 +1,115 @@
+@use '@/styles/colors.scss' as *;
+@use '@/styles/fonts.scss' as *;
+@use '@/styles/sizes.scss' as *;
+@use '@/styles/breakpoints.scss' as *;
+
+$opacityText: 0.8;
+$opacityLine: 0.2;
+
+.formHeader {
+  text-align: center;
+  margin-bottom: $spacesM;
+}
+
+.subtitle {
+  margin-bottom: $spacesS;
+  color: $mainColor;
+  font-size: $fonstSizeM;
+  font-weight: $fontWeightM;
+  letter-spacing: $letterSpacing;
+  text-transform: uppercase;
+
+  @media (max-width: $breakpointM) {
+    margin-bottom: $spacesXS;
+    font-size: $fonstSizeS;
+  }
+}
+
+.title {
+  margin-bottom: $spacesS;
+  color: $mainColor;
+  font-size: $fonstSizeXXL;
+  font-weight: $fontWeightL;
+
+  @media (max-width: $breakpointM) {
+    margin-bottom: $spacesXS;
+    font-size: $fonstSizeXL;
+  }
+}
+
+.description {
+  margin-bottom: $spacesS;
+  color: $mediumTextColor;
+  font-size: $fonstSizeS;
+  font-weight: $fontWeightS;
+  line-height: $lineHeightL;
+
+  @media (max-width: $breakpointM) {
+    margin-bottom: $spacesXS;
+    font-size: $fonstSizeXS;
+    line-height: normal;
+  }
+}
+
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: $spacesM;
+  padding: $spacesM;
+  background-color: $linkColor;
+
+  @media (max-width: $breakpointL) {
+    flex-direction: column;
+  }
+
+  @media (max-width: $breakpointM) {
+    padding: $spacesXS;
+  }
+}
+
+.contactsBlock {
+  width: 50%;
+  margin-right: $spacesM;
+
+  @media (max-width: $breakpointL) {
+    width: 100%;
+    margin-bottom: $spacesS;
+  }
+}
+
+.contactsInfo {
+  color: $textColor;
+  opacity: $opacityText;
+  font-size: $fonstSizeS;
+  font-weight: $fontWeightS;
+  line-height: $lineHeightL;
+
+  @media (max-width: $breakpointM) {
+    font-size: $fonstSizeXS;
+    line-height: normal;
+  }
+}
+
+.contactsTitle {
+  color: $textColor;
+  font-size: $fonstSizeM;
+  font-weight: $fontWeightL;
+  line-height: $lineHeightL;
+
+  @media (max-width: $breakpointM) {
+    line-height: normal;
+  }
+}
+
+.line {
+  margin-bottom: $spacesXS;
+  margin-top: $spacesXS;
+  height: $borderWidth;
+  background-color: $textColor;
+  opacity: $opacityLine;
+
+  @media (max-width: $breakpointM) {
+    margin-bottom: $spacesXXS;
+    margin-top: $spacesXXS;
+  }
+}
